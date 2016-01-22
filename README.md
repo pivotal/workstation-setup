@@ -11,8 +11,8 @@ This project automates the process of setting up a new Pivotal Labs machine.
 
 ```sh
 $ cd workspace
-$ git clone this_repo
-$ cd this_repo
+$ git clone https://github.com/pivotal/workstation-setup.git
+$ cd workstation-setup
 $ ./script/setup.sh
 ```
 
