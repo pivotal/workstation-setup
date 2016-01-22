@@ -21,5 +21,5 @@ $ ./script/setup.sh
 If you'd like to customize this project for your own use:
 
 - Fork the project
-- Edit `./script/setup.sh` to you liking
+- Edit `./scripts/setup.sh` to you liking
 - Profit
