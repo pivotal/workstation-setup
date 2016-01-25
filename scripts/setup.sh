@@ -95,4 +95,15 @@ rbenv rehash
 brew cask install rubymine
 
 echo
+echo "Setting up Pivotal IDE preferences..."
+
+cd ~/workspace
+rm -rf pivotal_ide_prefs
+git clone https://github.com/pivotal/pivotal_ide_prefs.git
+pushd pivotal_ide_prefs/cli/
+./bin/ide_prefs install --ide=intellij
+./bin/ide_prefs install --ide=rubymine
+popd
+
+echo
 echo "Done!"
