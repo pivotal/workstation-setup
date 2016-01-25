@@ -86,6 +86,7 @@ brew install maven
 brew install gradle
 brew install nexus
 brew install jenkins
+brew install springboot
 
 echo
 echo "Installing Ruby tools and Ruby 2.2.3"
