@@ -41,6 +41,9 @@ git clone https://github.com/ahmadassaf/bash-it.git ~/.bash_it
 ~/.bash_it/install.sh
 bash-it enable plugin rbenv
 
+echo
+echo "Adding Pivotal Tab to Homebrew"
+brew tap pivotal/tap
 
 echo
 echo "Installing git tools"
