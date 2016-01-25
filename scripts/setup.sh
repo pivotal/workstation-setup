@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set +e
+
 clear
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
