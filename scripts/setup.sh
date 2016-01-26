@@ -1,6 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 clear
+
+# Redirect a copy of the script output to setup.log
+exec > >(tee -i setup.log)
+exec 2>&1
 
 echo "Installing Homebrew..."
 echo
@@ -123,6 +127,7 @@ echo "Done!"
 
 echo
 echo "After checking the above output for any problems, start a new iTerm session to make use of all the tools that have been installed."
+echo "Additionally, the results of this setup have been stored in setup.log for review."
 
 echo
 
