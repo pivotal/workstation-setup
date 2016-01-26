@@ -91,12 +91,11 @@ brew install jenkins
 brew install springboot
 
 echo
-echo "Installing Ruby tools and Ruby 2.2.3"
-brew install ruby
+echo "Installing Ruby tools and Ruby 2.3.0"
 brew install rbenv
 bash-it enable plugin rbenv
-rbenv install 2.2.3
-rbenv global 2.2.3
+rbenv install 2.3.0
+rbenv global 2.3.0
 gem install bundler
 rbenv rehash
 brew cask install rubymine
