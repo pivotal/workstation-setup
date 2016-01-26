@@ -43,7 +43,14 @@ bash-it enable plugin rbenv
 
 echo
 echo "Adding Pivotal Tab to Homebrew"
+
 brew tap pivotal/tap
+
+echo
+echo "Installing Cloud Foundry Command-line Inteface"
+
+brew tap cloudfoundry/tap
+brew install cf-cli
 
 echo
 echo "Installing git tools"
