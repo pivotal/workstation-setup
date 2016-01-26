@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set +e
+
 clear
 
 # Redirect a copy of the script output to setup.log
