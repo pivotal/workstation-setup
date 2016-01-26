@@ -33,7 +33,7 @@ echo "Installing bash-it"
 brew install grc
 brew install coreutils
 brew install wget
-cp files/dircolors.ansi-dark -O ~/.dircolors
+cp files/dircolors.ansi-dark ~/.dircolors
 cp files/.inputrc ~/.inputrc
 cd ~/
 rm -rf ~/.bash_it
