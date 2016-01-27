@@ -1,23 +1,26 @@
 #!/usr/bin/env bash
 
+# Fail immediately if any errors occur
+set -e
+
 clear
-
-# Redirect a copy of the script output to setup.log
-exec > >(tee -i setup.log)
-exec 2>&1
-
-echo "Installing Homebrew..."
-echo
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo
 echo "You need to agree to the Xcode Software License Agreement"
 echo "You will need to enter your password first."
 echo "Then, when the agree comes up, press 'q' to jump to the end and then type 'agree' and press return"
 echo
+
 sudo xcodebuild -license
 
-echo 
+if hash brew 2>/dev/null; then
+  echo "Homebrew is already installed!"
+else
+  echo "Installing Homebrew..."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+echo
 echo "Ensuring you have the latest Homebrew..."
 brew update
 
@@ -97,7 +100,7 @@ brew install springboot
 echo
 echo "Installing Ruby tools and Ruby 2.3.0"
 brew install rbenv
-bash-it enable plugin rbenv
+eval "$(rbenv init -)"
 rbenv install 2.3.0
 rbenv global 2.3.0
 gem install bundler
