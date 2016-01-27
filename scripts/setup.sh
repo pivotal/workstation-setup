@@ -81,7 +81,7 @@ brew cask install screenhero
 
 echo
 echo "Installing MacVim and vim configuration"
-brew cask install macvim
+brew install macvim
 cd ~/
 rm -rf ~/.vim
 git clone https://github.com/pivotalcommon/vim-config.git ~/.vim
