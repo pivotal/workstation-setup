@@ -15,7 +15,7 @@ Then open up the OS X Terminal and run the following commands:
 $ cd workspace
 $ git clone https://github.com/pivotal/workstation-setup.git
 $ cd workstation-setup
-$ ./script/setup.sh
+$ ./scripts/setup.sh
 ```
 
 ## Having problems?
