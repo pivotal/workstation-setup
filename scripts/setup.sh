@@ -70,6 +70,7 @@ cp files/.pairs ~/.pairs
 echo
 echo "Installing common applications"
 brew cask install flux
+brew cask install flycut
 brew cask install github-desktop
 brew cask install google-chrome
 brew cask install iterm2
