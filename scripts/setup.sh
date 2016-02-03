@@ -70,14 +70,14 @@ cp files/.pairs ~/.pairs
 echo
 echo "Installing common applications"
 brew cask install flux
-brew cask install iterm2
-brew cask install google-chrome
-brew cask install shiftit
-brew cask install macdown
-brew cask install slack
 brew cask install github-desktop
-brew cask install sourcetree
+brew cask install google-chrome
+brew cask install iterm2
+brew cask install macdown
 brew cask install screenhero
+brew cask install shiftit
+brew cask install slack
+brew cask install sourcetree
 
 echo
 echo "Installing MacVim and vim configuration"
