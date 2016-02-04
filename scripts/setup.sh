@@ -80,6 +80,9 @@ brew cask install shiftit
 brew cask install slack
 brew cask install sourcetree
 
+echo "Setting up iterm"
+cp files/com.googlecode.iterm2.plist ~/Library/Preferences
+
 echo
 echo "Installing MacVim and vim configuration"
 brew install macvim
