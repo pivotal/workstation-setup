@@ -79,7 +79,8 @@ brew cask install screenhero
 brew cask install shiftit
 brew cask install slack
 brew cask install sourcetree
-
+brew cask install textmate
+ 
 echo "Setting up iterm"
 cp files/com.googlecode.iterm2.plist ~/Library/Preferences
 
