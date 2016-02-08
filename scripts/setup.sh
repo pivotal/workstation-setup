@@ -130,6 +130,9 @@ echo
 echo "Adding rbenv initialization to .bash_profile..."
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 
+echo 'Customizing OS X configuration'
+./scripts/osx-settings.sh
+
 echo
 echo "Done!"
 
