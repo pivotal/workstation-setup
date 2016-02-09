@@ -62,6 +62,7 @@ echo "Installing git tools"
 brew install git
 brew tap git-duet/tap
 brew install git-duet
+gem install pivotal_git_scripts
 
 echo
 echo "Putting a sample git-pair file in ~/.pairs"
