@@ -90,7 +90,7 @@ echo "Installing MacVim and vim configuration"
 brew install macvim
 cd ~/
 rm -rf ~/.vim
-git clone https://github.com/pivotalcommon/vim-config.git ~/.vim
+git clone https://github.com/pivotal/vim-config.git ~/.vim
 ~/.vim/bin/install
 
 echo
