@@ -1,2 +1,4 @@
-"\e[A":history-search-backward
-"\e[B":history-search-forward
+$if Bash
+  "\e[B": history-search-forward
+  "\e[A": history-search-backward
+$endif
