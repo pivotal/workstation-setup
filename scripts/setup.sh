@@ -88,10 +88,11 @@ cp files/com.googlecode.iterm2.plist ~/Library/Preferences
 echo
 echo "Installing MacVim and vim configuration"
 brew install macvim
-cd ~/
+pushd ~/
 rm -rf ~/.vim
 git clone https://github.com/pivotal/vim-config.git ~/.vim
 ~/.vim/bin/install
+popd
 
 echo
 echo "Installing Java Development tools"
@@ -115,12 +116,13 @@ brew cask install rubymine
 
 echo
 echo "Setting up Pivotal IDE preferences..."
-cd ~/workspace
+pushd ~/workspace
 rm -rf pivotal_ide_prefs
 git clone https://github.com/pivotal/pivotal_ide_prefs.git
 pushd pivotal_ide_prefs/cli/
 ./bin/ide_prefs install --ide=intellij
 ./bin/ide_prefs install --ide=rubymine
+popd
 popd
 
 echo
@@ -130,6 +132,9 @@ echo 'export PATH="/usr/local/sbin:$PATH"' >> ~/.bash_profile
 echo
 echo "Adding rbenv initialization to .bash_profile..."
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+
+echo 'Customizing OS X configuration'
+./scripts/osx-settings.sh
 
 echo
 echo "Done!"
