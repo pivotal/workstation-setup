@@ -14,6 +14,3 @@ defaults write /Users/pivotal/Library/Preferences/.GlobalPreferences InitialKeyR
 # set finder to display full path in title bar
 defaults write com.apple.finder '_FXShowPosixPathInTitle' -bool true
 
-# allow a user to choose a language input method from a pop-up menu in the login window
-# useful if keyboard left in dvorak or comak
-defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -boolean true
