@@ -37,6 +37,10 @@ echo "Cleaning up your Homebrew installation..."
 brew cleanup
 
 echo
+echo "Installing Homebrew services..."
+brew tap homebrew/services
+
+echo
 echo "Installing bash-it"
 brew install grc
 brew install coreutils
