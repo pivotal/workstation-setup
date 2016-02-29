@@ -2,3 +2,5 @@ $if Bash
   "\e[B": history-search-forward
   "\e[A": history-search-backward
 $endif
+
+set completion-ignore-case On
