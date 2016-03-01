@@ -68,6 +68,13 @@ brew tap git-duet/tap
 brew install git-duet
 brew install git-pair
 
+brew install bash-completion
+cat <<EOF >> ~/.bash_profile
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+EOF
+
 echo
 echo "Putting a sample git-pair file in ~/.pairs"
 cp files/.pairs ~/.pairs
