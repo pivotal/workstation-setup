@@ -1,0 +1,8 @@
+pairs:
+  bk: Brian Kelly; bkelly
+  ah: Ashraf Hanafy; ahanafy
+
+email:
+  prefix: pair
+  domain: pivotal.io
+
