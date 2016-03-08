@@ -29,9 +29,3 @@ brew cask install sublime
 brew cask install textmate
 brew install macvim
 
-# Design Tools
-
-brew cask install adobe-creative-cloud
-brew cask install sketch
-brew cask install recordit
-
