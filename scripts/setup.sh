@@ -22,6 +22,8 @@ $setup_dir/configuration-bash.sh
 $setup_dir/git.sh
 $setup_dir/java.sh
 $setup_dir/ruby.sh
+$setup_dir/node.sh
+$setup_dir/node-packages.sh
 $setup_dir/cloud.sh
 $setup_dir/applications.sh
 $setup_dir/configurations.sh
