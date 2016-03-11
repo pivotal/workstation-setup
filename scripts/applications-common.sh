@@ -21,6 +21,7 @@ brew cask install firefox
 
 brew cask install slack
 brew cask install screenhero
+brew cask install skype
 
 # Text Editors
 
@@ -29,9 +30,6 @@ brew cask install sublime
 brew cask install textmate
 brew install macvim
 
-# Design Tools
+# Emulation tools
 
-brew cask install adobe-creative-cloud
-brew cask install sketch
-brew cask install recordit
-
+brew cask install virtualbox

@@ -15,7 +15,22 @@ Then open up the OS X Terminal and run the following commands:
 $ cd workspace
 $ git clone https://github.com/pivotal/workstation-setup.git
 $ cd workstation-setup
-$ ./scripts/setup.sh
+```
+
+### Engineering Machine
+
+If you're setting up an engineering machine run the following:
+
+```sh
+$ ./engineer.sh
+```
+
+### Designer Machine
+
+If you're setting up an engineering machine run the following:
+
+```sh
+$ ./designer.sh
 ```
 
 ## Having problems?
@@ -24,7 +39,7 @@ If you're having problems using the setup script, please let us know by [opening
 
 ## Customizing
 
-If you'd like to customize this project for your own use:
+If you'd like to customize this project for a project's use:
 
 - Fork the project
 - Edit `./scripts/setup.sh` to your liking

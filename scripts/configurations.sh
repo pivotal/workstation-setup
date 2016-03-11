@@ -1,5 +1,5 @@
 echo
-echo "Configuring iterm"
+echo "Configuring iTerm"
 cp files/com.googlecode.iterm2.plist ~/Library/Preferences
 
 echo

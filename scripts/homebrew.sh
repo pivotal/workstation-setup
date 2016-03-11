@@ -12,11 +12,11 @@ echo "Ensuring you have the latest Homebrew..."
 brew update
 
 echo 
-echo "Ensuring you have a healthy Homebrew enviroment..."
+echo "Ensuring you have a healthy Homebrew environment..."
 brew doctor
 
 echo
-echo "Ensuring your Homebrew directory is writeable..."
+echo "Ensuring your Homebrew directory is writable..."
 sudo chown -R $(whoami) /usr/local/bin
 
 echo
@@ -28,6 +28,9 @@ echo "Adding Pivotal Tab to Homebrew"
 brew tap pivotal/tap
 
 echo
+echo "Upgrading existing brews..."
+brew upgrade
+
 echo "Cleaning up your Homebrew installation..."
 brew cleanup
 
