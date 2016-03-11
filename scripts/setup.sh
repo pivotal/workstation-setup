@@ -18,6 +18,7 @@ ${MY_DIR}/homebrew.sh
 ${MY_DIR}/configuration-osx.sh
 ${MY_DIR}/configuration-bash.sh
 ${MY_DIR}/git.sh
+${MY_DIR}/git-aliases.sh
 ${MY_DIR}/java.sh
 ${MY_DIR}/ruby.sh
 ${MY_DIR}/node.sh
