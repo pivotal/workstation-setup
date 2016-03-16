@@ -27,7 +27,7 @@ $ ./engineer.sh
 
 ### Designer Machine
 
-If you're setting up an engineering machine run the following:
+If you're setting up a design machine run the following:
 
 ```sh
 $ ./designer.sh
