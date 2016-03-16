@@ -8,6 +8,7 @@ brew cask install flycut
 brew cask install shiftit
 brew cask install dash
 brew cask install postman
+brew casket install google-drive
 
 # Terminals
 
