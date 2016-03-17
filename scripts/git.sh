@@ -12,3 +12,6 @@ echo
 echo "Putting a sample git-pair file in ~/.pairs"
 cp files/.pairs ~/.pairs
 
+echo
+echo "Setting vim as core editor for git"
+git config --global core.editor /usr/bin/vim
