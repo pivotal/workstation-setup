@@ -60,5 +60,6 @@ The goals of this projects is to keep the setup process simple and up to date:
 Please see [this GitHub issue](https://github.com/pivotal/workstation-setup/issues/3) for more discussion on the subject.
 
 ## FAQ
-Is it okay to run `./designer.sh` command again?
+**Is it okay to run `./designer.sh` command again?**
+
 Yes. The script does not reinstall apps that are already on the machine.
