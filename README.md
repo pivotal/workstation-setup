@@ -58,3 +58,7 @@ The goals of this projects is to keep the setup process simple and up to date:
 - It has very limited requirements: git, bash and Ruby are all available on OS X by default
 
 Please see [this GitHub issue](https://github.com/pivotal/workstation-setup/issues/3) for more discussion on the subject.
+
+## FAQ
+Is it okay to run `./designer.sh` command again?
+Yes. The script does not reinstall apps that are already on the machine.
