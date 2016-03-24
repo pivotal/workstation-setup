@@ -26,7 +26,7 @@ ${MY_DIR}/node-packages.sh
 ${MY_DIR}/cloud.sh
 ${MY_DIR}/applications-common.sh
 
-if [ "$SETUP_TYPE" -eq "designer" ]
+if [ "${SETUP_TYPE}" == "designer" ]
 then
   ${MY_DIR}/applications-designer.sh
 fi
