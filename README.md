@@ -33,6 +33,8 @@ If you're setting up a design machine run the following:
 $ ./designer.sh
 ```
 
+To see which applications were installed, visit [applications-designer.sh]  (workstation-setup/scripts/applications-designer.sh)
+
 ## Having problems?
 
 If you're having problems using the setup script, please let us know by [opening an issue](https://github.com/pivotal/workstation-setup/issues/new).
