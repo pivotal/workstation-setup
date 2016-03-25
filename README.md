@@ -25,6 +25,8 @@ If you're setting up an engineering machine run the following:
 $ ./engineer.sh
 ```
 
+The list of Engineering applications is found in: [applications-common.sh] (https://github.com/pivotal/workstation-setup/blob/master/scripts/applications-common.sh)
+
 ### Designer Machine
 
 If you're setting up a design machine run the following:
@@ -33,7 +35,7 @@ If you're setting up a design machine run the following:
 $ ./designer.sh
 ```
 
-To see which applications were installed, visit [applications-designer.sh]  (https://github.com/pivotal/workstation-setup/blob/master/scripts/applications-designer.sh)
+In addition to the Engineering applications, this script also installs the list of Design applications found in: [applications-designer.sh]  (https://github.com/pivotal/workstation-setup/blob/master/scripts/applications-designer.sh)
 
 ## Having problems?
 
