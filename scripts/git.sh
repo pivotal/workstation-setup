@@ -5,7 +5,7 @@ brew tap git-duet/tap
 brew install git-duet
 brew install git-pair
 brew cask install github-desktop
-brew cask install gitx
+brew cask install rowanj-gitx
 brew cask install sourcetree
 
 echo
