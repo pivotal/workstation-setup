@@ -9,6 +9,7 @@ pushd ~/
 git clone https://github.com/Bash-it/bash-it.git ~/.bash_it
 popd
 cp files/add_user_initials_to_git_prompt_info.bash ~/.bash_it/custom
-mkdir -p ~/.bash_it/completion/enabled
-cp ~/.bash_it/completion/available/git.completion.bash ~/.bash_it/completion/enabled/git.completion.bash
 ~/.bash_it/install.sh
+source ~/.bash_profile
+bash-it enable completion git
+bash-it enable plugin ssh
