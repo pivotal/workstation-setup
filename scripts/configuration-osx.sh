@@ -11,7 +11,7 @@ defaults write com.apple.dock autohide -bool true
 killall Dock
 
 # fast key repeat rate, requires reboot to take effect
-defaults write /Users/pivotal/Library/Preferences/.GlobalPreferences KeyRepeat -int 1
+defaults write /Users/pivotal/Library/Preferences/.GlobalPreferences KeyRepeat -int 2
 defaults write /Users/pivotal/Library/Preferences/.GlobalPreferences InitialKeyRepeat -int 15
 
 # set finder to display full path in title bar
