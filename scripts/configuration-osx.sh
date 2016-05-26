@@ -17,3 +17,5 @@ defaults write /Users/pivotal/Library/Preferences/.GlobalPreferences InitialKeyR
 # set finder to display full path in title bar
 defaults write com.apple.finder '_FXShowPosixPathInTitle' -bool true
 
+# enable Flycut to start on login
+defaults write '/Users/pivotal/Library/Application Support/Flycut/com.generalarcade.flycut.plist' loadOnStartup -bool true
