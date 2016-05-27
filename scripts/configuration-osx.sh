@@ -21,4 +21,5 @@ defaults write com.apple.finder '_FXShowPosixPathInTitle' -bool true
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 #to revert use defaults -currentHost delete com.apple.ImageCapture disableHotPlug
 
-
+# enable Flycut to start on login
+defaults write '/Users/pivotal/Library/Application Support/Flycut/com.generalarcade.flycut.plist' loadOnStartup -bool true
