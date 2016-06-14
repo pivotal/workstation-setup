@@ -23,7 +23,7 @@ cd workstation-setup
 If you're setting up an engineering machine run the following:
 
 ```sh
-$ ./engineer.sh
+./engineer.sh
 ```
 
 The list of Engineering applications is found in: [applications-common.sh] (https://github.com/pivotal/workstation-setup/blob/master/scripts/applications-common.sh)
@@ -33,7 +33,7 @@ The list of Engineering applications is found in: [applications-common.sh] (http
 If you're setting up a design machine run the following:
 
 ```sh
-$ ./designer.sh
+./designer.sh
 ```
 
 In addition to the Engineering applications, this script also installs the list of Design applications found in: [applications-designer.sh]  (https://github.com/pivotal/workstation-setup/blob/master/scripts/applications-designer.sh)
