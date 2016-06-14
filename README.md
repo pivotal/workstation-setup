@@ -12,10 +12,10 @@ This project automates the process of setting up a new Pivotal Labs machine usin
 Open up the OS X Terminal and run the following commands:
 
 ```sh
-$ mkdir -p ~/workspace
-$ cd ~/workspace
-$ git clone https://github.com/pivotal/workstation-setup.git
-$ cd workstation-setup
+mkdir -p ~/workspace
+cd ~/workspace
+git clone https://github.com/pivotal/workstation-setup.git
+cd workstation-setup
 ```
 
 ### Engineering Machine
