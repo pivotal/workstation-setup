@@ -7,7 +7,7 @@ clear
 
 echo
 echo "Ensuring your Homebrew directory is writable..."
-sudo chown -R $(whoami) /usr/local/bin
+echo "$PASS" | sudo -kS chown -R $(whoami) /usr/local/bin
 
 brew prune
 

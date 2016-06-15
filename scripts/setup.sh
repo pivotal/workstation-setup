@@ -1,5 +1,18 @@
 #!/usr/bin/env bash
 
+while : ; do
+  read -sp "Password:" PASS
+  echo
+  echo "Testing password..."
+  echo "$PASS" | sudo -kS true 2>/dev/null
+  if [ $? -eq 0 ]; then
+    echo "All good!"
+    export PASS
+    break
+  fi
+  echo "No good. Please try again."
+done
+
 # Fail immediately if any errors occur
 set -e
 
