@@ -1,5 +1,7 @@
 echo
 echo "Installing Ruby tools and Ruby 2.3.0"
+cp files/.irbrc ~/.irbrc
+brew install readline
 brew install rbenv
 eval "$(rbenv init -)"
 rbenv install 2.3.0 --skip-existing
