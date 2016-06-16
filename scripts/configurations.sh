@@ -13,8 +13,8 @@ loginitems -a "ShiftIt" -p "/Users/$(whoami)/Applications/ShiftIt.app" # Start o
 open ~/Applications/ShiftIt.app
 
 echo "Configuring FlyCut"
-loginitems -a "FlyCut" # Start at login
-open /Applications/ShiftIt.app
+loginitems -a "Flycut" # Start at login
+open /Applications/Flycut.app
 
 echo
 echo "Installing vim configuration"
