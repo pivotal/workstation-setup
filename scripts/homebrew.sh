@@ -17,7 +17,7 @@ brew doctor
 
 echo
 echo "Ensuring your Homebrew directory is writable..."
-echo "$PASS" | sudo -kS chown -R $(whoami) /usr/local/bin
+sudo chown -R $(whoami) /usr/local/bin
 
 echo
 echo "Installing Homebrew services..."
