@@ -9,8 +9,8 @@ cp files/com.googlecode.iterm2.plist ~/Library/Preferences
 
 echo "Configuring ShiftIt"
 sudo tccutil --insert "org.shiftitapp.ShiftIt" # Enable Accessibility Settings
-loginitems -a "ShiftIt" -p "/Users/$(whoami)/Applications/ShiftIt.app" # Start on login
-open ~/Applications/ShiftIt.app
+loginitems -a "ShiftIt" # Start on login
+open /Applications/ShiftIt.app
 
 echo "Configuring FlyCut"
 loginitems -a "Flycut" # Start at login
