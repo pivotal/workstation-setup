@@ -24,7 +24,7 @@ echo "Installing Homebrew services..."
 brew tap homebrew/services
 
 echo
-echo "Adding Pivotal Tab to Homebrew"
+echo "Adding Pivotal tap to Homebrew"
 brew tap pivotal/tap
 
 echo
