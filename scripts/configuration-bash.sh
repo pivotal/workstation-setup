@@ -14,3 +14,4 @@ cp files/bobby_pivotal/bobby_pivotal.theme.bash ~/.bash_it/themes/bobby/bobby.th
 source ~/.bash_profile
 bash-it enable completion git
 bash-it enable plugin ssh
+bash-it enable plugin rbenv
