@@ -10,8 +10,3 @@ gem install bundler
 rbenv rehash
 
 brew cask install rubymine
-
-echo
-echo "Adding rbenv initialization to .bash_profile..."
-echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-
