@@ -35,6 +35,10 @@ then
   source ${MY_DIR}/applications-designer.sh
 fi
 
+if [ "${SETUP_TYPE}" == "data-engineer" ]
+  source ${MY_DIR}/applications-data-engineer.sh
+fi
+
 source ${MY_DIR}/configurations.sh
 
 source ${MY_DIR}/finished.sh

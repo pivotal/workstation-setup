@@ -23,7 +23,8 @@ cd workstation-setup
 If you're setting up an engineering machine run the following:
 
 ```sh
-./engineer.sh
+./data-engineer.sh
+./labs-engineer.sh
 ```
 
 The list of Engineering applications is found in: [applications-common.sh] (https://github.com/pivotal/workstation-setup/blob/master/scripts/applications-common.sh)
