@@ -36,6 +36,7 @@ then
 fi
 
 if [ "${SETUP_TYPE}" == "data-engineer" ]
+then
   source ${MY_DIR}/applications-data-engineer.sh
 fi
 
