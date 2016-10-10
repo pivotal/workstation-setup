@@ -30,6 +30,11 @@ source ${MY_DIR}/node-packages.sh
 source ${MY_DIR}/cloud.sh
 source ${MY_DIR}/applications-common.sh
 
+if [ "${SETUP_TYPE}" == "engineer" ]
+then
+  source ${MY_DIR}/direnv.sh
+fi
+
 if [ "${SETUP_TYPE}" == "designer" ]
 then
   source ${MY_DIR}/applications-designer.sh
