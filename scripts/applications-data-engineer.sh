@@ -4,6 +4,13 @@ echo "Installing Data R&D Engineer applications"
 brew install autoconf
 brew install wget
 
+# Go source
+mkdir -p ~/go/src
+brew install go --cross-compile-common
+export GOPATH=$HOME/go
+echo "Adding GOPATH"
+echo 'export GOPATH==$HOME/go' >> ~/.bash_profile
+
 # C tools
 brew install ccache
 brew install ctags
