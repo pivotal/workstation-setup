@@ -30,7 +30,7 @@ source ${MY_DIR}/node-packages.sh
 source ${MY_DIR}/cloud.sh
 source ${MY_DIR}/applications-common.sh
 
-if [ "${SETUP_TYPE}" == "engineer" ]
+if [ "${SETUP_TYPE}" == "labs-engineer" ]
 then
   source ${MY_DIR}/direnv.sh
 fi
