@@ -13,3 +13,4 @@ source ~/.bash_profile
 bash-it enable completion git
 bash-it enable plugin ssh
 bash-it enable plugin rbenv
+bash-it enable completion ssh
