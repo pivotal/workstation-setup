@@ -1,6 +1,23 @@
 # Workstation Setup
 
-This project automates the process of setting up a new Pivotal Labs machine using a simple [Bash](https://www.gnu.org/software/bash/) script.
+This project automates the process of setting up a new Pivotal machine using a simple [Bash](https://www.gnu.org/software/bash/) script.
+
+## Goals
+
+The primary goal of this project is to give people a simple script they can run to make their machine a bit more useful and standard for working on Pivotal projects.
+
+ * A bash script is easy for users to edit locally on-the-fly for small temporary tweaks
+ * Everything is in one repository
+ * The project name is informative
+ * Keep it easy to fork and customize
+ * It has very limited requirements: git, bash and Ruby are all available on macOS by default
+
+## Anti-goals
+
+This project does not aim to do everything. Some examples:
+
+ * We don't install everything that your project needs. These scripts should only install generally useful things, and prefer running quickly over being complete.
+ * We avoid setting up and maintaining overly-custom configurations. When there is already a tool that will get us something in a conventional manner, such as [bash-it](https://github.com/Bash-it/bash-it), we prefer to use it instead of doing things ourselves.
 
 **Warning: the automation script is currently aggressive about what it does and will overwrite vim configurations, bash-it configurations, etc.**
 
@@ -62,11 +79,5 @@ Yes. The script does not reinstall apps that are already on the machine.
 This project is provided as an alternative to the [pivotal-sprout/sprout-wrap](https://github.com/pivotal-sprout/sprout-wrap) project. You are encouraged to use that project if it better suits your needs.
 
 The goals of this projects is to keep the setup process simple and up to date:
-
-- A bash script is easy to manage
-- Everything is in one repository
-- The project name is informative
-- Keep it easy to fork and customize
-- It has very limited requirements: git, bash and Ruby are all available on OS X by default
 
 Please see [this GitHub issue](https://github.com/pivotal/workstation-setup/issues/3) for more discussion on the subject.
