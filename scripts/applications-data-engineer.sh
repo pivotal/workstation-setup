@@ -9,7 +9,8 @@ mkdir -p ~/go/src
 brew install go --cross-compile-common
 export GOPATH=$HOME/go
 echo "Adding GOPATH"
-echo 'export GOPATH==$HOME/go' >> ~/.bash_profile
+echo 'export GOPATH=$HOME/go' >> ~/.bash_profile
+echo 'export PATH="$PATH:$GOPATH/bin"' >> ~/.bash_profile
 
 # C tools
 brew install ccache
