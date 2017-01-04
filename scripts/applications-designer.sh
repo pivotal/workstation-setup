@@ -1,3 +1,7 @@
+# All these applications are independent, so if one
+# fails to install, don't stop.
+set +e
+
 echo
 echo "Installing Designer applications"
 
@@ -13,3 +17,4 @@ brew cask install skitch
 brew cask install licecap
 brew cask install screenflow
 
+set -e
