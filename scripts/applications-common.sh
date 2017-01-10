@@ -35,7 +35,7 @@ brew cask install skype
 brew cask install macdown
 brew cask install sublime-text
 brew cask install textmate
-brew install macvim
+brew cask install macvim
 
 # Emulation tools
 
