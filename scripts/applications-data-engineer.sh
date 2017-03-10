@@ -3,6 +3,7 @@ echo "Installing Data R&D Engineer applications"
 
 brew install autoconf
 brew install wget
+brew install fzf
 
 # Go source
 mkdir -p ~/go/src
