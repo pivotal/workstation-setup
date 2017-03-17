@@ -23,7 +23,8 @@ brew cask install docker
 
 # Docker Bash Completion
 # Reference https://docs.docker.com/docker-for-mac/
-cd /usr/local/etc/bash_completion.d
+pushd /usr/local/etc/bash_completion.d
 ln -s /Applications/Docker.app/Contents/Resources/etc/docker.bash-completion
 ln -s /Applications/Docker.app/Contents/Resources/etc/docker-machine.bash-completion
 ln -s /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion
+popd
