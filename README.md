@@ -37,7 +37,7 @@ cd workstation-setup
 
 ### Engineering Machine
 
-If you're setting up an engineering machine run the following:
+If you're setting up an engineering machine run one or both of the following:
 
 ```sh
 ./data-engineer.sh
