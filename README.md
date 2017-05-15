@@ -60,6 +60,8 @@ In addition to the Engineering applications, this script also installs the list 
 
 If you're having problems using the setup script, please let us know by [opening an issue](https://github.com/pivotal/workstation-setup/issues/new).
 
+If you see errors from `brew`, try running `brew doctor` and include the diagnostic output in your issue submission.
+
 ## Customizing
 
 If you'd like to customize this project for a project's use:

@@ -11,10 +11,6 @@ echo
 echo "Ensuring you have the latest Homebrew..."
 brew update
 
-echo 
-echo "Ensuring you have a healthy Homebrew environment..."
-brew doctor
-
 echo
 echo "Ensuring your Homebrew directory is writable..."
 sudo chown -R $(whoami) /usr/local/bin
