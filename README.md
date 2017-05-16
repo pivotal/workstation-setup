@@ -23,10 +23,10 @@ This project does not aim to do everything. Some examples:
 
 ## Getting Started
 
-- Make sure you are running [El Capitan](https://itunes.apple.com/us/app/os-x-el-capitan/id1018109117)
-- Install [Xcode 7](https://itunes.apple.com/us/app/xcode/id497799835)
+- Make sure you are running the lastest version of macOS. (Currently [Sierra](https://www.apple.com/macos/sierra/))
+- Install the latest version of [Xcode](https://developer.apple.com/xcode/).
 
-Open up the OS X Terminal and run the following commands:
+Open up Terminal.app and run the following commands:
 
 ```sh
 mkdir -p ~/workspace
