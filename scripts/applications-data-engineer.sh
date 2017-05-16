@@ -18,6 +18,7 @@ brew install ctags
 brew install cmake
 brew install cscope
 brew cask install clion
+brew install ninja
 
 # Docker
 brew cask install docker
