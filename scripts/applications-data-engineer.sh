@@ -3,6 +3,7 @@ echo "Installing Data R&D Engineer applications"
 
 brew install autoconf
 brew install wget
+brew install fzf
 
 # Go source
 mkdir -p ~/go/src
@@ -17,6 +18,7 @@ brew install ctags
 brew install cmake
 brew install cscope
 brew cask install clion
+brew install ninja
 
 # Docker
 brew cask install docker
