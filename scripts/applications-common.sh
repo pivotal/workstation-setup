@@ -29,6 +29,7 @@ brew cask install firefox
 brew cask install slack
 brew cask install screenhero
 brew cask install skype
+brew cask install zoomus
 
 # Text Editors
 
