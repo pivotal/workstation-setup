@@ -5,12 +5,7 @@ brew install autoconf
 brew install wget
 brew install fzf
 
-# Go source
-mkdir -p ~/go/src
-brew install go --cross-compile-common
-export GOPATH=$HOME/go
-echo "Adding GOPATH"
-echo 'export GOPATH==$HOME/go' >> ~/.bash_profile
+source ${MY_DIR}/golang.sh
 
 # C tools
 brew install ccache
