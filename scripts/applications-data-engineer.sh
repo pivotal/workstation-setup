@@ -10,14 +10,7 @@ brew install wget
 brew install fzf
 
 source ${MY_DIR}/golang.sh
-
-# C tools
-brew install ccache
-brew install ctags
-brew install cmake
-brew install cscope
-brew cask install clion
-brew install ninja
+source ${MY_DIR}/c.sh
 
 # Docker
 brew cask install docker
