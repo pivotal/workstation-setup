@@ -2,7 +2,7 @@ echo
 echo "Installing Golang Development tools"
 
 mkdir -p ~/go/src
-brew install go --cross-compile-common
+brew install go
 brew cask install gogland
 
 echo
