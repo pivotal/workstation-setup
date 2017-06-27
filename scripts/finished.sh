@@ -10,7 +10,12 @@ echo "sudo scutil --set LocalHostName newname"
 echo "sudo scutil --set HostName newname"
 
 echo
-echo "After checking the above output for any problems, start a new iTerm session to make use of all the tools that have been installed."
+echo "You can use 'git pair' (enabled) 'git duet' (enabled) or 'git with' aka git-together (installed but not enabled)"
+echo "To enable git together"
+echo "'git=git-together' >> ~/.bash_profile"
+
+echo
+echo "After checking the above output for any problems, start a new iTerm session to make use of all the installed tools."
 echo "Rebooting is only necessary for keyboard repeat settings to work."
 
 echo
