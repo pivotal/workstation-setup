@@ -24,7 +24,7 @@ This project does not aim to do everything. Some examples:
 ## Getting Started
 
 - Make sure you are running the lastest version of macOS. (Currently [Sierra](https://www.apple.com/macos/sierra/))
-- Install the latest version of [Xcode](https://developer.apple.com/xcode/).
+- If you are not on Sierra, you need to install the latest version of [Xcode](https://developer.apple.com/xcode/). On Sierra, using git will install the command line developer tools.  
 
 Open up Terminal.app and run the following commands:
 
