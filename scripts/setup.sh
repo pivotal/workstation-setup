@@ -24,7 +24,7 @@ source ${MY_DIR}/configuration-bash.sh
 source ${MY_DIR}/git.sh
 source ${MY_DIR}/git-aliases.sh
 source ${MY_DIR}/java.sh
-source ${MY_DIR}/cloud.sh
+source ${MY_DIR}/cloud-foundry.sh
 source ${MY_DIR}/applications-common.sh
 
 if [ "${SETUP_TYPE}" == "labs-engineer" ]
