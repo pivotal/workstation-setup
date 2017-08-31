@@ -5,7 +5,6 @@ set +e
 echo
 echo "Installing Data R&D Engineer applications"
 
-brew install autoconf
 brew install wget
 brew install fzf
 
