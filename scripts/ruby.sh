@@ -9,3 +9,8 @@ gem install bundler
 rbenv rehash
 
 brew cask install rubymine
+
+source ${MY_DIR}/download-pivotal-ide-prefs.sh
+pushd ~/workspace/pivotal_ide_prefs/cli
+./bin/ide_prefs install --ide=rubymine
+popd
