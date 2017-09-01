@@ -20,10 +20,12 @@ source ${MY_DIR}/homebrew.sh
 
 # Place any applications that require the user to type in their password here
 brew tap caskroom/cask
+brew cask install github-desktop
+brew cask install virtualbox
 brew cask install zoomus
 
-source ${MY_DIR}/configuration-osx.sh
 source ${MY_DIR}/configuration-bash.sh
+source ${MY_DIR}/configuration-osx.sh
 source ${MY_DIR}/git.sh
 source ${MY_DIR}/git-aliases.sh
 source ${MY_DIR}/java.sh
