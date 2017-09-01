@@ -17,16 +17,20 @@ echo "Setting up a '$SETUP_TYPE' machine..."
 
 # Note: Homebrew needs to be set up first
 source ${MY_DIR}/homebrew.sh
-source ${MY_DIR}/configuration-osx.sh
+
+# Place any applications that require the user to type in their password here
+brew tap caskroom/cask
+brew cask install github-desktop
+brew cask install virtualbox
+brew cask install zoomus
+
 source ${MY_DIR}/configuration-bash.sh
+source ${MY_DIR}/configuration-osx.sh
 source ${MY_DIR}/git.sh
 source ${MY_DIR}/git-aliases.sh
-source ${MY_DIR}/java.sh
 source ${MY_DIR}/cloud-foundry.sh
 source ${MY_DIR}/applications-common.sh
 
-# Place any applications that require the user to type in their password here
-brew cask install zoomus
 
 if [ "${SETUP_TYPE}" == "labs-engineer" ]
 then
@@ -44,5 +48,6 @@ then
 fi
 
 source ${MY_DIR}/configurations.sh
+source ${MY_DIR}/java.sh
 
 source ${MY_DIR}/finished.sh

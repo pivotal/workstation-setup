@@ -36,8 +36,4 @@ brew cask install sublime-text
 brew cask install textmate
 brew cask install macvim
 
-# Emulation tools
-
-brew cask install virtualbox
-
 set -e
