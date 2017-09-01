@@ -25,6 +25,9 @@ source ${MY_DIR}/java.sh
 source ${MY_DIR}/cloud-foundry.sh
 source ${MY_DIR}/applications-common.sh
 
+# Place any applications that require the user to type in their password here
+brew cask install zoomus
+
 if [ "${SETUP_TYPE}" == "labs-engineer" ]
 then
   source ${MY_DIR}/applications-labs-engineer.sh
