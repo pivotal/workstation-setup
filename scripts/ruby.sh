@@ -8,7 +8,8 @@ rbenv global 2.3.1
 gem install bundler
 rbenv rehash
 
-brew cask install rubymine
+# guard against pre-installed rubymine
+brew cask install rubymine --force
 
 source ${MY_DIR}/download-pivotal-ide-prefs.sh
 pushd ~/workspace/pivotal_ide_prefs/cli
