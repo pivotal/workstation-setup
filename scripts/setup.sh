@@ -15,8 +15,6 @@ clear
 echo
 echo "Setting up a '$SETUP_TYPE' machine..."
 
-source ${MY_DIR}/remove-icons-from-dock.sh
-
 # Note: Homebrew needs to be set up first
 source ${MY_DIR}/homebrew.sh
 
