@@ -25,7 +25,6 @@ brew cask install virtualbox
 brew cask install zoomus
 
 source ${MY_DIR}/configuration-bash.sh
-source ${MY_DIR}/configuration-osx.sh
 source ${MY_DIR}/git.sh
 source ${MY_DIR}/git-aliases.sh
 source ${MY_DIR}/cloud-foundry.sh
@@ -47,6 +46,7 @@ then
   source ${MY_DIR}/applications-data-engineer.sh
 fi
 
+source ${MY_DIR}/configuration-osx.sh
 source ${MY_DIR}/configurations.sh
 source ${MY_DIR}/java.sh
 
