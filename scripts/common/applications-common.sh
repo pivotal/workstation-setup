@@ -24,7 +24,6 @@ brew cask install iterm2
 # Browsers
 
 brew cask install google-chrome
-brew cask install firefox
 
 # Communication
 

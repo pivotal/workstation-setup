@@ -1,0 +1,2 @@
+echo
+echo "Installing customizations"
