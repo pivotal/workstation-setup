@@ -7,7 +7,6 @@ echo "Installing applications"
 
 # Utilities
 
-brew cask install flux
 brew cask install flycut
 brew cask install shiftit
 brew cask install dash
