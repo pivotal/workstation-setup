@@ -16,3 +16,8 @@ bash-it enable completion git
 bash-it enable plugin ssh
 bash-it enable plugin rbenv
 bash-it enable completion ssh
+
+echo
+echo "Configuring direnv with bash-it"
+brew install direnv
+cp files/direnv.bash ~/.bash_it/custom/direnv.bash
