@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # All these applications are independent, so if one
 # fails to install, don't stop.
 set +e

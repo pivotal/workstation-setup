@@ -37,11 +37,14 @@ cd workstation-setup
 
 ### Engineering Machine
 
-If you're setting up an engineering machine run one or both of the following:
+If you're setting up an engineering machine choose which languages to install:
 
 ```sh
-./data-engineer.sh
-./labs-engineer.sh
+# For Labs developers (remove unnecessary languages when running command)
+./setup.sh developer java ruby node golang c docker
+
+# For Data developers
+./setup.sh developer c golang java docker
 ```
 
 The list of Engineering applications is found in: [applications-common.sh](https://github.com/pivotal/workstation-setup/blob/master/scripts/applications-common.sh)
@@ -51,7 +54,7 @@ The list of Engineering applications is found in: [applications-common.sh](https
 If you're setting up a design machine run the following:
 
 ```sh
-./designer.sh
+./setup.sh designer
 ```
 
 In addition to the Engineering applications, this script also installs the list of Design applications found in: [applications-designer.sh](https://github.com/pivotal/workstation-setup/blob/master/scripts/applications-designer.sh)

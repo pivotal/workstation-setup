@@ -5,7 +5,7 @@ mkdir -p ~/go/src
 brew install go
 brew cask install goland
 
-source ${MY_DIR}/download-pivotal-ide-prefs.sh
+source ${MY_DIR}/scripts/common/download-pivotal-ide-prefs.sh
 pushd ~/workspace/pivotal_ide_prefs/cli
 ./bin/ide_prefs install --ide=gogland
 popd
