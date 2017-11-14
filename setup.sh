@@ -13,6 +13,7 @@ clear
 
 # Note: Homebrew needs to be set up first
 source ${MY_DIR}/scripts/common/homebrew.sh
+source ${MY_DIR}/scripts/common/configuration-bash.sh
 
 # Place any applications that require the user to type in their password here
 brew tap caskroom/cask
@@ -20,7 +21,6 @@ brew cask install github
 brew cask install virtualbox
 brew cask install zoomus
 
-source ${MY_DIR}/scripts/common/configuration-bash.sh
 source ${MY_DIR}/scripts/common/git.sh
 source ${MY_DIR}/scripts/common/git-aliases.sh
 source ${MY_DIR}/scripts/common/cloud-foundry.sh
