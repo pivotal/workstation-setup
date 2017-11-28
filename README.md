@@ -47,7 +47,7 @@ If you're setting up an engineering machine choose which languages to install:
 ./setup.sh developer c golang java docker
 ```
 
-The list of Engineering applications is found in: [applications-common.sh](https://github.com/pivotal/workstation-setup/blob/master/scripts/applications-common.sh)
+The list of Engineering applications is found in: [applications-common.sh](https://github.com/pivotal/workstation-setup/blob/master/scripts/common/applications-common.sh)
 
 ### Designer Machine
 
