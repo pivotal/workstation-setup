@@ -57,7 +57,7 @@ If you're setting up a design machine run the following:
 ./setup.sh designer
 ```
 
-In addition to the Engineering applications, this script also installs the list of Design applications found in: [applications-designer.sh](https://github.com/pivotal/workstation-setup/blob/master/scripts/applications-designer.sh)
+In addition to the Engineering applications, this script also installs the list of Design applications found in: [applications-designer.sh](https://github.com/pivotal/workstation-setup/blob/master/scripts/opt-in/designer.sh)
 
 ## Having problems?
 
