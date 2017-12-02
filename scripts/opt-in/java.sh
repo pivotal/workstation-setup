@@ -1,12 +1,4 @@
 echo
-echo "Installing Java Development tools"
+echo "Installing most recent version of Java"
 brew cask install java
-brew cask install intellij-idea --force # guard against pre-installed intellij
-brew install maven
-brew install gradle
-brew install springboot
-
-source ${MY_DIR}/scripts/common/download-pivotal-ide-prefs.sh
-pushd ~/workspace/pivotal_ide_prefs/cli
-./bin/ide_prefs install --ide=intellij
-popd
+source ${MY_DIR}/scripts/opt-in/java-tools.sh
