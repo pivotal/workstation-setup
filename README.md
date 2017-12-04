@@ -45,6 +45,9 @@ If you're setting up an engineering machine choose which languages to install:
 
 # For Data developers
 ./setup.sh developer c golang java docker
+
+# If you want java 8, you can use
+./setup.sh developer java8
 ```
 
 The list of Engineering applications is found in: [applications-common.sh](https://github.com/pivotal/workstation-setup/blob/master/scripts/common/applications-common.sh)
