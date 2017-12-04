@@ -25,7 +25,6 @@ brew cask install firefox
 # Communication
 
 brew cask install slack
-brew cask install screenhero
 brew cask install skype
 
 # Text Editors
