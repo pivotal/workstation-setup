@@ -13,10 +13,10 @@ git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(ye
 git config --global alias.lol "log --graph --decorate --oneline"
 git config --global alias.lola "log --graph --decorate --oneline --all"
 git config --global alias.blog "log origin/master... --left-right"
-git config --global alias.ds diff --staged
-git config --global alias.fixup commit --fixup
-git config --global alias.squash commit --squash
-git config --global alias.unstage reset HEAD
+git config --global alias.ds "diff --staged"
+git config --global alias.fixup "commit --fixup"
+git config --global alias.squash "commit --squash"
+git config --global alias.unstage "reset HEAD"
 git config --global alias.rum "rebase master@{u}"
 mkdir ~/.bash_it/aliases/enabled
 echo "#Git" >> ~/.bash_it/aliases/enabled/general.aliases.bash
