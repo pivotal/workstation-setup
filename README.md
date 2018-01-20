@@ -41,13 +41,13 @@ If you're setting up an engineering machine choose which languages to install:
 
 ```sh
 # For Labs developers (remove unnecessary languages when running command)
-./setup.sh unix java ruby node golang c docker
+./setup.sh java ruby node golang c docker
 
 # For Data developers
-./setup.sh unix c golang java docker
+./setup.sh c golang java docker
 
 # If you want java 8, you can use
-./setup.sh unix java8
+./setup.sh java8
 ```
 
 The list of Engineering applications is found in: [applications-common.sh](https://github.com/pivotal/workstation-setup/blob/master/scripts/common/applications-common.sh)
