@@ -1,6 +1,6 @@
 echo
 echo "Installing Java Development tools"
-brew cask install intellij-idea --force # guard against pre-installed intellij
+brew cask install jetbrains-toolbox --force
 brew install maven
 brew install gradle
 brew install springboot
