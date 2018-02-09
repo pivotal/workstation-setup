@@ -62,6 +62,14 @@ If you're setting up a design machine run the following:
 
 In addition to the Engineering applications, this script also installs the list of Design applications found in: [applications-designer.sh](https://github.com/pivotal/workstation-setup/blob/master/scripts/opt-in/designer.sh)
 
+### XP Workshop
+
+If you're setting up a machine for the XP workshop run the following:
+
+```sh
+./setup.sh java8 node
+```
+
 ## Having problems?
 
 If you're having problems using the setup script, please let us know by [opening an issue](https://github.com/pivotal/workstation-setup/issues/new).
