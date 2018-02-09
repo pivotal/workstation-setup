@@ -19,6 +19,8 @@ CHANGELOG
 * Add `keycastr`as a common application
 * Move the dock to the right side of the screen
 * Added `nvm` to the nodejs install scripts
+* Remove any global NPM packages.  Those are bad.
+* Install yarn when installing node.js
 
 The original README from Pivotal is below:
 
