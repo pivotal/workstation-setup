@@ -25,6 +25,7 @@ Voom has forked this project to make some tweaks for our flavor of pairing machi
 * Set OSX background image to be a sweet helicopter photo.
 * Remove `zoomus` from the default install
 * Remove `cloud-foundry` from the default install
+* Remove `virtualbox` from the default install
 * Remove `skype` as a common application
 * Add `keycastr` as a common application
 * Move the dock to the right side of the screen
