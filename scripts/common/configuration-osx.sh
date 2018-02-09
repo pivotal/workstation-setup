@@ -33,4 +33,4 @@ defaults write com.apple.dock orientation right
 killall -HUP Dock
 
 # set the desktop wallpaper
-osascript -e 'tell application “Finder” to set desktop picture to POSIX file "${MY_DIR}/files/images/splash.png"'
+osascript -e 'tell application "Finder" to set desktop picture to POSIX file "${MY_DIR}/files/images/splash.png"'
