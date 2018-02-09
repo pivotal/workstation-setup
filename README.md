@@ -2,6 +2,28 @@
 
 This project automates the process of setting up a new Pivotal machine using a simple [Bash](https://www.gnu.org/software/bash/) script.
 
+## Voom Pairing Machines
+
+To setup a Voom pairing machine, clone this repo and run `./setup.sh voom`
+
+Voom has cloned this project to make some tweaks for our flavor of pairing machine.  The changes include:
+
+CHANGELOG
+
+### 2018-02-09
+* Created the `voom` script, which merges in a few of the original scripts together
+* Created the `heroku` script, which installs Heroku stuff; make it part of the voom install
+* Remove `zoomus` from the default install
+* Remove `cloud-foundry` from the default install
+* Remove `skype` as a common application
+* Add `keycastr`as a common application
+* Move the dock to the right side of the screen
+* Added `nvm` to the nodejs install scripts
+
+The original README from Pivotal is below:
+
+---
+
 ## Goals
 
 The primary goal of this project is to give people a simple script they can run to make their machine a bit more useful and standard for working on Pivotal projects.
