@@ -31,3 +31,6 @@ dockutil --add /Applications/iTerm.app
 # move the dock to the right side of the screen (requires logout to take effect)
 defaults write com.apple.dock orientation right
 killall -HUP Dock
+
+# set the desktop wallpaper
+osascript -e 'tell application “Finder” to set desktop picture to POSIX file "${MY_DIR}/files/images/splash.png"'
