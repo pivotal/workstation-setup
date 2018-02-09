@@ -1,10 +1,10 @@
 echo
-echo "Installing Ruby tools and Ruby 2.3.1"
+echo "Installing Ruby tools and Ruby 2.5.0"
 cp files/.irbrc ~/.irbrc
 brew install readline
 eval "$(rbenv init -)"
-rbenv install 2.3.1 --skip-existing
-rbenv global 2.3.1
+rbenv install 2.5.0 --skip-existing
+rbenv global 2.5.0
 gem install bundler
 rbenv rehash
 
