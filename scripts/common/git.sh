@@ -17,3 +17,5 @@ echo
 echo "Setting global Git configurations"
 git config --global core.editor /usr/bin/vim
 git config --global transfer.fsckobjects true
+git config --global url.git@github.com:.pushInsteadOf https://github.com/
+git config --global --add url.git@github.com:.pushInsteadOf git://github.com/
