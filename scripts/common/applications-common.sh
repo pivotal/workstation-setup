@@ -9,6 +9,10 @@ echo "Installing applications"
 
 brew cask install flycut
 brew cask install shiftit
+echo
+echo "configure shiftit to be like Onsi's fork with:"
+echo "`defaults write org.shiftitapp.ShiftIt multipleActionsCycleWindowSizes YES`"
+echo
 brew cask install dash
 brew cask install postman
 
