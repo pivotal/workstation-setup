@@ -19,6 +19,9 @@ Voom has forked this project to make some tweaks for our flavor of pairing machi
 
 ### CHANGELOG
 
+#### 2018-02-12
+* Added logo images to this repo so pairing machines can set avatars
+
 #### 2018-02-09
 * Created the `voom` script, which merges in a few of the original scripts together (ruby, node, & design)
 * Created the `heroku` script, which installs Heroku stuff; make it part of the voom install
