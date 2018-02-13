@@ -29,6 +29,7 @@ brew cask install skype
 
 # Text Editors
 
+brew install neovim
 brew cask install macdown
 brew cask install sublime-text
 brew cask install textmate

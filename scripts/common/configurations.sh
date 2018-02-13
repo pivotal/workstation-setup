@@ -17,4 +17,7 @@ if [ ! -d ~/.vim ]; then
 fi
 popd
 
+echo
+echo "Aliasing vim to neovim"
+alias vim=nvim
 
