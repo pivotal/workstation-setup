@@ -1,14 +1,9 @@
 pairs:
-  bk: Brian Kelly; bkelly
-  ah: Ashraf Hanafy; ahanafy
-  jf: Joshua Franklin; jfranklin
-  de: David Edwards; dedwards
-  ec: Eric Cipra; ecipra
-  ts: Todd Sedano; tsedano
-  sw: Stephen Wu; stwu
-  js: John Sandfort; jsandfort
+  bp: Brian Piña; brian
+  ah: Annalee Herrera; annalee
 
 email:
   prefix: pair
-  domain: pivotal.io
+  domain: voom.flights
 
+global: true
