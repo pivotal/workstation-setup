@@ -10,7 +10,7 @@ echo "Installing applications"
 brew cask install flycut
 brew cask install shiftit
 echo
-echo "configure shiftit to be like Onsi's fork with:"
+echo "configure shiftit to select 1/3 screen width, 1/2 screen width and 2/3 screen width:"
 echo "`defaults write org.shiftitapp.ShiftIt multipleActionsCycleWindowSizes YES`"
 echo
 brew cask install dash
