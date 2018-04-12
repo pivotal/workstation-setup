@@ -18,7 +18,6 @@ source ${MY_DIR}/scripts/common/configuration-bash.sh
 # Place any applications that require the user to type in their password here
 brew tap caskroom/cask
 brew cask install github
-brew cask install virtualbox
 brew cask install zoomus
 
 source ${MY_DIR}/scripts/common/git.sh
