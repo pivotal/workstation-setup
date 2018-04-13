@@ -73,6 +73,14 @@ If you're setting up a machine for the XP workshop run the following:
 ./setup.sh java8 node
 ```
 
+## Analytics
+
+The tool will send anonymous user data to our Google Analytics account, so we can see what command line arguments are popular.  You can disable this:
+```
+# Remove unnecessary languages when running command
+SKIP_ANALYTICS=1 ./setup.sh java ruby node golang c docker
+```
+
 ## Having problems?
 
 If you're having problems using the setup script, please let us know by [opening an issue](https://github.com/pivotal/workstation-setup/issues/new).
