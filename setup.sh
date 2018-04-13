@@ -8,7 +8,8 @@ sudo -K
 sudo true;
 
 MY_DIR="$(dirname "$0")"
-
+clientID=$(od -vAn -N4 -tx  < /dev/urandom)
+source ${MY_DIR}/scripts/helpers/google-analytics.sh ${clientID} start $@
 clear
 
 # Note: Homebrew needs to be set up first
@@ -43,3 +44,4 @@ do
 done
 
 source ${MY_DIR}/scripts/common/finished.sh
+source ${MY_DIR}/scripts/helpers/google-analytics.sh ${clientID} finish $@
