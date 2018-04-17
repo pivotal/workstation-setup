@@ -80,6 +80,7 @@ The tool will send anonymous user data to our Google Analytics account, so we ca
 # Remove unnecessary languages when running command
 SKIP_ANALYTICS=1 ./setup.sh java ruby node golang c docker
 ```
+This will also disable brew's [data collection](https://github.com/Homebrew/brew/blob/master/docs/Analytics.md).
 
 ## Having problems?
 

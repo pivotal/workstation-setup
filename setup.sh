@@ -22,6 +22,8 @@ SKIP_ANALYTICS=${SKIP_ANALYTICS:-0}
 if (( SKIP_ANALYTICS == 0 )); then
     clientID=$(od -vAn -N4 -tx  < /dev/urandom)
     source ${MY_DIR}/scripts/helpers/google-analytics.sh ${clientID} start $@
+else
+    export HOMEBREW_NO_ANALYTICS=1
 fi
 
 # Note: Homebrew needs to be set up first
