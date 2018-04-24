@@ -19,5 +19,8 @@ brew services start postgresql
 brew services start redis
 brew services start chromedriver
 
+# Voom stores files on Google Drive
+brew install google-drive-file-stream
+
 # JAMF
-echo "!!! DO NOT FORGET TO ENROLL THIS MACHINE IN JAMF !!!" 
+echo "!!! DO NOT FORGET TO ENROLL THIS MACHINE IN JAMF !!!"
