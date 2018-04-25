@@ -1,0 +1,16 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Babel",
+		"Git",
+		"GitGutter",
+		"Package Control",
+		"RubyTest",
+		"Sass",
+		"Theme - Spacegray"
+	]
+}
