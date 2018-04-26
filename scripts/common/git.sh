@@ -19,11 +19,21 @@ echo "Setting global Git configurations"
 git config --global core.editor /usr/bin/vim
 git config --global transfer.fsckobjects true
 
-echo
-echo "Installing git hooks for cred-alert"
-# for more information see https://github.com/pivotal-cf/git-hooks-core
-git clone https://github.com/pivotal-cf/git-hooks-core $HOME/workspace/git-hooks-core
-git config --global --add core.hooksPath $HOME/workspace/git-hooks-core
+HOOKS_DIRECTORY=$HOME/workspace/git-hooks-core
+if [ ! -d $HOOKS_DIRECTORY ]; then
+  echo
+  echo "Installing git hooks for cred-alert"
+  # for more information see https://github.com/pivotal-cf/git-hooks-core
+  git clone https://github.com/pivotal-cf/git-hooks-core $HOOKS_DIRECTORY
+  git config --global --add core.hooksPath $HOOKS_DIRECTORY
+else
+  echo
+  echo "Updating git-hooks for cred-alert"
+  pushd $HOOKS_DIRECTORY
+  git pull -r
+  popd
+fi
+
 # install cred-alert-cli
 os_name=$(uname | awk '{print tolower($1)}')
 curl -o cred-alert-cli \
