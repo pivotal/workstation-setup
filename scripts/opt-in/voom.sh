@@ -11,7 +11,7 @@ source ${MY_DIR}/scripts/opt-in/sublime-settings.sh
 # Install Voom application dependancies
 brew install postgresql
 brew install redis
-brew install chromedriver
+brew cask install chromedriver
 brew install memcached
 
 # Setup needed databases to start at boot
