@@ -11,6 +11,11 @@ curl -L -o "$SUBLIME_PACKAGES_DESTINATION_FOLDER/Package Control.sublime-package
 
 echo "Copying Sublime Text 3 Settings"
 
+echo "Color Themes"
+
+cp "$SUBLIME_PREFERENCES_SOURCE_FOLDER/base16-eighties.dark.tmTheme" "$SUBLIME_PREFERENCES_DESTINATION_FOLDER/"
+cp "$SUBLIME_PREFERENCES_SOURCE_FOLDER/RubyTest-Twilight-Spacegray Eighties.tmTheme" "$SUBLIME_PREFERENCES_DESTINATION_FOLDER/"
+
 echo "PackageControl Settings"
 cp -a -n "$SUBLIME_PREFERENCES_SOURCE_FOLDER/Package Control.sublime-settings" "$SUBLIME_PREFERENCES_DESTINATION_FOLDER/"
 
