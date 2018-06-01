@@ -2,6 +2,20 @@
 
 This project automates the process of setting up a new Pivotal machine using a simple [Bash](https://www.gnu.org/software/bash/) script.
 
+## Getting Started
+
+- Run the latest version of macOS, currently [High Sierra](https://www.apple.com/macos/high-sierra/),
+  unless you have a specific reason not to
+- These scripts might work on previous versions, but are maintained with only the latest macOS in mind
+- If you are not on High Sierra, you need to install the latest version of [Xcode](https://developer.apple.com/xcode/)
+- On High Sierra, once you have used git (below), you will have installed the command line developer tools
+
+Open up Terminal.app and run the following command:
+
+```sh
+curl https://github.com/pivotaltracker/workstation-setup/blob/master/download.sh | sh && cd workspace-setup
+```
+
 ## Goals
 
 The primary goal of this project is to give people a simple script they can run to make their machine a bit more useful and standard for working on Pivotal projects.
@@ -20,23 +34,6 @@ This project does not aim to do everything. Some examples:
  * We avoid setting up and maintaining overly-custom configurations. When there is already a tool that will get us something in a conventional manner, such as [bash-it](https://github.com/Bash-it/bash-it), we prefer to use it instead of doing things ourselves.
 
 **Warning: the automation script is currently aggressive about what it does and will overwrite vim configurations, bash-it configurations, etc.**
-
-## Getting Started
-
-- Run the latest version of macOS, currently [High Sierra](https://www.apple.com/macos/high-sierra/),
-  unless you have a specific reason not to
-- These scripts might work on previous versions, but are maintained with only the latest macOS in mind
-- If you are not on High Sierra, you need to install the latest version of [Xcode](https://developer.apple.com/xcode/)
-- On High Sierra, once you have used git (below), you will have installed the command line developer tools
-
-Open up Terminal.app and run the following commands:
-
-```sh
-mkdir -p ~/workspace
-cd ~/workspace
-git clone https://github.com/pivotal/workstation-setup.git
-cd workstation-setup
-```
 
 ### Engineering Machine
 
