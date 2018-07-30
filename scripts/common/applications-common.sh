@@ -36,5 +36,6 @@ brew cask install macdown
 brew cask install sublime-text
 brew cask install textmate
 brew cask install macvim
+brew cask install jetbrains-toolbox --force # guard against pre-installed jetbrains-toolbox
 
 set -e
