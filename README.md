@@ -51,6 +51,9 @@ If you're setting up an engineering machine choose which languages to install:
 
 # If you want java 8, you can use
 ./setup.sh java8
+
+# For .net
+./setup.sh dotnet
 ```
 
 The list of Engineering applications is found in: [applications-common.sh](https://github.com/pivotal/workstation-setup/blob/master/scripts/common/applications-common.sh)
