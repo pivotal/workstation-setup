@@ -38,5 +38,5 @@ brew cask install textmate
 brew cask install macvim
 brew cask install jetbrains-toolbox --force # guard against pre-installed jetbrains-toolbox
 brew cask install vscode
-
+brew cask install atom
 set -e
