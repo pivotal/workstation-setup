@@ -10,5 +10,5 @@ export NVM_DIR="$HOME/.nvm"
 brew install node
 brew install yarn
 
-nvm install v9
-nvm alias default v9
+nvm install v8
+nvm alias default v8
