@@ -1,7 +1,8 @@
 echo
-echo "Installing most recent version of NodeJS"
+echo "Installing NodeJS 8.x.x"
 
-brew install node
+brew install node@8
+brew link node@8 --force
 
 echo
 echo "Installing global NodeJS Packages"

@@ -23,8 +23,11 @@ This project does not aim to do everything. Some examples:
 
 ## Getting Started
 
-- Make sure you are running the lastest version of macOS. (Currently [Sierra](https://www.apple.com/macos/sierra/))
-- If you are not on Sierra, you need to install the latest version of [Xcode](https://developer.apple.com/xcode/). On Sierra, using git will install the command line developer tools.  
+- Run the latest version of macOS, currently [High Sierra](https://www.apple.com/macos/high-sierra/),
+  unless you have a specific reason not to
+- These scripts might work on previous versions, but are maintained with only the latest macOS in mind
+- If you are not on High Sierra, you need to install the latest version of [Xcode](https://developer.apple.com/xcode/)
+- On High Sierra, once you have used git (below), you will have installed the command line developer tools
 
 Open up Terminal.app and run the following commands:
 
@@ -41,10 +44,16 @@ If you're setting up an engineering machine choose which languages to install:
 
 ```sh
 # For Labs developers (remove unnecessary languages when running command)
-./setup.sh developer java ruby node golang c docker
+./setup.sh java ruby node golang c docker
 
 # For Data developers
-./setup.sh developer c golang java docker
+./setup.sh c golang java docker
+
+# If you want java 8, you can use
+./setup.sh java8
+
+# For .net
+./setup.sh dotnet
 ```
 
 The list of Engineering applications is found in: [applications-common.sh](https://github.com/pivotal/workstation-setup/blob/master/scripts/common/applications-common.sh)
@@ -58,6 +67,23 @@ If you're setting up a design machine run the following:
 ```
 
 In addition to the Engineering applications, this script also installs the list of Design applications found in: [applications-designer.sh](https://github.com/pivotal/workstation-setup/blob/master/scripts/opt-in/designer.sh)
+
+### XP Workshop
+
+If you're setting up a machine for the XP workshop run the following:
+
+```sh
+./setup.sh java8 node
+```
+
+## Analytics
+
+The tool will send anonymous user data to our Google Analytics account, so we can see what command line arguments are popular.  You can disable this:
+```
+# Remove unnecessary languages when running command
+SKIP_ANALYTICS=1 ./setup.sh java ruby node golang c docker
+```
+This will also disable brew's [data collection](https://github.com/Homebrew/brew/blob/master/docs/Analytics.md).
 
 ## Having problems?
 

@@ -4,7 +4,7 @@ if hash brew 2>/dev/null; then
   echo "Homebrew is already installed!"
 else
   echo "Installing Homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  yes '' | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 echo
