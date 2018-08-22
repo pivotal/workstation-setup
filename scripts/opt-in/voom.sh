@@ -7,7 +7,8 @@ source ${MY_DIR}/scripts/opt-in/node.sh
 source ${MY_DIR}/scripts/opt-in/designer.sh
 source ${MY_DIR}/scripts/opt-in/heroku.sh
 source ${MY_DIR}/scripts/opt-in/mobile.sh
-# source ${MY_DIR}/scripts/opt-in/sublime-settings.sh
+source ${MY_DIR}/scripts/opt-in/sublime-settings.sh
+source ${MY_DIR}/scripts/opt-in/bash-settings.sh
 
 # Install Voom application dependancies
 brew install postgresql
@@ -25,3 +26,4 @@ brew cask install google-drive-file-stream
 
 # JAMF
 echo "!!! DO NOT FORGET TO ENROLL THIS MACHINE IN JAMF !!!"
+
