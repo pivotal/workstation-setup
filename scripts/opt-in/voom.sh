@@ -24,6 +24,10 @@ brew services start chromedriver
 # Voom stores files on Google Drive
 brew cask install google-drive-file-stream
 
+# Common workstation utilities
+brew install htop
+brew cask install react-native-debugger
+
 # JAMF
 echo "!!! DO NOT FORGET TO ENROLL THIS MACHINE IN JAMF !!!"
 
