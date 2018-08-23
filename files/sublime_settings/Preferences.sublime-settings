@@ -1,5 +1,5 @@
 {
-  "color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
+	"color_scheme": "Packages/User/base16-eighties.dark.tmTheme",
 	"detect_indentation": false,
 	"drag_text": false,
 	"ensure_newline_at_eof_on_save": true,
@@ -52,6 +52,6 @@
 	"tab_size": 2,
 	"theme": "Spacegray Eighties.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": "true"
 }
-
