@@ -1,10 +1,12 @@
+source scripts/helpers/brew.sh
+
 echo
 echo "Installing Git and associated tools"
-brew install git
+brew_install_if_missing git
 brew tap git-duet/tap
-brew install git-duet
-brew install git-pair
-brew install seattle-beach/tap/git-together
+brew_install_if_missing git-duet
+brew_install_if_missing git-pair
+brew_install_if_missing seattle-beach/tap/git-together
 
 brew cask install rowanj-gitx
 brew cask install sourcetree
@@ -17,3 +19,4 @@ echo
 echo "Setting global Git configurations"
 git config --global core.editor /usr/bin/vim
 git config --global transfer.fsckobjects true
+

@@ -1,9 +1,11 @@
+source scripts/helpers/brew.sh
+
 echo
 echo "Configuring bash with bash-it"
-brew install grc
-brew install coreutils
-brew install rbenv
-brew install watch
+brew_install_if_missing grc
+brew_install_if_missing coreutils
+brew_install_if_missing rbenv
+brew_install_if_missing watch
 cp files/dircolors.ansi-dark ~/.dircolors
 cp files/.inputrc ~/.inputrc
 rm -rf ~/.bash_it
@@ -19,5 +21,6 @@ bash-it enable completion ssh
 
 echo
 echo "Configuring direnv with bash-it"
-brew install direnv
+brew_install_if_missing direnv
 cp files/direnv.bash ~/.bash_it/custom/direnv.bash
+

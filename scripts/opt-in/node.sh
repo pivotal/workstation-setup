@@ -1,3 +1,5 @@
+source scripts/helpers/brew.sh
+
 echo
 echo "Installing NodeJS"
 
@@ -7,8 +9,8 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | b
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-brew install node
-brew install yarn
+brew_install_if_missing node
+brew_install_if_missing yarn
 
 nvm install v8
 nvm alias default v8
