@@ -1,3 +1,5 @@
+#!/bin/sh
+
 ME=`whoami`
 SUBLIME_PREFERENCES_SOURCE_FOLDER="${MY_DIR}/files/sublime_settings"
 SUBLIME_PREFERENCES_DESTINATION_FOLDER="/Users/$ME/Library/Application Support/Sublime Text 3/Packages/User/"
@@ -17,7 +19,7 @@ cp "$SUBLIME_PREFERENCES_SOURCE_FOLDER/base16-eighties.dark.tmTheme" "$SUBLIME_P
 cp "$SUBLIME_PREFERENCES_SOURCE_FOLDER/RubyTest-Twilight-Spacegray Eighties.tmTheme" "$SUBLIME_PREFERENCES_DESTINATION_FOLDER/"
 
 echo "PackageControl Settings"
-cp -a -n "$SUBLIME_PREFERENCES_SOURCE_FOLDER/Package Control.sublime-settings" "$SUBLIME_PREFERENCES_DESTINATION_FOLDER/"
+cp "$SUBLIME_PREFERENCES_SOURCE_FOLDER/Package Control.sublime-settings" "$SUBLIME_PREFERENCES_DESTINATION_FOLDER/"
 
 echo "User Settings"
 cp $SUBLIME_PREFERENCES_SOURCE_FOLDER/Preferences.sublime-settings "$SUBLIME_PREFERENCES_DESTINATION_FOLDER"
