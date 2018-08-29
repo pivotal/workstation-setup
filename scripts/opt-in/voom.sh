@@ -1,3 +1,10 @@
+source scripts/helpers/brew.sh
+
+
+brew_install_if_missing node
+brew_install_if_missing yarn
+
+
 echo ""
 echo " ~~~ Making `hostname` a Voom Pairing Machine ~~~"
 echo ""
@@ -10,10 +17,10 @@ source ${MY_DIR}/scripts/opt-in/mobile.sh
 source ${MY_DIR}/scripts/opt-in/sublime-settings.sh
 
 # Install Voom application dependancies
-brew install postgresql
-brew install redis
+brew_install_if_missing postgresql
+brew_install_if_missing redis
 brew cask install chromedriver
-brew install memcached
+brew_install_if_missing memcached
 
 # Setup needed databases to start at boot
 brew services start postgresql
@@ -25,7 +32,7 @@ brew cask install google-drive-file-stream
 brew cask install files/slack-alpha.rb
 
 # Common workstation utilities
-brew install htop
+brew_install_if_missing htop
 brew cask install react-native-debugger
 
 # JAMF
