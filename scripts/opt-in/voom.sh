@@ -22,6 +22,7 @@ brew services start chromedriver
 
 # Voom stores files on Google Drive
 brew cask install google-drive-file-stream
+brew cask install files/slack-alpha.rb
 
 # Common workstation utilities
 brew install htop
