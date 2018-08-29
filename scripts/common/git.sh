@@ -8,8 +8,8 @@ brew_install_if_missing git-duet
 brew_install_if_missing git-pair
 brew_install_if_missing seattle-beach/tap/git-together
 
-brew cask install rowanj-gitx
-brew cask install sourcetree
+brew_cask_install_if_missing rowanj-gitx
+brew_cask_install_if_missing sourcetree
 
 echo
 echo "Putting a sample git-pair file in ~/.pairs"
