@@ -18,6 +18,7 @@ bash-it enable completion git
 bash-it enable plugin ssh
 bash-it enable plugin rbenv
 bash-it enable completion ssh
+bash-it enable alias git
 
 echo
 echo "Configuring direnv with bash-it"

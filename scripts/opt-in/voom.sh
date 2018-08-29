@@ -8,7 +8,6 @@ source ${MY_DIR}/scripts/opt-in/designer.sh
 source ${MY_DIR}/scripts/opt-in/heroku.sh
 source ${MY_DIR}/scripts/opt-in/mobile.sh
 source ${MY_DIR}/scripts/opt-in/sublime-settings.sh
-source ${MY_DIR}/scripts/opt-in/bash-settings.sh
 
 # Install Voom application dependancies
 brew install postgresql
