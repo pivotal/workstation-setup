@@ -33,6 +33,7 @@ brew_cask_install_if_missing files/slack-alpha.rb
 # Common workstation utilities
 brew_install_if_missing htop
 brew_cask_install_if_missing react-native-debugger
+brew_cask_install_if_missing ccmenu
 
 # JAMF
 echo "!!! DO NOT FORGET TO ENROLL THIS MACHINE IN JAMF !!!"
