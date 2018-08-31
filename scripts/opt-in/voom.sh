@@ -8,6 +8,7 @@ echo ""
 echo " ~~~ Making `hostname` a Voom Pairing Machine ~~~"
 echo ""
 
+source ${MY_DIR}/scripts/opt-in/bash-settings.sh
 source ${MY_DIR}/scripts/opt-in/ruby.sh
 source ${MY_DIR}/scripts/opt-in/node.sh
 source ${MY_DIR}/scripts/opt-in/designer.sh
