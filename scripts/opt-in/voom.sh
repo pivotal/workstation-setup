@@ -25,7 +25,6 @@ brew_install_if_missing memcached
 # Setup needed databases to start at boot
 brew services start postgresql
 brew services start redis
-brew services start chromedriver
 
 # Voom stores files on Google Drive
 brew_cask_install_if_missing google-drive-file-stream
