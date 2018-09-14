@@ -36,7 +36,8 @@
 		"tmp",
 		"node_modules",
 		"public",
-    "build"
+    "build",
+    "Pods",
 	],
 	"font_size": 17,
 	"ignored_packages":
