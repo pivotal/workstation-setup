@@ -20,6 +20,7 @@ source ${MY_DIR}/scripts/opt-in/sublime-settings.sh
 brew_install_if_missing postgresql
 brew_install_if_missing redis
 brew_cask_install_if_missing chromedriver
+brew_cask_install_if_missing ngrok
 brew_install_if_missing memcached
 
 # Setup needed databases to start at boot
