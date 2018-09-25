@@ -26,6 +26,12 @@ Voom has forked this project to make some tweaks for our flavor of pairing machi
 * No more popups during run
 * ~~Install slack alpha for better screen sharing~~ (no longer necessary as of 3.3.1)
 * Init rbenv inside of ~/.bash_profile
+* Update off of pivotal/master, with revisions.
+  * ShiftIt now does 1/3, 1/2, 2/3rd screen on successive presses.
+  * Install latest version of vim
+  * Do NOT install git-hooks-core, do NOT install Atom or VS code.
+  * Do NOT send analytics to homewbrew or google.
+* Do not hide dock on right side for easier remote pairing.
 
 #### 2018-08
 
