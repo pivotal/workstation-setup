@@ -1,5 +1,7 @@
 # All these applications are independent, so if one
 # fails to install, don't stop.
+source scripts/helpers/brew.sh
+
 set +e
 
 echo
@@ -7,36 +9,35 @@ echo "Installing applications"
 
 # Utilities
 
-brew cask install flycut
-brew cask install shiftit
+brew_cask_install_if_missing flycut
+brew_cask_install_if_missing shiftit
 echo
 echo "configure shiftit to select 1/3 screen width, 1/2 screen width and 2/3 screen width:"
 echo "`defaults write org.shiftitapp.ShiftIt multipleActionsCycleWindowSizes YES`"
 echo
-brew cask install dash
-brew cask install postman
+brew_cask_install_if_missing dash
+brew_cask_install_if_missing postman
+brew_install_if_missing the_silver_searcher
 
 # Terminals
 
-brew cask install iterm2
+brew_cask_install_if_missing iterm2
 
 # Browsers
 
-brew cask install google-chrome
-brew cask install firefox
+brew_cask_install_if_missing google-chrome
+brew_cask_install_if_missing firefox
 
 # Communication
 
-brew cask install slack
-brew cask install skype
+brew_cask_install_if_missing slack
+brew_cask_install_if_missing keycastr
 
 # Text Editors
 
-brew cask install macdown
-brew cask install sublime-text
-brew cask install textmate
-brew cask install macvim
-brew cask install jetbrains-toolbox --force # guard against pre-installed jetbrains-toolbox
-brew cask install visual-studio-code
-brew cask install atom
+brew_cask_install_if_missing macdown
+brew_cask_install_if_missing sublime-text
+brew_cask_install_if_missing textmate
+brew_cask_install_if_missing macvim
+
 set -e

@@ -1,12 +1,16 @@
+source scripts/helpers/brew.sh
+
 echo
 echo "Installing most recent version of NodeJS"
 
-brew install node
+bash-it enable plugin nvm
+# brew install nvm (The NVM website suggests there are some problems with the homebrew version; don't use it)
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-echo
-echo "Installing global NodeJS Packages"
+brew_install_if_missing node
+brew_install_if_missing yarn
 
-npm install --global yo
-npm install --global webpack
-npm install --global grunt-cli
-npm install --global gulp-cli
+nvm install v8
+nvm alias default v8

@@ -1,6 +1,64 @@
 # Workstation Setup
 
-This project automates the process of setting up a new Pivotal machine using a simple [Bash](https://www.gnu.org/software/bash/) script.
+This project automates the process of setting up a new Voom machine using a simple [Bash](https://www.gnu.org/software/bash/) script.
+
+## Voom Pairing Machines
+
+To setup a Voom pairing machine, clone this repo.
+
+```sh
+mkdir -p ~/workspace
+cd ~/workspace
+git clone https://github.com/a3-ponton/workstation-setup.git
+cd workstation-setup
+```
+
+...and run `./setup.sh voom`
+
+Voom has forked this project to make some tweaks for our flavor of pairing machine.  The changes include:
+
+### CHANGELOG
+
+#### 2018-09
+
+* No longer install rubymine
+* Install CCMenu
+* No more popups during run
+* ~~Install slack alpha for better screen sharing~~ (no longer necessary as of 3.3.1)
+* Init rbenv inside of ~/.bash_profile
+
+#### 2018-08
+
+* Install node@8 and cocoapods
+* Enable bash-it git aliases
+* Install htop and react-native-debugger
+* Add bash utility to only install brew packages if missing.
+
+#### 2018-04
+
+* Manage Sublime settings
+* Install chromedriver cask
+
+#### 2018-02-12
+* Added logo images to this repo so pairing machines can set avatars
+
+#### 2018-02-09
+* Created the `voom` script, which merges in a few of the original scripts together (ruby, node, & design)
+* Created the `heroku` script, which installs Heroku stuff; make it part of the voom install
+* Set OSX background image to be a sweet helicopter photo.
+* Remove `zoomus` from the default install
+* Remove `cloud-foundry` from the default install
+* Remove `virtualbox` from the default install
+* Remove `skype` as a common application
+* Add `keycastr` as a common application
+* Move the dock to the right side of the screen
+* Added `nvm` to the node.js install scripts
+* Remove any global NPM packages.  Those are bad.
+* Install yarn when installing node.js
+
+The original README from Pivotal is below:
+
+---
 
 ## Goals
 
