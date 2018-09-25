@@ -1,10 +1,10 @@
 # Workstation Setup
 
-This project automates the process of setting up a new Pivotal machine using a simple [Bash](https://www.gnu.org/software/bash/) script.
+This project automates the process of setting up a new Voom machine using a simple [Bash](https://www.gnu.org/software/bash/) script.
 
 ## Voom Pairing Machines
 
-To setup a Voom pairing machine, clone this repo...
+To setup a Voom pairing machine, clone this repo.
 
 ```sh
 mkdir -p ~/workspace
@@ -18,6 +18,26 @@ cd workstation-setup
 Voom has forked this project to make some tweaks for our flavor of pairing machine.  The changes include:
 
 ### CHANGELOG
+
+#### 2018-09
+
+* No longer install rubymine
+* Install CCMenu
+* No more popups during run
+* ~~Install slack alpha for better screen sharing~~ (no longer necessary as of 3.3.1)
+* Init rbenv inside of ~/.bash_profile
+
+#### 2018-08
+
+* Install node@8 and cocoapods
+* Enable bash-it git aliases
+* Install htop and react-native-debugger
+* Add bash utility to only install brew packages if missing.
+
+#### 2018-04
+
+* Manage Sublime settings
+* Install chromedriver cask
 
 #### 2018-02-12
 * Added logo images to this repo so pairing machines can set avatars
