@@ -8,25 +8,11 @@ brew_install_if_missing rbenv
 brew_install_if_missing watch
 cp files/dircolors.ansi-dark ~/.dircolors
 cp files/.inputrc ~/.inputrc
-
-BASH_IT_DIRECTORY=$HOME/.bash_it
-if [ ! -d $BASH_IT_DIRECTORY ]; then
-  echo
-  echo "Installing bash_it"
-  # for more information see https://github.com/pivotal-cf/git-hooks-core
-  git clone https://github.com/Bash-it/bash-it.git $BASH_IT_DIRECTORY
-  $BASH_IT_DIRECTORY/install.sh --silent
-else
-  echo
-  echo "Updating bash_it"
-  pushd $BASH_IT_DIRECTORY
-  git checkout $BASH_IT_DIRECTORY/themes/bobby/bobby.theme.bash
-  git pull -r
-  popd
-fi
-
-cp files/add_user_initials_to_git_prompt_info.bash $BASH_IT_DIRECTORY/custom
-cp files/bobby_pivotal/bobby_pivotal.theme.bash $BASH_IT_DIRECTORY/themes/bobby/bobby.theme.bash
+rm -rf ~/.bash_it
+git clone https://github.com/Bash-it/bash-it.git ~/.bash_it
+cp files/add_user_initials_to_git_prompt_info.bash ~/.bash_it/custom
+cp files/bobby_pivotal/bobby_pivotal.theme.bash ~/.bash_it/themes/bobby/bobby.theme.bash
+~/.bash_it/install.sh
 source ~/.bash_profile
 bash-it enable completion git
 bash-it enable plugin ssh
