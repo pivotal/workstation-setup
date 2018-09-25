@@ -1,7 +1,7 @@
 source scripts/helpers/brew.sh
 
 echo
-echo "Installing NodeJS"
+echo "Installing most recent version of NodeJS"
 
 bash-it enable plugin nvm
 # brew install nvm (The NVM website suggests there are some problems with the homebrew version; don't use it)
