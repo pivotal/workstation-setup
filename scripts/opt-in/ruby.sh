@@ -8,7 +8,3 @@ rbenv global 2.5.1
 gem install bundler
 rbenv rehash
 
-source ${MY_DIR}/scripts/common/download-pivotal-ide-prefs.sh
-pushd ~/workspace/pivotal_ide_prefs/cli
-./bin/ide_prefs install --ide=rubymine
-popd

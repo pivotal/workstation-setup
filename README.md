@@ -21,11 +21,13 @@ Voom has forked this project to make some tweaks for our flavor of pairing machi
 
 #### 2018-09
 
+* Do not install pivotal ide prefs
 * No longer install rubymine
 * Install CCMenu
 * No more popups during run
 * ~~Install slack alpha for better screen sharing~~ (no longer necessary as of 3.3.1)
 * Init rbenv inside of ~/.bash_profile
+
 
 #### 2018-08
 
