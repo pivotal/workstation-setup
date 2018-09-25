@@ -6,8 +6,8 @@ echo 'Customizing OS X configuration'
 defaults write com.apple.menuextra.clock "DateFormat" 'EEE MMM d  h:mm:ss a'
 killall SystemUIServer
 
-# hide the dock
-defaults write com.apple.dock autohide -bool true
+# do not hide the dock
+defaults write com.apple.dock autohide -bool false
 killall Dock
 
 # fast key repeat rate, requires reboot to take effect
