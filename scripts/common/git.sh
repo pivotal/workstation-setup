@@ -9,9 +9,7 @@ brew_install_if_missing git-pair
 brew_install_if_missing seattle-beach/tap/git-together
 
 # Get latest version of vim
-# brew install vim --with-override-system-vi
-# Do not install latest version of vim until we have upgraded to node 10
-# as it is a dependency of vim.
+brew install vim --with-override-system-vi
 
 brew_cask_install_if_missing rowanj-gitx
 brew_cask_install_if_missing sourcetree
