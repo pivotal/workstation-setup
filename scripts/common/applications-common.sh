@@ -11,6 +11,10 @@ echo "Installing applications"
 
 brew_cask_install_if_missing flycut
 brew_cask_install_if_missing shiftit
+echo
+echo "configure shiftit to select 1/3 screen width, 1/2 screen width and 2/3 screen width:"
+echo "`defaults write org.shiftitapp.ShiftIt multipleActionsCycleWindowSizes YES`"
+echo
 brew_cask_install_if_missing dash
 brew_cask_install_if_missing postman
 brew_install_if_missing the_silver_searcher

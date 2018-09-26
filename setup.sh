@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+#
+# setup.sh:  run the Pivotal workstation setup
+#
+# Arguments:
+#   - a list of components to install, see scripts/opt-in/ for valid options
+#
 
 # Fail immediately if any errors occur
 set -e
@@ -6,10 +12,11 @@ set -e
 echo "Caching password..."
 sudo -K
 sudo true;
+clear
 
 MY_DIR="$(dirname "$0")"
-
-clear
+export SKIP_ANALYTICS=1
+export HOMEBREW_NO_ANALYTICS=1
 
 # Note: Homebrew needs to be set up first
 source ${MY_DIR}/scripts/common/homebrew.sh

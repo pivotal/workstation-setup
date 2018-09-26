@@ -8,6 +8,9 @@ brew_install_if_missing git-duet
 brew_install_if_missing git-pair
 brew_install_if_missing seattle-beach/tap/git-together
 
+# Get latest version of vim
+brew install vim --with-override-system-vi
+
 brew_cask_install_if_missing rowanj-gitx
 brew_cask_install_if_missing sourcetree
 
@@ -17,6 +20,6 @@ cp files/.pairs ~/.pairs
 
 echo
 echo "Setting global Git configurations"
-git config --global core.editor /usr/bin/vim
+git config --global core.editor /usr/local/bin/vim
 git config --global transfer.fsckobjects true
 

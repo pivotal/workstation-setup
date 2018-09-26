@@ -27,6 +27,12 @@ Voom has forked this project to make some tweaks for our flavor of pairing machi
 * No more popups during run
 * ~~Install slack alpha for better screen sharing~~ (no longer necessary as of 3.3.1)
 * Init rbenv inside of ~/.bash_profile
+* Update off of pivotal/master, with revisions.
+  * ShiftIt now does 1/3, 1/2, 2/3rd screen on successive presses.
+  * Install latest version of vim
+  * Do NOT install git-hooks-core, do NOT install Atom or VS code.
+  * Do NOT send analytics to homewbrew or google.
+* Do not hide dock on bottom side for easier remote pairing.
 
 
 #### 2018-08
@@ -83,8 +89,11 @@ This project does not aim to do everything. Some examples:
 
 ## Getting Started
 
-- Make sure you are running the lastest version of macOS. (Currently [Sierra](https://www.apple.com/macos/sierra/))
-- If you are not on Sierra, you need to install the latest version of [Xcode](https://developer.apple.com/xcode/). On Sierra, using git will install the command line developer tools.  
+- Run the latest version of macOS, currently [High Sierra](https://www.apple.com/macos/high-sierra/),
+  unless you have a specific reason not to
+- These scripts might work on previous versions, but are maintained with only the latest macOS in mind
+- If you are not on High Sierra, you need to install the latest version of [Xcode](https://developer.apple.com/xcode/)
+- On High Sierra, once you have used git (below), you will have installed the command line developer tools
 
 Open up Terminal.app and run the following commands:
 
@@ -108,6 +117,9 @@ If you're setting up an engineering machine choose which languages to install:
 
 # If you want java 8, you can use
 ./setup.sh java8
+
+# For .net
+./setup.sh dotnet
 ```
 
 The list of Engineering applications is found in: [applications-common.sh](https://github.com/pivotal/workstation-setup/blob/master/scripts/common/applications-common.sh)
@@ -129,6 +141,18 @@ If you're setting up a machine for the XP workshop run the following:
 ```sh
 ./setup.sh java8 node
 ```
+
+## Analytics
+
+> The tool will send anonymous user data to our Google Analytics account, so we can see what command line arguments are popular.  You can disable this:
+```
+# Remove unnecessary languages when running command
+SKIP_ANALYTICS=1 ./setup.sh java ruby node golang c docker
+```
+This will also disable brew's [data collection](https://github.com/Homebrew/brew/blob/master/docs/Analytics.md).
+
+### Note
+Voom thinks this is really shady.  We deleted this file.
 
 ## Having problems?
 

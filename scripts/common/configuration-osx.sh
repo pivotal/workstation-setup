@@ -6,10 +6,6 @@ echo 'Customizing OS X configuration'
 defaults write com.apple.menuextra.clock "DateFormat" 'EEE MMM d  h:mm:ss a'
 killall SystemUIServer
 
-# do not hide the dock
-defaults write com.apple.dock autohide -bool false
-killall Dock
-
 # fast key repeat rate, requires reboot to take effect
 defaults write ~/Library/Preferences/.GlobalPreferences KeyRepeat -int 1
 defaults write ~/Library/Preferences/.GlobalPreferences InitialKeyRepeat -int 15
@@ -30,7 +26,10 @@ dockutil --add /Applications/iTerm.app
 
 # move the dock to the right side of the screen (requires logout to take effect)
 defaults write com.apple.dock orientation bottom
-killall -HUP Dock
+
+# show the dock
+defaults write com.apple.dock autohide -bool false
+killall Dock
 
 # set the desktop wallpaper
 osascript -e 'tell application "System Events" to set picture of every desktop to ("files/images/splash.png" as POSIX file as alias)'
