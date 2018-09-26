@@ -6,7 +6,6 @@ echo 'Customizing OS X configuration'
 defaults write com.apple.menuextra.clock "DateFormat" 'EEE MMM d  h:mm:ss a'
 killall SystemUIServer
 
-
 # fast key repeat rate, requires reboot to take effect
 defaults write ~/Library/Preferences/.GlobalPreferences KeyRepeat -int 1
 defaults write ~/Library/Preferences/.GlobalPreferences InitialKeyRepeat -int 15

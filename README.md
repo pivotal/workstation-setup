@@ -21,6 +21,7 @@ Voom has forked this project to make some tweaks for our flavor of pairing machi
 
 #### 2018-09
 
+* Do not install pivotal ide prefs
 * No longer install rubymine
 * Install CCMenu
 * No more popups during run
@@ -32,6 +33,7 @@ Voom has forked this project to make some tweaks for our flavor of pairing machi
   * Do NOT install git-hooks-core, do NOT install Atom or VS code.
   * Do NOT send analytics to homewbrew or google.
 * Do not hide dock on bottom side for easier remote pairing.
+
 
 #### 2018-08
 
