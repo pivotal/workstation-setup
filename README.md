@@ -31,7 +31,7 @@ Voom has forked this project to make some tweaks for our flavor of pairing machi
   * Install latest version of vim
   * Do NOT install git-hooks-core, do NOT install Atom or VS code.
   * Do NOT send analytics to homewbrew or google.
-* Do not hide dock on right side for easier remote pairing.
+* Do not hide dock on bottom side for easier remote pairing.
 
 #### 2018-08
 

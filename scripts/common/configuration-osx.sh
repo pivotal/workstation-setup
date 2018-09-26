@@ -29,7 +29,7 @@ dockutil --add /Applications/Google\ Chrome.app --no-restart
 dockutil --add /Applications/iTerm.app
 
 # move the dock to the right side of the screen (requires logout to take effect)
-defaults write com.apple.dock orientation right
+defaults write com.apple.dock orientation bottom
 killall -HUP Dock
 
 # set the desktop wallpaper
