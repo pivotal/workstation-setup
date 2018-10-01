@@ -2,7 +2,7 @@ source scripts/helpers/brew.sh
 
 brew_install_if_missing node
 brew_install_if_missing yarn
-
+brew_install_if_missing hub
 
 echo ""
 echo " ~~~ Making `hostname` a Voom Pairing Machine ~~~"
