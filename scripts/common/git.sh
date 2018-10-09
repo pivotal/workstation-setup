@@ -6,6 +6,8 @@ brew install git-duet
 brew install git-pair
 brew install git-together
 brew install git-author
+# Get latest version of vim
+brew install vim --with-override-system-vi
 
 brew cask install rowanj-gitx
 brew cask install sourcetree
@@ -16,7 +18,7 @@ cp files/.pairs ~/.pairs
 
 echo
 echo "Setting global Git configurations"
-git config --global core.editor /usr/bin/vim
+git config --global core.editor /usr/local/bin/vim
 git config --global transfer.fsckobjects true
 
 HOOKS_DIRECTORY=$HOME/workspace/git-hooks-core
