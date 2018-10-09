@@ -8,5 +8,5 @@ brew install pstree
 brew install the_silver_searcher
 brew install wget
 
-:# For developers of shell scripts
+# For developers of shell scripts
 brew install jq
