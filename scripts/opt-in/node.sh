@@ -13,6 +13,6 @@ bash-it enable plugin nvm
 brew_install_if_missing node
 brew_install_if_missing yarn
 
-nvm install v8
-nvm alias default v8
+nvm install v10
+nvm alias default v10
 npm install yarn -g
