@@ -73,7 +73,7 @@ In addition to the Engineering applications, this script also installs the list 
 If you're setting up a machine for the XP workshop run the following:
 
 ```sh
-./setup.sh java8 node
+./setup.sh java node
 ```
 
 ## Analytics
