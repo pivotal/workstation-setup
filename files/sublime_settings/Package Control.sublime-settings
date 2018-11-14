@@ -15,6 +15,7 @@
     "SublimeLinter-eslint",
     "SublimeLinter-rubocop",
     "SublimeLinter-ruby",
-    "Theme - Spacegray"
+    "Theme - Spacegray",
+    "YAML Nav"
   ]
 }
