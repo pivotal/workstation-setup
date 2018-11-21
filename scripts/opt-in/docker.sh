@@ -2,7 +2,7 @@
 set +e
 
 # Docker
-brew cask install docker
+brew_cask_install_if_missing docker
 echo "To get docker command-line tools, run the docker application"
 
 # Docker Bash Completion
