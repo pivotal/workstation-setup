@@ -32,6 +32,7 @@ brew_cask_install_if_missing google-drive-file-stream
 
 # Common workstation utilities
 brew_install_if_missing htop
+brew_install_if_missing circleci
 brew_cask_install_if_missing react-native-debugger
 brew_cask_install_if_missing ccmenu
 
