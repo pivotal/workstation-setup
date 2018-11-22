@@ -8,5 +8,5 @@ brew cask install goland
 
 source ${MY_DIR}/scripts/common/download-pivotal-ide-prefs.sh
 pushd ~/workspace/pivotal_ide_prefs/cli
-./bin/ide_prefs install --ide=gogland
+./bin/ide_prefs install --ide=goland
 popd
