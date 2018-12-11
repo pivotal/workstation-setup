@@ -2,4 +2,4 @@ source scripts/helpers/brew.sh
 
 echo
 echo "Installing Heroku tools"
-brew_install_if_missing heroku/brew/heroku
+brew list | grep heroku || brew install heroku/brew/heroku

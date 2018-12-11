@@ -21,6 +21,7 @@ source ${MY_DIR}/scripts/opt-in/sublime-settings.sh
 # Install Voom application dependancies
 brew_install_if_missing postgresql
 brew_install_if_missing redis
+brew_install_if_missing imagemagick
 brew_cask_install_if_missing chromedriver
 brew_cask_install_if_missing ngrok
 brew_install_if_missing memcached
