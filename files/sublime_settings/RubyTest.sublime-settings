@@ -1,4 +1,5 @@
 {
     "save_on_run": true,
-    "theme": "Packages/User/RubyTest-Twilight-Spacegray Eighties.tmTheme"
+    "theme": "Packages/User/RubyTest-Twilight-Spacegray Eighties.tmTheme",
+    "ignored_directories": [".git", "vendor", "tmp", "node_modules", "build", "Pods"]
 }
