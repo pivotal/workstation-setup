@@ -17,6 +17,13 @@ sudo -K
 sudo true;
 clear
 
+pre_setup_dir="$HOME/.pivotal-workstation-pre-setup"
+if [ -d "$pre_setup_dir" ]; then
+    for file in $(ls "$pre_setup_dir"); do
+        source "$pre_setup_dir/$file"
+    done
+fi
+
 MY_DIR="$(dirname "$0")"
 SKIP_ANALYTICS=${SKIP_ANALYTICS:-0}
 if (( SKIP_ANALYTICS == 0 )); then
@@ -55,6 +62,13 @@ do
        echo "Warning: $var does not appear to be a valid argument. File $FILE does not exist."
     fi
 done
+
+post_setup_dir="$HOME/.pivotal-workstation-post-setup"
+if [ -d "$post_setup_dir" ]; then
+    for file in $(ls "$post_setup_dir"); do
+        source "$post_setup_dir/$file"
+    done
+fi
 
 source ${MY_DIR}/scripts/common/finished.sh
 if (( SKIP_ANALYTICS == 0 )); then
