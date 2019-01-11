@@ -17,6 +17,9 @@ defaults write com.apple.finder '_FXShowPosixPathInTitle' -bool true
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 #to revert use defaults -currentHost delete com.apple.ImageCapture disableHotPlug
 
+# stop iTunes from opening automatically when iOS devices connected
+defaults write com.apple.iTunesHelper ignore-devices 1
+
 # modify appearance of dock: remove standard icons, add chrome and iTerm
 curl https://raw.githubusercontent.com/kcrawford/dockutil/master/scripts/dockutil > /usr/local/bin/dockutil
 chmod a+rx,go-w /usr/local/bin/dockutil
