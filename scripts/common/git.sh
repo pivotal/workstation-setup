@@ -6,8 +6,7 @@ brew install git-duet
 brew install git-pair
 brew install git-together
 brew install git-author
-# Get latest version of vim
-brew install vim --with-override-system-vi
+brew install vim
 
 brew cask install rowanj-gitx
 brew cask install sourcetree
