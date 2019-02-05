@@ -24,7 +24,6 @@ source ${MY_DIR}/scripts/common/configuration-bash.sh
 
 # Place any applications that require the user to type in their password here
 brew tap caskroom/cask
-brew_cask_install_if_missing github
 
 source ${MY_DIR}/scripts/common/git.sh
 source ${MY_DIR}/scripts/common/git-aliases.sh

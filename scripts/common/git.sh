@@ -10,6 +10,7 @@ brew_install_if_missing vim --with-override-system-vi
 
 brew_cask_install_if_missing rowanj-gitx
 brew_cask_install_if_missing sourcetree
+brew_cask_install_if_missing github
 
 echo
 echo "Putting a sample git-pair file in ~/.pairs"
