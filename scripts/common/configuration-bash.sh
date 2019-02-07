@@ -12,7 +12,8 @@ cp files/add_user_initials_to_git_prompt_info.bash ~/.bash_it/custom
 cp files/bobby_pivotal/bobby_pivotal.theme.bash ~/.bash_it/themes/bobby/bobby.theme.bash
 cp files/cf_cli.completion.bash ~/.bash_it/completion/available
 ~/.bash_it/install.sh --silent
-source ~/.bash_profile
+
+bash --login
 bash-it enable completion git
 bash-it enable plugin ssh
 bash-it enable plugin rbenv
