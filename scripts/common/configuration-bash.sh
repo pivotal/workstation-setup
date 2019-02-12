@@ -13,6 +13,7 @@ cp files/bobby_pivotal/bobby_pivotal.theme.bash ~/.bash_it/themes/bobby/bobby.th
 cp files/cf_cli.completion.bash ~/.bash_it/completion/available
 ~/.bash_it/install.sh --silent
 source ~/.bash_profile
+source ~/.bash_it/bash_it.sh
 bash-it enable completion git
 bash-it enable plugin ssh
 bash-it enable plugin rbenv
