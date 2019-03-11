@@ -7,6 +7,11 @@ SUBLIME_PREFERENCES_DESTINATION_FOLDER="/Users/$ME/Library/Application Support/S
 SUBLIME_PACKAGES_DESTINATION_FOLDER="/Users/$ME/Library/Application Support/Sublime Text 3/Installed Packages"
 SUBLIME_PACKAGE_CONTROL_URL="https://packagecontrol.io/Package%20Control.sublime-package"
 
+echo "Preparing Sublime Packages and Settings Folders as Needed"
+
+mkdir -p "$SUBLIME_PACKAGES_DESTINATION_FOLDER"
+mkdir -p "$SUBLIME_PREFERENCES_DESTINATION_FOLDER"
+
 echo "Downloading and Installing Sublime PackageControl"
 
 curl -L -o "$SUBLIME_PACKAGES_DESTINATION_FOLDER/Package Control.sublime-package" $SUBLIME_PACKAGE_CONTROL_URL
