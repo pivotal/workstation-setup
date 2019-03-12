@@ -11,6 +11,8 @@ rbenv rehash
 # guard against pre-installed rubymine
 brew cask install rubymine --force
 
+sudo mkdir -p /Users/tsedano/Library/Preferences/RubyMine2018.3
+
 source ${MY_DIR}/scripts/common/download-pivotal-ide-prefs.sh
 pushd ~/workspace/pivotal_ide_prefs/cli
 ./bin/ide_prefs install --ide=rubymine
