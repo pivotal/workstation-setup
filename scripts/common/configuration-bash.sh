@@ -1,5 +1,6 @@
 echo
 echo "Configuring bash with bash-it"
+brew install autojump
 brew install grc
 brew install coreutils
 brew install rbenv
@@ -16,6 +17,7 @@ cp files/cf_cli.completion.bash ~/.bash_it/completion/available
 source ~/.bash_profile
 source ~/.bash_it/bash_it.sh
 bash-it enable completion git
+bash-it enable plugin autojump
 bash-it enable plugin ssh
 bash-it enable plugin rbenv
 bash-it enable completion ssh
