@@ -16,6 +16,7 @@ source ${MY_DIR}/scripts/opt-in/heroku.sh
 source ${MY_DIR}/scripts/opt-in/docker.sh
 source ${MY_DIR}/scripts/opt-in/android.sh
 source ${MY_DIR}/scripts/opt-in/sublime-settings.sh
+source ${MY_DIR}/scripts/opt-in/vscode.sh
 
 # Install Voom application dependancies
 brew_install_if_missing postgresql
