@@ -17,6 +17,14 @@ cd workstation-setup
 
 Voom has forked this project to make some tweaks for our flavor of pairing machine.  The changes include:
 
+## Running individual scripts
+
+For instance, if you only want to install VSCode and extensions
+
+```sh
+MY_DIR='./' ./scripts/opt-in/vscode.sh
+```
+
 ### CHANGELOG
 
 #### 2018-09
