@@ -9,7 +9,7 @@ To setup a Voom pairing machine, clone this repo.
 ```sh
 mkdir -p ~/workspace
 cd ~/workspace
-git clone https://github.com/a3-ponton/workstation-setup.git
+git clone https://github.com/voomflights/workstation-setup.git
 cd workstation-setup
 ```
 
