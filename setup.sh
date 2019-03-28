@@ -15,8 +15,8 @@ sudo true;
 clear
 
 MY_DIR="$(dirname "$0")"
-export SKIP_ANALYTICS=1
-export HOMEBREW_NO_ANALYTICS=1
+
+source ${MY_DIR}/env.sh
 
 # Note: Homebrew needs to be set up first
 source ${MY_DIR}/scripts/common/homebrew.sh

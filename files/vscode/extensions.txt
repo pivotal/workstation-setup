@@ -19,7 +19,6 @@ msjsdiag.debugger-for-chrome
 noku.rails-run-spec-vscode
 sianglim.slim
 vayan.haml
-vscodevim.vim
 xabikos.JasmineSnippets
 xabikos.JavaScriptSnippets
 xabikos.ReactSnippets

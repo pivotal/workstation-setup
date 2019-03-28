@@ -22,7 +22,7 @@ Voom has forked this project to make some tweaks for our flavor of pairing machi
 For instance, if you only want to install VSCode and extensions
 
 ```sh
-MY_DIR='./' ./scripts/opt-in/vscode.sh
+./single.sh ./scripts/opt-in/vscode.sh
 ```
 
 ### CHANGELOG
