@@ -17,8 +17,11 @@ ms-vscode.atom-keybindings
 ms-vscode.sublime-keybindings
 msjsdiag.debugger-for-chrome
 noku.rails-run-spec-vscode
+rebornix.ruby
 sianglim.slim
+tyriar.sort-lines
 vayan.haml
+vscode-icons-team.vscode-icons
 xabikos.JasmineSnippets
 xabikos.JavaScriptSnippets
 xabikos.ReactSnippets
