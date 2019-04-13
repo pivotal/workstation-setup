@@ -8,6 +8,7 @@ christian-kohler.path-intellisense
 dbaeumer.vscode-eslint
 eamodio.gitlens
 eg2.vscode-npm-script
+github-history.netflicy.com
 jasonnutter.search-node-modules
 jawandarajbir.react-vscode-extension-pack
 Lourenci.go-to-spec
