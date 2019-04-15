@@ -8,7 +8,6 @@ christian-kohler.path-intellisense
 dbaeumer.vscode-eslint
 eamodio.gitlens
 eg2.vscode-npm-script
-github-history.netflicy.com
 jasonnutter.search-node-modules
 jawandarajbir.react-vscode-extension-pack
 Lourenci.go-to-spec
@@ -18,6 +17,7 @@ ms-vscode.atom-keybindings
 ms-vscode.sublime-keybindings
 msjsdiag.debugger-for-chrome
 noku.rails-run-spec-vscode
+pomber.git-file-history
 rebornix.ruby
 sianglim.slim
 tyriar.sort-lines
