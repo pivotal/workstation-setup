@@ -1,5 +1,4 @@
 echo
-echo "Installing Java 8"
-brew tap homebrew/cask-versions
-brew cask install java8
-source ${MY_DIR}/scripts/opt-in/java-tools.sh
+echo "WARNING: Installing Java 8 is no longer supported"
+echo "         Manual installation can still be performed here:"
+echo "         https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html"
