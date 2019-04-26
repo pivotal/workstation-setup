@@ -2,14 +2,21 @@
   "editor.fontSize": 18,
   "editor.tabSize": 2,
   "editor.cursorStyle": "block",
-  "files.insertFinalNewline": true,
   "editor.minimap.enabled": false,
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.renderWhitespace": "all",
   "workbench.colorTheme": "Base16 Dark Twilight",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "files.autoSave": "onFocusChange",
   "window.zoomLevel": 1,
   "terminal.integrated.fontSize": 14,
   "javascript.suggest.autoImports": false,
-  "typescript.suggest.autoImports": false
+  "typescript.suggest.autoImports": false,
+  "workbench.iconTheme": "vscode-icons",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true
 }

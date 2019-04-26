@@ -29,6 +29,8 @@ cp "$SUBLIME_PREFERENCES_SOURCE_FOLDER/Package Control.sublime-settings" "$SUBLI
 echo "User Settings"
 cp $SUBLIME_PREFERENCES_SOURCE_FOLDER/Preferences.sublime-settings "$SUBLIME_PREFERENCES_DESTINATION_FOLDER"
 
-printf "RubyTest Settings"
+echo "RubyTest Settings"
 cp $SUBLIME_PREFERENCES_SOURCE_FOLDER/RubyTest.sublime-settings "$SUBLIME_PREFERENCES_DESTINATION_FOLDER"
 
+printf "JsPrettier Settings"
+cp $SUBLIME_PREFERENCES_SOURCE_FOLDER/JsPrettier.sublime-settings "$SUBLIME_PREFERENCES_DESTINATION_FOLDER"
