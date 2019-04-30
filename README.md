@@ -49,9 +49,6 @@ If you're setting up an engineering machine choose which languages to install:
 # For Data developers
 ./setup.sh c golang java docker
 
-# If you want java 8, you can use
-./setup.sh java8
-
 # For .net
 ./setup.sh dotnet
 ```
