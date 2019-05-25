@@ -23,6 +23,10 @@ echo
 echo "Adding Pivotal tap to Homebrew"
 brew tap pivotal/tap
 
+echo
+echo "Adding 'homebrew/cask-fonts' tap to Homebew"
+brew tap homebrew/cask-fonts
+
 echo "Cleaning up your Homebrew installation..."
 brew cleanup
 

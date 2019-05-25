@@ -40,4 +40,8 @@ brew_cask_install_if_missing sublime-text
 brew_cask_install_if_missing textmate
 brew_cask_install_if_missing macvim
 
+# Fonts
+
+brew_cask_install_if_missing font-fira-code
+
 set -e
