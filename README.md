@@ -46,6 +46,9 @@ If you're setting up an engineering machine choose which languages to install:
 # For Labs developers (remove unnecessary languages when running command)
 ./setup.sh java ruby node golang python c docker
 
+# For CloudFoundry developers
+./setup.sh c golang java docker cloud-foundry
+
 # For Data developers
 ./setup.sh c golang java docker
 
