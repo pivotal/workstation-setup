@@ -17,6 +17,7 @@ git config --global alias.blog "log origin/master... --left-right"
 git config --global alias.ds "diff --staged"
 git config --global alias.fixup "commit --fixup"
 git config --global alias.squash "commit --squash"
+git config --global alias.amendit "commit --amend --no-edit"
 git config --global alias.unstage "reset HEAD"
 git config --global alias.rum "rebase master@{u}"
 mkdir ~/.bash_it/aliases/enabled
