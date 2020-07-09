@@ -10,6 +10,7 @@ brew install vim
 
 brew cask install rowanj-gitx
 brew cask install sourcetree
+brew cask install gitup
 
 echo
 echo "Putting a sample git-pair file in ~/.pairs"
