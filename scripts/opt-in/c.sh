@@ -4,7 +4,7 @@ brew install ccache
 brew install ctags
 brew install cmake
 brew install cscope
-brew cask install clion
+brew install --cask clion
 brew install ninja
 
 source ${MY_DIR}/scripts/common/download-pivotal-ide-prefs.sh

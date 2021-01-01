@@ -31,8 +31,8 @@ source ${MY_DIR}/scripts/common/homebrew.sh
 source ${MY_DIR}/scripts/common/configuration-bash.sh
 
 # Place any applications that require the user to type in their password here
-brew cask install github
-brew cask install zoomus
+brew install --cask github
+brew install --cask zoomus
 
 source ${MY_DIR}/scripts/common/git.sh
 source ${MY_DIR}/scripts/common/git-aliases.sh

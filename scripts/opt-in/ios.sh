@@ -9,4 +9,4 @@ brew install carthage
 brew install fastlane
 
 # ide
-brew cask install appcode --force
+brew install --cask appcode --force
