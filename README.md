@@ -29,13 +29,13 @@ This project does not aim to do everything. Some examples:
 - If you are not on High Sierra, you need to install the latest version of [Xcode](https://developer.apple.com/xcode/)
 - On High Sierra, once you have used git (below), you will have installed the command line developer tools
 
-Open up Terminal.app and run the following commands:
+Open up Terminal.app and run the following command:
 
 ```sh
-mkdir -p ~/workspace
-cd ~/workspace
-git clone https://github.com/pivotal/workstation-setup.git
-cd workstation-setup
+mkdir -p ~/workspace &&
+  cd ~/workspace &&
+  git clone https://github.com/pivotal/workstation-setup.git &&
+  cd workstation-setup
 ```
 
 ### Engineering Machine
