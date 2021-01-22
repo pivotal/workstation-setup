@@ -53,7 +53,7 @@ If you're setting up an engineering machine choose which languages to install:
 ./setup.sh dotnet
 
 # For Solutions Architects/Platform Engineers
-./setup.sh docker golang kubernetes terraform
+./setup.sh docker golang kubernetes terraform concourse
 ```
 
 The list of Engineering applications is found in: [applications-common.sh](https://github.com/pivotal/workstation-setup/blob/master/scripts/common/applications-common.sh)
