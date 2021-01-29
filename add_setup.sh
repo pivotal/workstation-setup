@@ -14,7 +14,7 @@ source ./_init.sh
 for var in "$@"
 do
     echo "$var"
-    FILE=${MY_DIR}/scripts/opt-in/${var}.sh
+    FILE=${WORKSTATION_SETUP_HOME}/scripts/opt-in/${var}.sh
     echo "$FILE"
     if [ -f $FILE ]; then
         source ${FILE}

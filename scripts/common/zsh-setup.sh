@@ -11,8 +11,8 @@ if grep -Fxq "#RxRevu" ~/.zprofile; then
 else
     echo "Profile is not configured for RxRevu, configuring now..."
     printf "%s\\n" "#RxRevu" >> ~/.zprofile
-    printf "%s\\n" "source ${MY_DIR}/files/functions.sh" >> ~/.zprofile
-    printf "%s\\n" "source ${MY_DIR}/files/aliases.sh" >> ~/.zprofile
+    printf "%s\\n" "source ${WORKSTATION_SETUP_HOME}/files/functions.sh" >> ~/.zprofile
+    printf "%s\\n" "source ${WORKSTATION_SETUP_HOME}/files/aliases.sh" >> ~/.zprofile
 
     echo "Configuring direnv"
     if ! brew ls --versions direnv > /dev/null; then
@@ -20,7 +20,7 @@ else
     fi
     printf "%s\\n" 'eval "$(direnv hook zsh)"' >> ~/.zprofile
 
-    rxrevu_home="$( cd "${MY_DIR}/.." >/dev/null 2>&1 && pwd)/rxrevu_web/"
+    rxrevu_home="$( cd "${WORKSTATION_SETUP_HOME}/.." >/dev/null 2>&1 && pwd)/rxrevu_web/"
     if [[ "${rxrevu_home}" ]]; then
       printf "%s\\n" "export RX_REVU_HOME=${rxrevu_home}" >> ~/.zprofile
     else

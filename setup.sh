@@ -21,4 +21,4 @@ set -e
 source base_setup.sh
 ./add_setup.sh "$@"
 
-source ${MY_DIR}/scripts/common/finished.sh
+source ${WORKSTATION_SETUP_HOME}/scripts/common/finished.sh
