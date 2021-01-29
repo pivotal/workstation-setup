@@ -48,7 +48,6 @@ Navigate to `workstation-setup/files/rm_settings.zip` and select `rm_settings.zi
 Select all the settings and hit `Ok`, RubyMine will then prompt you to restart (it is wise to do so).
 
 ### AWS Credential Setup
->**todo**: add safe copying of sample aws credental files to the aws opt-in script
 **Note:** Requires staging/prod and sandbox AWS credentials
 Change `aws_access_key_id`s and `aws_secret_access_key`s in 
 the ~/.aws/credentials directory to use the credentials provided to
