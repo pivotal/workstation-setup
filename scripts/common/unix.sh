@@ -10,3 +10,7 @@ brew install wget
 
 # For developers of shell scripts
 brew install jq
+
+# Other useful command-line tools for RxRevu
+brew install tealdeer
+brew gnu-sed

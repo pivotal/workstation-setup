@@ -1,0 +1,116 @@
+#!/usr/bin/env bash
+
+PROGNAME=$(basename $0)
+
+get_session_token() {
+  echo "Geting Session Token..."
+  unset AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_EXPIRATION AWS_SESSION_TOKEN
+
+  CREDS=$(mktemp)
+  echo "AWS_USER: ${AWS_USER}"
+  echo "Environment: ${ENVIRONMENT}"
+
+  if [ ${ENVIRONMENT} = "production" ]; then
+    ARN=957205877601
+  else
+    ARN=566112438981
+  fi
+
+  aws sts get-session-token \
+      --serial-number "arn:aws:iam::${ARN}:mfa/${AWS_USER}" \
+      --token-code "${CODE}" --output json > "${CREDS}" \
+      --profile ${ENVIRONMENT}
+
+  return
+}
+
+set_aws_vars() {
+  echo "Setting AWS Vars..."
+  export AWS_ACCESS_KEY_ID="$(jq -r '.Credentials.AccessKeyId' ${CREDS})"
+  export AWS_SECRET_ACCESS_KEY="$(jq -r '.Credentials.SecretAccessKey' ${CREDS})"
+  export AWS_SESSION_EXPIRATION="$(jq -r '.Credentials.Expiration' ${CREDS})"
+  export AWS_SESSION_TOKEN="$(jq -r '.Credentials.SessionToken' ${CREDS})"
+
+  return
+}
+
+print_aws_vars() {
+  printf "\nexport AWS_ACCESS_KEY_ID=%s \nexport AWS_SECRET_ACCESS_KEY=%s \nexport AWS_SESSION_TOKEN=%s \nexport AWS_SESSION_EXPIRATION=%s\n"  "${AWS_ACCESS_KEY_ID:?Creating temporary session token failed}" "${AWS_SECRET_ACCESS_KEY}" "${AWS_SESSION_TOKEN}" "${AWS_SESSION_EXPIRATION}"
+
+  return
+}
+
+usage() {
+    echo "usage: ${PROGNAME} <-u aws_user_name | --user aws_user_name> <-t aws_mfa_token | --token aws_mfa_token> <-e [sandbox|production] | --environment [sandbox|production]>"
+}
+
+clean_up() {
+  rm -f ${CREDS}
+  exit $1
+}
+
+error_exit() {
+  echo "${PROGNAME}: ${1:-"Unknown Error"}" 1>&2
+  clean_up 1
+}
+
+get_parameters() {
+  aws_user=
+  aws_mfa_token=
+  while [ "$1" != "" ]; do
+    case $1 in
+      -u | --user )
+        shift
+        aws_user=$1
+        ;;
+      -t | --token )
+        shift
+        aws_mfa_token=$1
+        ;;
+      -e | --environment )
+        shift
+        environment=$1
+        ;;
+      -h | --help )
+        usage
+        exit
+        ;;
+      * )
+        usage
+        exit 1
+    esac
+    shift
+  done
+
+  if [[ -z ${aws_user} ]]; then
+    usage
+    error_exit "username must be specified"
+  fi
+  if [[ -z ${aws_mfa_token} ]]; then
+    usage
+    error_exit "mfa token must be specified"
+  fi
+  if [[ -z ${environment} ]]; then
+    environment="production"
+  fi
+
+  AWS_USER=${aws_user}
+  CODE=${aws_mfa_token}
+  ENVIRONMENT=${environment}
+}
+
+main() {
+  trap clean_up SIGHUP SIGINT SIGTERM
+
+  get_parameters $@
+  get_session_token
+  set_aws_vars
+  print_aws_vars | tee "${HOME}/.aws/mfa_session"
+
+  printf "\nTo use the temporary token you just created (in any terminal, for the next 12 hours) run the following:\n\n\`. ~/.aws/mfa_session\`\n"
+
+  echo ". ~/.aws/mfa_session" | pbcopy
+}
+
+main $@
+#EOF
