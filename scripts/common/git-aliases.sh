@@ -20,6 +20,7 @@ git config --global alias.squash "commit --squash"
 git config --global alias.amendit "commit --amend --no-edit"
 git config --global alias.unstage "reset HEAD"
 git config --global alias.rum "rebase master@{u}"
+git config --global alias.pushf "push --force-with-lease"
 if [ ! -d ~/.bash_it/aliases/enabled ]; then
     mkdir ~/.bash_it/aliases/enabled
 fi
