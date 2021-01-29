@@ -7,10 +7,10 @@ if [[ ! -d ~/.aws ]]] ; then
   mkdir ~/.aws
 fi
 
-if [[ ! -f ~/.aws/aws_config ]]] ; then
-cp ${WORKSTATION_SETUP_HOME}/files/aws_config.example ~/.aws/aws_config
+if [[ ! -f ~/.aws/config ]]] ; then
+cp ${WORKSTATION_SETUP_HOME}/files/aws_config.example ~/.aws/config
 fi
 
-if [[ ! -f ~/.aws/aws_credentials ]]] ; then
-cp ${WORKSTATION_SETUP_HOME}/files/aws_credentials.example ~/.aws/aws_credentials
+if [[ ! -f ~/.aws/credentials ]]] ; then
+cp ${WORKSTATION_SETUP_HOME}/files/aws_credentials.example ~/.aws/credentials
 fi
