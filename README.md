@@ -24,16 +24,14 @@ mkdir -p ~/workspace &&
 
 If you're setting up a development machine choose which languages to install:
 
-```sh
-# For Direct developers (remove unnecessary languages when running command)
-./setup.sh direct-dev aws ruby python docker oh-my-zsh snowflake terraform
+#### For Direct developers (remove unnecessary languages when running command)
+`./setup.sh direct-dev aws ruby python docker oh-my-zsh snowflake terraform`
 
-# For Insights developers
-./setup.sh aws python docker oh-my-zsh snowflake terraform
+#### For Insights developers
+`./setup.sh aws python docker oh-my-zsh snowflake terraform`
 
-# For Solutions Architects/Platform Engineers
-./setup.sh aws docker oh-my-zsh snowflake terraform
-```
+#### For Solutions Architects/Platform Engineers
+`./setup.sh aws docker oh-my-zsh snowflake terraform`
 
 ## Having problems?
 
@@ -50,10 +48,8 @@ Select all the settings and hit `Ok`, RubyMine will then prompt you to restart (
 ### AWS Credential Setup
 **Note:** Requires staging/prod and sandbox AWS credentials
 Change `aws_access_key_id`s and `aws_secret_access_key`s in 
-the ~/.aws/credentials directory to use the credentials provided to
+the `~/.aws/credentials` file to use the credentials provided to
 you by the security team.
-
->**todo**: removed account setup as HR is maintaining this workflow
 
 ### AWS MFA
 Use the `mfa` command to set an MFA token for the next 12 hours.
