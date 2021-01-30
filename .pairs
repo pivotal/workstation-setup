@@ -1,14 +1,11 @@
 pairs:
-  bk: Brian Kelly; bkelly
   ah: Ashraf Hanafy; ahanafy
-  jf: Joshua Franklin; jfranklin
-  de: David Edwards; dedwards
+  ce: Cedar Edwards; cedwards
   ec: Eric Cipra; ecipra
+  ed: Erica Dohring; edohring
   ts: Todd Sedano; tsedano
-  sw: Stephen Wu; stwu
-  js: John Sandfort; jsandfort
 
 email:
   prefix: pair
-  domain: pivotal.io
+  domain: vmware.com
 
