@@ -17,7 +17,7 @@ The primary goal of this project is to give people a simple script they can run 
 This project does not aim to do everything. Some examples:
 
  * We don't install everything that your project needs. These scripts should only install generally useful things, and prefer running quickly over being complete.
- * We avoid setting up and maintaining overly-custom configurations. When there is already a tool that will get us something in a conventional manner, such as [bash-it](https://github.com/Bash-it/bash-it), we prefer to use it instead of doing things ourselves.
+ * We avoid setting up and maintaining overly-custom configurations. When there is already a tool that will get us something in a conventional manner, such as [Oh My Zsh](https://ohmyz.sh/), we prefer to use it instead of doing things ourselves.
 
 **Warning: the automation script is currently aggressive about what it does and will overwrite vim configurations, bash-it configurations, etc.**
 
