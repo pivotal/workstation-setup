@@ -2,7 +2,6 @@ echo
 brew install autojump
 brew install grc
 brew install coreutils
-brew install rbenv
 brew install watch
 
 echo "Installing Oh My Zsh"

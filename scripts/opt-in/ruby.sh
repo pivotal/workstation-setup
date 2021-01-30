@@ -1,5 +1,6 @@
 echo
 echo "Installing Ruby tools and latest Ruby"
+brew install rbenv
 cp files/.irbrc ~/.irbrc
 brew install readline
 eval "$(rbenv init -)"
