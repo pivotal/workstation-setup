@@ -7,7 +7,7 @@ brew install cscope
 brew install --cask clion
 brew install ninja
 
-source ${MY_DIR}/scripts/common/download-pivotal-ide-prefs.sh
+source ${WORKSTATION_SETUP_HOME}/scripts/common/download-pivotal-ide-prefs.sh
 pushd ~/workspace/pivotal_ide_prefs/cli
 ./bin/ide_prefs install --ide=clion
 popd

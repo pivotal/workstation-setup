@@ -76,6 +76,19 @@ If you're setting up a machine for the XP workshop run the following:
 ./setup.sh java node
 ```
 
+### Additional tools
+
+To see a list of additional tool sets available to install run the following:
+
+```sh
+printf "%s " `ls scripts/opt-in | sed 's/\..*//'`; echo
+```
+
+To add one of these tool sets run:
+```sh
+./add_setup <tool set>
+```
+
 ## Analytics
 
 The tool will send anonymous user data to our Google Analytics account, so we can see what command line arguments are popular.  You can disable this:
