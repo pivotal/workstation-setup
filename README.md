@@ -7,6 +7,8 @@ It was forked from https://github.com/pivotal/workstation-setup
 
 **Warning: this script is currently aggressive about what it does and will overwrite vim configurations, bash-it configurations, etc.**
 
+**Note:** the primary branch for this repo is `main` rather than `master`
+
 ## Getting Started
 
 - Run the latest version of macOS
