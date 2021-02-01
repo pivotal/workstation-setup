@@ -28,7 +28,7 @@ source ${WORKSTATION_SETUP_HOME}/scripts/common/configuration-bash.sh
 brew install --cask github
 brew install --cask zoomus
 
-source ${WORKSTATION_SETUP_HOME}/scripts/common/zprofile-setup.sh
+source ${WORKSTATION_SETUP_HOME}/scripts/common/zsh-setup.sh
 source ${WORKSTATION_SETUP_HOME}/scripts/common/asdf.sh
 source ${WORKSTATION_SETUP_HOME}/scripts/common/git.sh
 source ${WORKSTATION_SETUP_HOME}/scripts/common/git-aliases.sh
