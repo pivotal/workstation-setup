@@ -13,7 +13,14 @@ sudo -K
 sudo true;
 clear
 
-# Note: Homebrew needs to be set up first
+if ! command -v brew >/dev/null; then
+  echo "Installing brew..."
+  curl -fsS \
+  'https://raw.githubusercontent.com/Homebrew/install/master/install' | ruby
+else
+  echo "Brew already installed"
+fi
+
 source ${WORKSTATION_SETUP_HOME}/scripts/common/homebrew.sh
 source ${WORKSTATION_SETUP_HOME}/scripts/common/configuration-bash.sh
 
