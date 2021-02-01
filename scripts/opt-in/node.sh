@@ -1,7 +1,7 @@
 echo
 echo "Installing most recent version of NodeJS"
 
-local nodejs_version="${DEFAULT_NODEJS_VERSION}"
+nodejs_version="${DEFAULT_NODEJS_VERSION}"
 if (! asdf list nodejs) && asdf list nodejs | grep -q "${nodejs_version}" ; then
   echo "Installing node@${nodejs_version}"
   asdf plugin add nodejs || true

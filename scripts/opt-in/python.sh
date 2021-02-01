@@ -1,7 +1,7 @@
 echo
 echo "Installing Python"
 
-local python_version="$DEFAULT_PYTHON_VERSION"
+python_version="$DEFAULT_PYTHON_VERSION"
 if [[ ! "$(python --version)" = "${python_version}" ]]; then
   asdf plugin add python || true
   asdf install python "${python_version}"

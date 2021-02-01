@@ -1,7 +1,7 @@
 echo
 echo "Installing Terraform tooling"
 
-local tf_version="${DEFAULT_TF_VERSION}"
+tf_version="${DEFAULT_TF_VERSION}"
 if (! asdf list terraform) && asdf list terraform | grep -q "$(tf_version)" ; then
   echo "Installing terrafrom@${tf_version}"
   asdf plugin add terraform || true
