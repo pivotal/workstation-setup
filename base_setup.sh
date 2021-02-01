@@ -15,8 +15,7 @@ clear
 
 if ! command -v brew >/dev/null; then
   echo "Installing brew..."
-  curl -fsS \
-  'https://raw.githubusercontent.com/Homebrew/install/master/install' | ruby
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 else
   echo "Brew already installed"
 fi
