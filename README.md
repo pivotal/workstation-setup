@@ -1,3 +1,5 @@
+>**todo**: Use environment to specify workspace directory
+
 # Workstation Setup
 
 This project automates the process of setting up a new RxRevu machine using a simple [Bash](https://www.gnu.org/software/bash/) script.
@@ -22,16 +24,28 @@ mkdir -p ~/workspace &&
 
 ### Development Machine
 
-If you're setting up a development machine choose which languages to install:
+If you're setting up a development machine choose which languages and tools to install:
 
 #### For Direct developers (remove unnecessary languages when running command)
 `./setup.sh direct-dev aws ruby python docker oh-my-zsh snowflake terraform`
+
+(and possibly `rxrevu_web_app_yml_symlink`)
 
 #### For Insights developers
 `./setup.sh aws python docker oh-my-zsh snowflake terraform`
 
 #### For Solutions Architects/Platform Engineers
 `./setup.sh aws docker oh-my-zsh snowflake terraform`
+
+Additional options can be installed later by running:
+
+`./add_setup.sh <list of opt-in items to install>`
+
+To see a list of available options run:
+
+```sh
+printf "%s " `ls scripts/opt-in | sed 's/\..*//'`; echo
+```
 
 ## Having problems?
 
