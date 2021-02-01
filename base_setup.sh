@@ -13,13 +13,7 @@ sudo -K
 sudo true;
 clear
 
-if ! command -v brew >/dev/null; then
-  echo "Installing brew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-else
-  echo "Brew already installed"
-fi
-
+# Note: Start by ensuring that homebrew is installed
 source ${WORKSTATION_SETUP_HOME}/scripts/common/homebrew.sh
 source ${WORKSTATION_SETUP_HOME}/scripts/common/configuration-bash.sh
 
