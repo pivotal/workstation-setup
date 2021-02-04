@@ -7,7 +7,7 @@ echo "Installing applications"
 
 # Utilities
 
-brew install --cask flycut
+brew install --cask alfred
 brew install --cask shiftit
 echo
 echo "configure shiftit to select 1/3 screen width, 1/2 screen width and 2/3 screen width:"
@@ -16,6 +16,9 @@ echo
 brew install --cask dash
 brew install --cask postman
 brew install --cask quicklook-json
+
+# RxRevu specific
+brew install gnupg
 
 # Terminals
 

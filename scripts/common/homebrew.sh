@@ -20,10 +20,6 @@ echo "Installing Homebrew services..."
 brew tap homebrew/services
 
 echo
-echo "Adding Pivotal tap to Homebrew"
-brew tap pivotal/tap
-
-echo
 echo "Upgrading existing brews..."
 brew upgrade
 
