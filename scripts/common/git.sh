@@ -8,6 +8,8 @@ brew install git-pair
 brew install git-together
 brew install git-author
 brew install vim
+echo "GitHub CLI -- gh"
+brew install gh
 
 brew install --cask rowanj-gitx
 brew install --cask sourcetree
