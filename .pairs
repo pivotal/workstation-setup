@@ -1,14 +1,33 @@
 pairs:
-  bk: Brian Kelly; bkelly
-  ah: Ashraf Hanafy; ahanafy
-  jf: Joshua Franklin; jfranklin
-  de: David Edwards; dedwards
-  ec: Eric Cipra; ecipra
-  ts: Todd Sedano; tsedano
-  sw: Stephen Wu; stwu
-  js: John Sandfort; jsandfort
-
+  al: Anna Lewis
+  bs: Brad Scharmann
+  cj: Chelsea Johnson
+  cd: Corey Downing
+  df: David Farber
+  dm: David Madouros
+  js: Joe Santini
+  kb: Kyle Behrens
+  kh: Kim Hendrick
+  lp: Lew Parker
+  mp: Mihir Parikh
+  pg: Phil Goodwin
+  rl: Ritchie Latimore
+  sg: Seth Geyer
+  ws: Wren Steitle
+  at: Alex Terletskiy
+  pg: Phil Goodwin
+  gt: Greg Thomas
 email:
   prefix: pair
-  domain: pivotal.io
+  domain: rxrevu.com
+  no_solo_prefix: true
+global: false  # Set to true for git-pair to change git configuration for all your projects
 
+hall_of_fame:
+  ac: Andrew Courter
+  ad: Amy Dusek
+  aj: Ali Jafarian
+  ch: Craig Hoffman
+  em: Ellie Morris
+  me: Matt Ewell
+  sh: Stephan Hagemann
