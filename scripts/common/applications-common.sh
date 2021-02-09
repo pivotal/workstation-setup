@@ -43,3 +43,7 @@ brew install --cask jetbrains-toolbox --force # guard against pre-installed jetb
 brew install --cask visual-studio-code
 brew install --cask atom
 set -e
+
+# Password Management
+
+brew install --cask 1password-cli
