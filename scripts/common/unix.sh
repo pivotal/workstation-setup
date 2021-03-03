@@ -14,3 +14,5 @@ brew install jq
 # Other useful command-line tools for RxRevu
 brew install tealdeer
 brew install gnu-sed
+# CLI for postman
+brew install newman

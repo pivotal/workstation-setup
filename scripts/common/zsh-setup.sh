@@ -6,11 +6,9 @@ if [[ ! -f ~/.zprofile ]] ; then
   touch ~/.zprofile
 fi
 
-if grep -Fxq "#RxRevu" ~/.zprofile; then
-    echo "Profile is configured for RxRevu"
-else
-    echo "Profile is not configured for RxRevu, configuring now..."
-    printf "%s\\n" "#RxRevu" >> ~/.zprofile
+if ! grep -Fxq "#Workstation_alias" ~/.zprofile; then
+    echo "Configuring zprofile..."
+    printf "%s\\n" "#Workstation_alias" >> ~/.zprofile
     printf "%s\\n" "source ${WORKSTATION_SETUP_HOME}/files/functions.sh" >> ~/.zprofile
     printf "%s\\n" "source ${WORKSTATION_SETUP_HOME}/files/aliases.sh" >> ~/.zprofile
 
