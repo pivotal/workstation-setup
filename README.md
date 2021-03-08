@@ -53,6 +53,12 @@ printf "%s " `ls scripts/opt-in | sed 's/\..*//'`; echo
 
 If you see errors from `brew`, try running `brew doctor` and include the diagnostic output in your issue submission.
 
+## Contributing
+
+If you'd like to add programs to this script, make sure they are approved for use.
+The security team maintains a [list of authorized software](https://rxrevu.atlassian.net/wiki/spaces/SEC/pages/72351752/Authorized+Software).
+Before adding any software to your machine or this script, fill out a [request form](https://rxrevu.atlassian.net/wiki/spaces/PLAT/pages/93520115/Request+Forms) to have it approved.
+
 >**todo**: is this still correct?
 ### Import RubyMine settings
 Within RubyMine select `File`->`Import Settings...`.
