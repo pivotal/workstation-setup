@@ -53,6 +53,11 @@ printf "%s " `ls scripts/opt-in | sed 's/\..*//'`; echo
 
 If you see errors from `brew`, try running `brew doctor` and include the diagnostic output in your issue submission.
 
+### Installing .NET
+There is a known conflict between `dotnet` and `dotnet-sdk` Homebrew formulae.
+The `dotnet` formula is only the runtime, so you probably want `dotnet-sdk`, which includes the .NET runtime.
+If you're seeing errors when attempting to install, run `brew uninstall dotnet`.
+
 ## Contributing
 
 If you'd like to add programs to this script, make sure they are approved for use.
