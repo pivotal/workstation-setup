@@ -19,7 +19,7 @@ source ${WORKSTATION_SETUP_HOME}/scripts/common/configuration-bash.sh
 
 # Place any applications that require the user to type in their password here
 brew install --cask github
-brew install --cask zoomus
+brew install --cask zoom
 
 source ${WORKSTATION_SETUP_HOME}/scripts/common/zsh-setup.sh
 source ${WORKSTATION_SETUP_HOME}/scripts/common/asdf.sh
