@@ -2,6 +2,7 @@ echo
 echo "Installing the AWS cli"
 
 brew install awscli
+brew install awsume
 
 if [[ ! -d ~/.aws ]] ; then
   mkdir ~/.aws
