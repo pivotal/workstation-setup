@@ -1,4 +1,5 @@
 echo
-echo "Installing most recent version of Java"
-brew install --cask java
+echo "Installing Java 11"
+brew install openjdk@11
+
 source ${WORKSTATION_SETUP_HOME}/scripts/opt-in/java-tools.sh
