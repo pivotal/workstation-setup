@@ -35,7 +35,6 @@ If you're setting up a development machine choose which languages and tools to i
 
 #### For Insights developers
 `./setup.sh aws python docker oh-my-zsh snowflake terraform intellij`
-(pycharm is also available as a Python specific IDE)
 
 #### For Solutions Architects/Platform Engineers
 `./setup.sh aws docker oh-my-zsh snowflake terraform lefthook`
