@@ -11,8 +11,11 @@ defaults write com.apple.dock autohide -bool true
 killall Dock
 
 # fast key repeat rate, requires reboot to take effect
+# If GlobalPreferences is owned by root allow this to fail and move on
+set +e
 defaults write ~/Library/Preferences/.GlobalPreferences KeyRepeat -int 1
 defaults write ~/Library/Preferences/.GlobalPreferences InitialKeyRepeat -int 15
+set -e
 
 # set finder to display full path in title bar
 defaults write com.apple.finder '_FXShowPosixPathInTitle' -bool true
@@ -20,7 +23,6 @@ defaults write com.apple.finder '_FXShowPosixPathInTitle' -bool true
 # stop Photos from opening automatically
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 #to revert use defaults -currentHost delete com.apple.ImageCapture disableHotPlug
-
 
 # modify appearance of dock: remove standard icons, add chrome and iTerm
 if [ ! -e /usr/local/bin/dockutil ]; then
@@ -30,6 +32,3 @@ chmod a+rx,go-w /usr/local/bin/dockutil
 dockutil --list | awk -F\t '{print "dockutil --remove \""$1"\" --no-restart"}' | sh
 dockutil --add /Applications/Google\ Chrome.app --no-restart
 dockutil --add /Applications/iTerm.app
-
-
-
