@@ -64,9 +64,8 @@ If you'd like to add programs to this script, make sure they are approved for us
 The security team maintains a [list of authorized software](https://rxrevu.atlassian.net/wiki/spaces/SEC/pages/72351752/Authorized+Software).
 Before adding any software to your machine or this script, fill out a [request form](https://rxrevu.atlassian.net/wiki/spaces/PLAT/pages/93520115/Request+Forms) to have it approved.
 
->**todo**: is this still correct?
 ### Import RubyMine settings
-Within RubyMine select `File`->`Import Settings...`.
+Within RubyMine select `File`->`Manage IDE Settings` ->`Import Settings...`.
 
 Navigate to `workstation-setup/files/rm_settings.zip` and select `rm_settings.zip`.
 
