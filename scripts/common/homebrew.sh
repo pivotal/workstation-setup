@@ -19,10 +19,6 @@ echo
 echo "Installing Homebrew services..."
 brew tap homebrew/services
 
-echo
-echo "Upgrading existing brews..."
-brew upgrade
-
 echo "Cleaning up your Homebrew installation..."
 brew cleanup
 
