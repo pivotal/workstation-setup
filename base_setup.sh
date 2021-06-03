@@ -15,7 +15,6 @@ clear
 
 # Note: Start by ensuring that homebrew is installed
 source ${WORKSTATION_SETUP_HOME}/scripts/common/homebrew.sh
-source ${WORKSTATION_SETUP_HOME}/scripts/common/configuration-bash.sh
 
 # Place any applications that require the user to type in their password here
 brew install --cask github
