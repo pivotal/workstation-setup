@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 WORKSTATION_SETUP_HOME="$( cd "$( dirname "$0" )/.." >/dev/null 2>&1 && pwd )"
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 #
 # add_setup.sh:  run the RxRevu workstation setup
 #
@@ -8,7 +8,7 @@
 # Fail immediately if any errors occur
 set -e
 
-source ./_init.sh
+. ./_init.sh
 
 # For each command line argument, try executing the corresponding script in opt-in/
 for var in "$@"
@@ -17,7 +17,7 @@ do
     FILE=${WORKSTATION_SETUP_HOME}/scripts/opt-in/${var}.sh
     echo "$FILE"
     if [ -f $FILE ]; then
-        source ${FILE}
+        . ${FILE}
     else
        echo "Warning: $var does not appear to be a valid argument. File $FILE does not exist."
     fi

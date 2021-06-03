@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 #
 # setup.sh:  run the RxRevu workstation setup
 #
@@ -14,7 +14,7 @@
 # Fail immediately if any errors occur
 set -e
 
-source ./base_setup.sh
+. ./base_setup.sh
 ./add_setup.sh "$@"
 
-source ${WORKSTATION_SETUP_HOME}/scripts/common/finished.sh
+. ${WORKSTATION_SETUP_HOME}/scripts/common/finished.sh
