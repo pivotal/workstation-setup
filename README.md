@@ -14,6 +14,8 @@ It was forked from https://github.com/pivotal/workstation-setup
 - Run the latest version of macOS
 - These scripts might work on previous versions, but are maintained with only the latest macOS in mind
 - You may need to install the latest version of [Xcode](https://developer.apple.com/xcode/) before starting
+    - In a terminal, run: `xcode-select --install`
+    - Accept the licensing agreement
 
 Open up Terminal.app and run the following command:
 
