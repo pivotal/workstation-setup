@@ -21,6 +21,7 @@ brew install --cask github
 brew install --cask zoom
 
 . ${WORKSTATION_SETUP_HOME}/scripts/common/zsh-setup.sh
+. ${WORKSTATION_SETUP_HOME}/scripts/common/oh-my-zsh.sh
 . ${WORKSTATION_SETUP_HOME}/scripts/common/asdf.sh
 . ${WORKSTATION_SETUP_HOME}/scripts/common/git.sh
 . ${WORKSTATION_SETUP_HOME}/scripts/common/git-aliases.sh
