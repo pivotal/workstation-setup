@@ -36,7 +36,7 @@ If you're setting up a development machine choose which languages and tools to i
 (and possibly `rxrevu_web_app_yml_symlink`)
 
 #### For Insights developers
-`./setup.sh aws python docker oh-my-zsh snowflake terraform intellij`
+`./setup.sh aws python docker oh-my-zsh snowflake intellij`
 
 #### For Solutions Architects/Platform Engineers
 `./setup.sh aws docker oh-my-zsh snowflake terraform lefthook`
