@@ -14,7 +14,7 @@ npm install --global gulp-cli
 # guard against preinstalled webstorm
 brew install --cask webstorm --force
 
-source ${MY_DIR}/scripts/common/download-pivotal-ide-prefs.sh
-pushd ~/workspace/pivotal_ide_prefs/cli
+source ${MY_DIR}/scripts/common/download-jetbrains-ide-prefs.sh
+pushd ~/workspace/jetbrains-ide-prefs/cli
 ./bin/ide_prefs install --ide=webstorm
 popd
