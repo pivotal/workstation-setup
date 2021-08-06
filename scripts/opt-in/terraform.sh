@@ -1,9 +1,7 @@
 echo
-echo "Installing Terraform tooling"
-
-brew tap hashicorp/tap
-brew install hashicorp/tap/terraform
+echo "Installing tfenv to manage Terraform versions"
+brew install tfenv
+tfenv install latest
 
 # shell completion
-
 terraform -install-autocomplete

@@ -8,10 +8,6 @@ brew install git-together
 brew install git-author
 brew install vim
 
-brew install --cask rowanj-gitx
-brew install --cask sourcetree
-brew install --cask gitup
-
 echo
 echo "Putting a sample git-pair file in ~/.pairs"
 cp files/.pairs ~/.pairs

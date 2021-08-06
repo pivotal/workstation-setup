@@ -18,7 +18,7 @@ sudo true;
 clear
 
 MY_DIR="$(dirname "$0")"
-SKIP_ANALYTICS=${SKIP_ANALYTICS:-0}
+SKIP_ANALYTICS=${SKIP_ANALYTICS:-1}
 if (( SKIP_ANALYTICS == 0 )); then
     clientID=$(od -vAn -N4 -tx  < /dev/urandom)
     source ${MY_DIR}/scripts/helpers/google-analytics.sh ${clientID} start $@
@@ -31,12 +31,13 @@ source ${MY_DIR}/scripts/common/homebrew.sh
 source ${MY_DIR}/scripts/common/configuration-bash.sh
 
 # Place any applications that require the user to type in their password here
-brew install --cask github
+# zoom is managed by workspace one, so don't fail on error
+set +e
 brew install --cask zoom
+set -e
 
 source ${MY_DIR}/scripts/common/git.sh
 source ${MY_DIR}/scripts/common/git-aliases.sh
-source ${MY_DIR}/scripts/common/cloud-foundry.sh
 source ${MY_DIR}/scripts/common/applications-common.sh
 source ${MY_DIR}/scripts/common/unix.sh
 source ${MY_DIR}/scripts/common/configuration-osx.sh
