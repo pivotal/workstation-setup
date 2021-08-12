@@ -55,6 +55,13 @@ printf "%s " `ls scripts/opt-in | sed 's/\..*//'`; echo
 
 If you see errors from `brew`, try running `brew doctor` and include the diagnostic output in your issue submission.
 
+If you see an error saying `Need sudo access on macOS` which goes on to claim that your user needs to be an administrator
+this command should help you out:
+```sh
+sudo dseditgroup -o edit -a <user-name> -t user admin
+```
+Run it and try your `./setup.sh` command again.
+
 ### Installing .NET
 There is a known conflict between `dotnet` and `dotnet-sdk` Homebrew formulae.
 The `dotnet` formula is only the runtime, so you probably want `dotnet-sdk`, which includes the .NET runtime.
