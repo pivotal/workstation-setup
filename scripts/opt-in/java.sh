@@ -12,7 +12,5 @@ fi
 
 # install latest version
 sdk install java
-# install java 8
-sdk install java $(sdk ls java |grep 8.0|grep hs-adpt|cut -d\| -f6)
 
 source ${MY_DIR}/scripts/opt-in/java-tools.sh
