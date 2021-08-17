@@ -9,7 +9,6 @@ echo "DISABLE_UPDATE_PROMPT=true" >> ~/.zshrc.local
 
 echo "PATH=/usr/local/bin:${PATH}"
 
-echo "alias git='git-together'" >> ~/.zshrc.local
 echo "alias git-pull-all='find . -type d -depth 1 -exec git -C {} pull \;'" >> ~/.zshrc.local
 echo "alias gpa=git-pull-all" >> ~/.zshrc.local
 echo "alias vi=vim" >> ~/.zshrc.local
