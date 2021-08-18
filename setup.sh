@@ -29,16 +29,8 @@ fi
 # Note: Homebrew needs to be set up first
 source ${MY_DIR}/scripts/common/homebrew.sh
 source ${MY_DIR}/scripts/common/zsh.sh
-
-# Place any applications that require the user to type in their password here
-# zoom is managed by workspace one, so don't fail on error
-set +e
-brew install --cask zoom
-set -e
-
 source ${MY_DIR}/scripts/common/git.sh
 source ${MY_DIR}/scripts/common/git-aliases.sh
-source ${MY_DIR}/scripts/common/applications-common.sh
 source ${MY_DIR}/scripts/common/unix.sh
 
 # make mac os configurations optional and only relevant on macs
@@ -50,6 +42,12 @@ then
   if [[ $OS_SETTINGS == "y" ]]
   then
     source ${MY_DIR}/scripts/common/configuration-osx.sh
+  fi
+  echo
+  read -r -p "Would you like to install common applications like browsers? (y/n default)" INSTALL_COMMON_APPS
+  if [[ $INSTALL_COMMON_APPS == "y" ]]
+  then
+    source ${MY_DIR}/scripts/common/applications-common.sh
   fi
 fi
 source ${MY_DIR}/scripts/common/configurations.sh
