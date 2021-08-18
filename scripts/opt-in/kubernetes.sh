@@ -10,7 +10,7 @@ brew install kubectl
 
 
 # Shell completion
-FILE=~/.zshrc
+FILE=~/.zshrc.local
 if [[ -f "$FILE" ]]; then
     echo "$FILE exists proceeding."
 else
@@ -18,11 +18,11 @@ else
     touch $FILE
 fi
 
-echo 'source <(kubectl completion zsh)' >>~/.zshrc
-echo 'alias k=kubectl' >>~/.zshrc
-echo 'complete -F __start_kubectl k' >>~/.zshrc
-echo 'autoload -Uz compinit' >>~/.zshrc
-echo 'compinit' >>~/.zshrc
+echo 'source <(kubectl completion zsh)' >>$FILE
+echo 'alias k=kubectl' >> $FILE
+echo 'complete -F __start_kubectl k' >>$FILE
+echo 'autoload -Uz compinit' >>$FILE
+echo 'compinit' >>$FILE
 
-echo 'eval $(minikube completion $(basename $SHELL))' >> ~/.zshrc.local
+echo 'eval $(minikube completion $(basename $SHELL))' >> $FILE
 
