@@ -31,6 +31,6 @@ brew install --cask firefox
 brew install --cask slack
 
 # Text Editors
-
+brew install vim
 brew install --cask sublime-text
 set -e
