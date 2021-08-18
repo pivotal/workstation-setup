@@ -32,7 +32,6 @@ alias ll='lsd -l'
 alias l='lsd -lah'
 alias dir='lsd -lah'
 alias la='lsd -la'
-alias cat='bat'
 eval "\$(direnv hook zsh)"
 eval "\$(mcfly init zsh)"
 
