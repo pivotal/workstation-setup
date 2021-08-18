@@ -40,7 +40,18 @@ source ${MY_DIR}/scripts/common/git.sh
 source ${MY_DIR}/scripts/common/git-aliases.sh
 source ${MY_DIR}/scripts/common/applications-common.sh
 source ${MY_DIR}/scripts/common/unix.sh
-source ${MY_DIR}/scripts/common/configuration-osx.sh
+
+# make mac os configurations optional and only relevant on macs
+if [[ $(uname) == "Darwin" ]]
+then
+  echo
+  echo
+  read -r -p "Do you want to update Mac OS settings? (y/n default)" OS_SETTINGS
+  if [[ $OS_SETTINGS == "y" ]]
+  then
+    source ${MY_DIR}/scripts/common/configuration-osx.sh
+  fi
+fi
 source ${MY_DIR}/scripts/common/configurations.sh
 
 # For each command line argument, try executing the corresponding script in opt-in/

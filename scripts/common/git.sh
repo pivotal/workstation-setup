@@ -4,8 +4,11 @@ brew install git
 brew install git-together
 
 echo
-echo "Putting a sample git-together file in ~/.git-together"
-cp ${MY_DIR}/files/.git-together ~/.git-together
+if [[ ! -f ~/.git-together ]]
+then
+  echo "Putting a sample git-together file in ~/.git-together"
+  cp ${MY_DIR}/files/.git-together ~/.git-together
+fi
 
 echo
 echo "Setting global Git configurations"
