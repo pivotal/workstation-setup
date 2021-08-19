@@ -38,17 +38,21 @@ if [[ $(uname) == "Darwin" ]]
 then
   echo
   echo
+  read -r -p "Would you like to install common applications like browsers? (y/n default)" INSTALL_COMMON_APPS
+  if [[ $INSTALL_COMMON_APPS == "y" ]]
+  then
+    source ${MY_DIR}/scripts/common/applications-common.sh
+  fi
+
+  echo
+  echo
+
   read -r -p "Do you want to update Mac OS settings? (y/n default)" OS_SETTINGS
   if [[ $OS_SETTINGS == "y" ]]
   then
     source ${MY_DIR}/scripts/common/configuration-osx.sh
   fi
   echo
-  read -r -p "Would you like to install common applications like browsers? (y/n default)" INSTALL_COMMON_APPS
-  if [[ $INSTALL_COMMON_APPS == "y" ]]
-  then
-    source ${MY_DIR}/scripts/common/applications-common.sh
-  fi
 fi
 source ${MY_DIR}/scripts/common/configurations.sh
 
