@@ -1,9 +1,7 @@
 pairs:
-  ah: Ashraf Hanafy; ahanafy
-  ce: Cedar Edwards; cedwards
-  ec: Eric Cipra; ecipra
-  ed: Erica Dohring; edohring
-  ts: Todd Sedano; tsedano
+  # Examples below (without # comment of course):
+  # aa: Aaron A Aaronson; aaronson
+  # mm: Mary Miles; mmiles
 
 email:
   prefix: pair
