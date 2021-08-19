@@ -1,17 +1,23 @@
 echo "Installing oh-my-zsh"
 OH_DIR=~/.oh-my-zsh
+NOW=$(date +"%Y.%m.%d_%H-%M-%S")
+
+# backup local config
+cp ~/.zshrc.local ~/.zshrc.local."$NOW"
+
+# install oh-my-zsh, but respect existing installation
 if [[ ! -d $OH_DIR ]]
 then
   git clone https://github.com/ohmyzsh/ohmyzsh.git $OH_DIR
+  cp ~/.zshrc ~/.zshrc.orig."$NOW"
+  cp $OH_DIR/templates/zshrc.zsh-template ~/.zshrc
 fi
-NOW=$(date +"%Y.%m.%d_%H-%M-%S")
-cp ~/.zshrc ~/.zshrc.orig."$NOW"
-cp ~/.zshrc.local ~/.zshrc.local."$NOW"
-cp $OH_DIR/templates/zshrc.zsh-template ~/.zshrc
+
 if [[ ! $(basename "$SHELL") == "zsh" ]]
 then
   chsh -s "$(which zsh)"
 fi
+
 echo "source ~/.zshrc.local" >> ~/.zshrc
 
 cp files/dircolors.ansi-dark ~/.dircolors
@@ -37,16 +43,16 @@ eval "\$(mcfly init zsh)"
 
 # add git-together pairing credentials to prompt
 function pairing_initials {
-  if [[ $(git rev-parse --is-inside-work-tree 2>/dev/null) == "true" ]]
+  if [[ \$(git rev-parse --is-inside-work-tree 2>/dev/null) == "true" ]]
   then
-    GIT_TOGETHER=$(git config git-together.active)
-    echo -e "[$GIT_TOGETHER] "
+    GIT_TOGETHER=\$(git config git-together.active)
+    echo -e "[\$GIT_TOGETHER] "
   else
     echo -e ""
   fi
 }
 
-export PROMPT='%F{2}$(pairing_initials)%F{253}'$PROMPT
+export PROMPT='%F{2}\$(pairing_initials)%F{253}'\$PROMPT
 
 EOF
 echo "You can find your custom zsh config in ~/.zshrc.local"
