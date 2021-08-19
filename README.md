@@ -51,6 +51,10 @@ To see a list of available options run:
 printf "%s " `ls scripts/opt-in | sed 's/\..*//'`; echo
 ```
 
+### Shiftit
+
+Shiftit is no longer under active development, if you want to install that, run `./setup.sh shiftit`
+
 ## Having problems?
 
 If you see errors from `brew`, try running `brew doctor` and include the diagnostic output in your issue submission.
