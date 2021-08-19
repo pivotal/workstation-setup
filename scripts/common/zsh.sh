@@ -36,7 +36,17 @@ eval "\$(direnv hook zsh)"
 eval "\$(mcfly init zsh)"
 
 # add git-together pairing credentials to prompt
-export PROMPT=\$PROMPT'%F{2}\$(git config git-together.active) %F{253}$ '
+function pairing_initials {
+  if [[ $(git rev-parse --is-inside-work-tree 2>/dev/null) == "true" ]]
+  then
+    GIT_TOGETHER=$(git config git-together.active)
+    echo -e "[$GIT_TOGETHER] "
+  else
+    echo -e ""
+  fi
+}
+
+export PROMPT='%F{2}$(pairing_initials)%F{253}'$PROMPT
 
 EOF
 echo "You can find your custom zsh config in ~/.zshrc.local"
