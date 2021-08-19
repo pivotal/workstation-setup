@@ -31,5 +31,12 @@ dockutil --list | awk -F\t '{print "dockutil --remove \""$1"\" --no-restart"}' |
 dockutil --add /Applications/Google\ Chrome.app --no-restart
 dockutil --add /Applications/iTerm.app
 
+echo
+echo "Configuring iTerm"
+cp files/com.googlecode.iterm2.plist ~/Library/Preferences
 
+echo "Configuring ShiftIt"
+open /Applications/ShiftIt.app
 
+echo "Configuring FlyCut"
+open /Applications/Flycut.app
