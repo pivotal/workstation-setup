@@ -55,4 +55,9 @@ function pairing_initials {
 export PROMPT='%F{2}\$(pairing_initials)%F{253}'\$PROMPT
 
 EOF
+read -r -p "Would you like to change your oh-my-zsh theme? Please enter name or press Enter (Default/n = no change) " THEME_NAME
+if [[ -n $THEME_NAME ]] || [[ $THEME_NAME == "n" ]]
+then
+  sed -i '' -e "s/ZSH_THEME=\".*$/ZSH_THEME=\"$THEME_NAME\"/g" ~/.zshrc
+fi
 echo "You can find your custom zsh config in ~/.zshrc.local"
