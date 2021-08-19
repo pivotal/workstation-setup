@@ -37,7 +37,7 @@ fi
 
 # install cred-alert-cli
 os_name=$(uname | awk '{print tolower($1)}')
-curl -o cred-alert-cli \
-  https://s3.amazonaws.com/cred-alert/cli/current-release/cred-alert-cli_${os_name}
+curl -L -o cred-alert-cli \
+  https://github.com/pivotal-cf/cred-alert/releases/latest/download/cred-alert-cli_${os_name}
 chmod 755 cred-alert-cli
 mv cred-alert-cli /usr/local/bin # <= or other directory in ${PATH}
