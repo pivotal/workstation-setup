@@ -4,29 +4,29 @@ if [[ $(uname) == 'Darwin' ]]
 then
   sudo xcodebuild -license
   xcode-select --install
-  brew install microsoft-office
-  brew install adobe-creative-cloud
-  brew install boxcryptor
-  brew install google-drive
-  brew install meetingbar
-  brew install miro
-  brew install balenaetcher
-  brew install onyx
-  brew install signal
-  brew install spotify
-  brew install tuple
-  brew install zoom
-  brew install deepl
-  brew install expressvpn
-  brew install fanny
-  brew install keka
-  brew install slack
-  brew install calibre
-  brew install veracrypt
-  brew install vnc-viewer
-  brew install teamviewer
-  brew install mas
-  brew install arq
+  brew install --force microsoft-office
+  brew install --force adobe-creative-cloud
+  brew install --force boxcryptor
+  brew install --force google-drive
+  brew install --force meetingbar
+  brew install --force miro
+  brew install --force balenaetcher
+  brew install --force onyx
+  brew install --force signal
+  brew install --force spotify
+  brew install --force tuple
+  brew install --force zoom
+  brew install --force deepl
+  brew install --force expressvpn
+  brew install --force fanny
+  brew install --force keka
+  brew install --force slack
+  brew install --force calibre
+  brew install --force veracrypt
+  brew install --force vnc-viewer
+  brew install --force teamviewer
+  brew install --force mas
+  brew install --force arq
   # install python
   source $MY_DIR/scripts/opt-in/python.sh
 
