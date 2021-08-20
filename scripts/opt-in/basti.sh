@@ -28,7 +28,7 @@ then
   brew install mas
   brew install arq
   # install python
-  source $MY_DIR/scripts/opt-in/python
+  source $MY_DIR/scripts/opt-in/python.sh
 
   # mac app store installations
   mas purchase $(mas search "Unsplash Wallpapers" | head -1 | cut -c1-12)
