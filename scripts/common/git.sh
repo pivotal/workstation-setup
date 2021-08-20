@@ -11,9 +11,15 @@ brew install vim
 echo "GitHub CLI -- gh"
 brew install gh
 
+# All these applications are independent, so if one
+# fails to install, don't stop.
+set +e
+
 brew install --cask rowanj-gitx
 brew install --cask sourcetree
 brew install --cask gitup
+
+set -e
 
 echo
 echo "Putting a sample git-pair file in ~/.pairs"
