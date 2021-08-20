@@ -2,6 +2,8 @@
 set +e
 if [[ $(uname) == 'Darwin' ]]
 then
+  sudo xcodebuild -license
+  xcode-select --install
   brew install microsoft-office
   brew install adobe-creative-cloud
   brew install boxcryptor
