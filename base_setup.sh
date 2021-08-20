@@ -8,11 +8,6 @@ set -e
 
 . _init.sh
 
-echo "Caching sudo password..."
-sudo -K
-sudo true;
-clear
-
 # Note: Start by ensuring that homebrew is installed
 . ${WORKSTATION_SETUP_HOME}/scripts/common/homebrew.sh
 
