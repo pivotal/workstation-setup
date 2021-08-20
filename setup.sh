@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# setup.sh:  run the Pivotal workstation setup
+# setup.sh:  run the workstation setup
 #
 # Arguments:
 #   - a list of components to install, see scripts/opt-in/ for valid options
