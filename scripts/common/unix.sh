@@ -2,26 +2,29 @@
 
 echo
 echo "Installing utilities for unix development"
-
-# For users of unixes
+brew install autojump
+brew install grc
+brew install coreutils
+brew install watch
 brew install pstree
 brew install the_silver_searcher
-brew install wget
 brew tap cantino/mcfly
-brew install mcfly
-brew install lsd
-brew install bat
-brew install delta
-brew install dust
-brew install duf
-brew install broot
-brew install fd
-brew install choose
-brew install glances
+brew install mcfly # better shell history
+brew install lsd # better ls
+brew install bat # better cat
+brew install delta # better diff
+brew install dust # better du
+brew install duf # better df
+brew install broot # better file ops in directory
+brew install fd # better find
+brew install choose # better cut
+brew install glances htop # better top
 brew install dog
+# for http scripting/testing
 brew install xh
 brew install httpie
-
+brew install wget
 
 # For developers of shell scripts
-brew install jq
+brew install jq # json parsing
+brew install yq # yaml/xml parsing
