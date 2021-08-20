@@ -53,7 +53,7 @@ printf "%s " `ls scripts/opt-in | sed 's/\..*//'`; echo
 
 ### Shiftit
 
-Shiftit is no longer under active development, if you want to install that, run `./setup.sh shiftit`
+Shiftit is no longer under active development, if you want to install it you can add `shiftit` to either your `./setup.sh` or `./add_setup.sh` command line.
 
 ## Having problems?
 
