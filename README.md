@@ -1,6 +1,6 @@
 # Workstation Setup
 
-This project automates the process of setting up a new Pivotal machine using a simple [Bash](https://www.gnu.org/software/bash/) script.
+This project automates the process of setting up a new development machine using a simple [Bash](https://www.gnu.org/software/bash/) script.
 
 ## Goals
 
