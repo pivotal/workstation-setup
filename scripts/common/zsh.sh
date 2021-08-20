@@ -52,7 +52,7 @@ function pairing_initials {
   fi
 }
 
-export PROMPT='%F{2}\$(pairing_initials)\${reset_color}'\$PROMPT
+export PROMPT='%{%F{2}%}\$(pairing_initials)%{\${reset_color}%}'\$PROMPT
 
 EOF
 read -r -p "Would you like to change your oh-my-zsh theme? Please enter name or press Enter (Default/n = no change) " THEME_NAME
