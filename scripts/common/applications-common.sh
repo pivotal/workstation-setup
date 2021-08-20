@@ -21,12 +21,7 @@ brew install --cask iterm2
 
 # Browsers
 
-brew install --cask google-chrome
 brew install --cask firefox
-
-# Communication
-
-brew install --cask slack
 
 # Text Editors
 

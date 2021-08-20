@@ -18,7 +18,6 @@ clear
 
 # Place any applications that require the user to type in their password here
 brew install --cask github
-brew install --cask zoom
 
 . ${WORKSTATION_SETUP_HOME}/scripts/common/zsh-setup.sh
 . ${WORKSTATION_SETUP_HOME}/scripts/common/oh-my-zsh.sh
