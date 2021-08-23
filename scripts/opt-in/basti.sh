@@ -63,5 +63,6 @@ then
   dockutil --add /Applications/Microsoft\ OneNote.app --no-restart
   dockutil --add /System/Applications/Notes.app --no-restart
   dockutil --add /System/Applications/Reminders.app
+  dockutil --add /System/Applications/Utilities/Activity Monitor.app
 fi
 set -e
