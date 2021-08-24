@@ -15,21 +15,20 @@ if ! command -v rvm > /dev/null; then
   curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -
   curl -sSL https://get.rvm.io | bash -s stable
 
-  source ~/.rvm/scripts/rvm
+  # Load RVM into a shell session *as a function*
+  if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
+    # First try to load from a user install
+    source "$HOME/.rvm/scripts/rvm"
+  elif [[ -s '/usr/local/rvm/scripts/rvm' ]] ; then
+    # Then try to load from a root install
+    source '/usr/local/rvm/scripts/rvm'
+  else
+    printf "ERROR: An RVM installation was not found.\n"
+  fi
 else
   echo 'RVM Installed'
 fi
 
-# Load RVM into a shell session *as a function*
-if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
-  # First try to load from a user install
-  source "$HOME/.rvm/scripts/rvm"
-elif [[ -s '/usr/local/rvm/scripts/rvm' ]] ; then
-  # Then try to load from a root install
-  source '/usr/local/rvm/scripts/rvm'
-else
-  printf "ERROR: An RVM installation was not found.\n"
-fi
 
 if ! [[ $(rvm ls) == *"${ruby_version}"* ]]; then
   echo "Installing Ruby ${ruby_version}"
