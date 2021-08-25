@@ -1,5 +1,8 @@
 #!/bin/zsh
 set +e
+
+brew install zoxide 
+
 if [[ $(uname) == 'Darwin' ]]
 then
   sudo xcodebuild -license
@@ -27,6 +30,7 @@ then
   brew install --force teamviewer
   brew install --force mas
   brew install --force arq
+  
   # install python
   source $MY_DIR/scripts/opt-in/python.sh
 
