@@ -4,7 +4,9 @@ brew install --cask intellij-idea --force # guard against pre-installed intellij
 brew tap jcgay/jcgay
 brew install maven-deluxe
 brew install gradle
-brew install springboot
+
+brew tap spring-io/tap
+brew install spring-boot
 
 source ${MY_DIR}/scripts/common/download-jetbrains-ide-prefs.sh
 pushd ~/workspace/jetbrains-ide-prefs/cli
