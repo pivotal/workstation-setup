@@ -3,6 +3,7 @@ set +e
 
 brew install zoxide
 brew install zsh-autosuggestions
+brew uninstall --cask --force jetbrains-toolbox
 
 echo 'source #{HOMEBREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc.local
 
