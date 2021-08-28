@@ -1,7 +1,10 @@
 #!/bin/zsh
 set +e
 
-brew install zoxide 
+brew install zoxide
+brew install zsh-autosuggestions
+
+echo 'source #{HOMEBREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc.local
 
 if [[ $(uname) == 'Darwin' ]]
 then
@@ -66,7 +69,7 @@ then
   dockutil --add /Applications/Microsoft\ Word.app --no-restart
   dockutil --add /Applications/Microsoft\ OneNote.app --no-restart
   dockutil --add /System/Applications/Notes.app --no-restart
-  dockutil --add /System/Applications/Reminders.app
-  dockutil --add /System/Applications/Utilities/Activity Monitor.app
+  dockutil --add /System/Applications/Reminders.app --no-restart
+  dockutil --add /System/Applications/Utilities/Activity\ Monitor.app
 fi
 set -e
