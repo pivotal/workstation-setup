@@ -5,7 +5,7 @@ brew install zoxide
 brew install zsh-autosuggestions
 brew uninstall --cask --force jetbrains-toolbox
 
-echo 'source #{HOMEBREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc.local
+echo 'source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc.local
 
 if [[ $(uname) == 'Darwin' ]]
 then
@@ -34,7 +34,7 @@ then
   brew install --force teamviewer
   brew install --force mas
   brew install --force arq
-  
+
   # install python & java
   source $MY_DIR/scripts/opt-in/python.sh
   source $MY_DIR/scripts/opt-in/java.sh
@@ -72,6 +72,8 @@ then
   dockutil --add /Applications/Microsoft\ OneNote.app --no-restart
   dockutil --add /System/Applications/Notes.app --no-restart
   dockutil --add /System/Applications/Reminders.app --no-restart
-  dockutil --add /System/Applications/Utilities/Activity\ Monitor.app
+  dockutil --add /System/Applications/Utilities/Activity\ Monitor.app --no-restart
+  dockutil --add '~/Downloads' --view grid --display stack --no-restart
+  dockutil --add '~/Documents' --view grid --display stack
 fi
 set -e
