@@ -30,13 +30,4 @@ brew install --cask firefox
 
 brew install --cask slack
 
-# Text Editors
-
-brew install --cask macdown
-brew install --cask sublime-text
-brew install --cask textmate
-brew install --cask macvim
-brew install --cask jetbrains-toolbox --force # guard against pre-installed jetbrains-toolbox
-brew install --cask visual-studio-code
-brew install --cask atom
 set -e
