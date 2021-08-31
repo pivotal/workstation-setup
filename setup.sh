@@ -28,15 +28,14 @@ fi
 
 # Note: Homebrew needs to be set up first
 source ${MY_DIR}/scripts/common/homebrew.sh
+
+# Install everything else
 source ${MY_DIR}/scripts/common/configuration-zsh.sh
-
-# Place any applications that require the user to type in their password here
-brew install --cask zoom
-
+source ${MY_DIR}/scripts/common/editors.sh
 source ${MY_DIR}/scripts/common/git.sh
 source ${MY_DIR}/scripts/common/git-aliases.sh
 source ${MY_DIR}/scripts/common/applications-common.sh
-source ${MY_DIR}/scripts/common/editors.sh
+source ${MY_DIR}/scripts/common/developer-utilities.sh
 source ${MY_DIR}/scripts/common/vim-configurations.sh
 source ${MY_DIR}/scripts/common/unix.sh
 source ${MY_DIR}/scripts/common/configuration-osx.sh
