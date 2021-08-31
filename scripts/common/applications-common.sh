@@ -10,12 +10,7 @@ echo "Installing applications"
 brew install --cask flycut
 brew install --cask rectangle
 
-brew install --cask dash
-brew install --cask postman
-brew install --cask quicklook-json
-
 # Terminals
-
 brew install --cask iterm2
 
 # Browsers
@@ -24,7 +19,7 @@ brew install --cask google-chrome
 brew install --cask firefox
 
 # Communication
-
 brew install --cask slack
+brew install --cask zoom
 
 set -e
