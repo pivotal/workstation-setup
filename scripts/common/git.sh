@@ -1,19 +1,6 @@
 echo
 echo "Installing Git and associated tools"
 brew install git
-brew tap git-duet/tap
-brew install git-duet
-brew install git-pair
-brew install git-together
-brew install git-author
-
-brew install --cask rowanj-gitx
-brew install --cask sourcetree
-brew install --cask gitup
-
-echo
-echo "Putting a sample git-pair file in ~/.pairs"
-cp files/.pairs ~/.pairs
 
 echo
 echo "Setting global Git configurations"
@@ -24,3 +11,19 @@ mkdir -p ~/.git_templates
 git config --global init.templateDir ~/.git_templates
 echo "ref: refs/heads/main" > ~/.git_templates/HEAD
 
+echo "Installing pair programming git attribution tools"
+brew tap git-duet/tap
+
+brew install git-duet
+echo "export GIT_DUET_GLOBAL=true" >> ~/.zshrc # use globally
+echo "export GIT_DUET_CO_AUTHORED_BY=1" >> ~/.zshrc # use Co-Authored-By
+echo "export GIT_DUET_ROTATE_AUTHOR=true" >> ~/.zshrc  # rotate the author
+echo "Putting a sample authors file in ~/.git-authors if it isn't already there"
+cp -n files/.git-authors ~/.git-authors || true
+
+echo "Installing git UI tools"
+set +e # Optional; don't exit if they fail
+brew install --cask rowanj-gitx
+brew install --cask sourcetree
+brew install --cask gitup
+set -e
