@@ -6,7 +6,6 @@ brew install git-duet
 brew install git-pair
 brew install git-together
 brew install git-author
-brew install vim
 
 brew install --cask rowanj-gitx
 brew install --cask sourcetree

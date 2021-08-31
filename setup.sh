@@ -36,11 +36,11 @@ brew install --cask zoom
 
 source ${MY_DIR}/scripts/common/git.sh
 source ${MY_DIR}/scripts/common/git-aliases.sh
-# source ${MY_DIR}/scripts/opt-in/git-hook-cred-alert-cli.sh # adds cred-alert git hook
 source ${MY_DIR}/scripts/common/applications-common.sh
+source ${MY_DIR}/scripts/common/editors.sh
+source ${MY_DIR}/scripts/common/vim-configurations.sh
 source ${MY_DIR}/scripts/common/unix.sh
 source ${MY_DIR}/scripts/common/configuration-osx.sh
-source ${MY_DIR}/scripts/common/configurations.sh
 
 # For each command line argument, try executing the corresponding script in opt-in/
 for var in "$@"
