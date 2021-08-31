@@ -23,9 +23,5 @@ echo
 echo "Adding Pivotal tap to Homebrew"
 brew tap pivotal/tap
 
-echo
-echo "Upgrading existing brews..."
-brew upgrade
-
 echo "Cleaning up your Homebrew installation..."
 brew cleanup
