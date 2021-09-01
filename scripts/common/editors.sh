@@ -10,6 +10,9 @@ echo "Uncomment other editors and rerun if you want them"
 brew install --cask visual-studio-code
 brew install vim
 
+echo
+echo "Other editors are available in this script."
+echo "Uncomment what you want."
 # brew install --cask macdown
 # brew install --cask sublime-text
 # brew install --cask textmate
