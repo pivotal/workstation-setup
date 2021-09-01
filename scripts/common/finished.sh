@@ -10,8 +10,8 @@ echo "sudo scutil --set LocalHostName newname"
 echo "sudo scutil --set HostName newname"
 
 echo
-echo "You can use 'git pair' (enabled) 'git duet' (enabled) 'git author' (enabled)"
-echo "or 'git with' aka git-together (installed but not enabled)"
+echo "For pair programming, git-duet is installed. https://github.com/git-duet/git-duet"
+echo "To configure your pairs, edit ~/.git-authors"
 echo ""
 echo "To enable git together:"
 echo "echo 'alias git=git-together' >> ~/.bash_profile"
