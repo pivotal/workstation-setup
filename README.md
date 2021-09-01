@@ -61,16 +61,6 @@ If you're setting up an engineering machine choose which languages to install:
 
 The list of Engineering applications is found in: [applications-common.sh](https://github.com/pivotal/workstation-setup/blob/master/scripts/common/applications-common.sh)
 
-### Designer Machine
-
-If you're setting up a design machine run the following:
-
-```sh
-./setup.sh designer
-```
-
-In addition to the Engineering applications, this script also installs the list of Design applications found in: [applications-designer.sh](https://github.com/pivotal/workstation-setup/blob/master/scripts/opt-in/designer.sh)
-
 ### XP Workshop
 
 If you're setting up a machine for the XP workshop run the following:
@@ -103,10 +93,6 @@ If you'd like to customize this project for a project's use:
 - Profit
 
 ## Frequently Asked Questions
-
-### Is it okay to run `./designer.sh` command again?
-
-Yes. The script does not reinstall apps that are already on the machine.
 
 ### What about sprout-wrap?
 
