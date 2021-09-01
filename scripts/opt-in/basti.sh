@@ -2,6 +2,8 @@
 set +e
 
 brew install zoxide
+echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc.local
+
 brew install zsh-autosuggestions
 brew uninstall --cask --force jetbrains-toolbox
 
@@ -77,3 +79,9 @@ then
   dockutil --add '~/Documents' --view grid --display stack
 fi
 set -e
+
+cat <<EOF >> .zshrc.local
+alias G="| grep"
+alias j="autojump"
+alias z="zoxide"
+EOF
