@@ -30,7 +30,7 @@ fi
 source ${MY_DIR}/scripts/common/homebrew.sh
 
 # Install everything else
-source ${MY_DIR}/scripts/common/configuration-zsh.sh
+source ${MY_DIR}/scripts/common/oh-my-zsh.sh
 source ${MY_DIR}/scripts/common/editors.sh
 source ${MY_DIR}/scripts/common/git.sh
 source ${MY_DIR}/scripts/common/git-aliases.sh
