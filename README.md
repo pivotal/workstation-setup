@@ -118,6 +118,29 @@ A: **Short answer:** run the suggested command, but you'll likely have to run it
 
 **Longer answer:** You might have multiple user profiles on your machine that are using homebrew (such as this tool) resulting in a mix of file and directory ownership under `/usr/local/var/homebrew`. This should mostly be an issue with installing things, but not using the tools installed by `brew`. If you switch between profiles _and_ install tools using `brew` often you might run into this a lot.
 
+**Possible Solution:** Try this solution from [itectec](https://itectec.com/superuser/enable-multiple-users-to-install-software-using-homebrew/) which makes homebrew's directories writable by the `staff` group, which should be all admin users on your machine.
+
+1. Note your default `umask` for later.
+
+   ```shell
+    $> umask
+    022
+    ```
+
+2. Set homebrew's directories to be writable by everyone in the `staff` group.
+
+    ```shell
+    umask 0002 # group write permission
+    sudo chmod -R g+w /usr/local/* # group writable
+    sudo chgrp -R staff /usr/local/* # staff owned
+    ```
+
+3. Set your `umask` back to the default.
+
+   ```shell
+    umask 022 # or whatever you noted earlier
+   ```
+
 _Q: How to I get my change into this tool?_
 
 A: Submit a PR, especially for things that are outdated or broken. But, we are being vigilant about keeping this tool lean after a history of letting many idiosyncratic changes creep in over the past few years. As stated above, you can edit the files yourself after downloading them and/or fork.
