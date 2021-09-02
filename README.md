@@ -51,7 +51,7 @@ Examples:
 # This will only install the default items
 ./setup.sh 
 
-# This will only install the latest Java and Docker
+# This will install the latest Java and Docker
 ./setup.sh java docker
 ```
 
@@ -66,11 +66,11 @@ Please look in `scripts/opt-in/` for optional, opt-in configurations. Some of th
 To install any of these, add them as arguments to `$> setup.sh`. Examples: 
 
 ```sh
-# Common for Java and Spring development
-./setup.sh java docker
+# Common for Spring Boot development
+./setup.sh java spring-boot docker
 
 # Lots of languages
-./setup.sh java ruby node golang python c docker
+./setup.sh java ruby node golang python c
 
 # Love those platforms!
 ./setup.sh golang docker kubernetes cloud-foundry terraform concourse
@@ -114,7 +114,7 @@ Error: Can't create update lock in /usr/local/var/homebrew/locks!
 Fix permissions by running:
   sudo chown -R $(whoami) /usr/local/var/homebrew
 ```
-A: **Short answer:** run the suggested command, but you'll likely have to run it again later. See below.
+A: **Short answer:** run the suggested command or consider the **Possible Solution** described below.
 
 **Longer answer:** You might have multiple user profiles on your machine that are using homebrew (such as this tool) resulting in a mix of file and directory ownership under `/usr/local/var/homebrew`. This should mostly be an issue with installing things, but not using the tools installed by `brew`. If you switch between profiles _and_ install tools using `brew` often you might run into this a lot.
 
