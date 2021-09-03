@@ -76,6 +76,12 @@ To install any of these, add them as arguments to `$> setup.sh`. Examples:
 ./setup.sh golang docker kubernetes cloud-foundry terraform concourse
 ```
 
+The tool also supports a menu for selecting which packages you'd like to include. Specifying no opt-ins will present you with the selection menu instead:
+
+```
+./setup.sh
+```
+
 ## Analytics
 
 The tool will send anonymous user data to our Google Analytics account, so we can see what command line arguments are popular.  You can disable this:
@@ -90,6 +96,8 @@ This will also disable brew's [data collection](https://github.com/Homebrew/brew
 If you're having problems using the setup script, please let us know by [opening an issue](https://github.com/pivotal/workstation-setup/issues/new).
 
 If you see errors from `brew`, try running `brew doctor` and include the diagnostic output in your issue submission.
+
+Using the `--help` or `-h` flags will also present you with a help page for the command syntax.
 
 ## Customizing
 
