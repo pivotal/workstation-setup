@@ -8,7 +8,6 @@ echo 'Starting Lima for the first time...'
 limactl start
 cat <<EOF >> ~/.zshrc.local
 alias docker="lima nerdctl"
-eval \$(limactl completion)
 limactl start
 EOF
 set -e
