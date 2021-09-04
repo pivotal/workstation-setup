@@ -13,5 +13,7 @@ echo
 echo "Starting Lima VM... please wait..."
 echo
 limactl start
+bashcompinit
+eval "\$(limactl completion bash)"
 EOF
 set -e
