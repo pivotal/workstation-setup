@@ -6,7 +6,12 @@ brew install zsh-autosuggestions
 brew uninstall --cask --force jetbrains-toolbox
 brew uninstall docker
 
-echo 'source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc.local
+cat <<EOF >> ~/.zshrc.local
+alias j="autojump"
+alias z="zoxide"
+eval "\$(zoxide init zsh)"
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+EOF
 
 if [[ $(uname) == 'Darwin' ]]
 then
@@ -35,20 +40,17 @@ then
   brew install mas
   brew install arq
 
-  # install python & java & lima
-  source "$MY_DIR/scripts/opt-in/python.sh"
-  source "$MY_DIR/scripts/opt-in/java.sh"
-  source "$MY_DIR/scripts/opt-in/containerization.sh"
-
   # mac app store installations
-  mas purchase "$(mas search "Unsplash Wallpapers" | head -1 | cut -c1-12)"
-  mas purchase "$(mas search "Be Focused" | head -1 | cut -c1-12)"
-  mas purchase "$(mas search "StuffIt Expander" | head -1 | cut -c1-12)"
-  mas purchase "$(mas search "HP Smart for Desktop" | head -1 | cut -c1-12)"
-  mas purchase "$(mas search "HP Easy Scan" | head -1 | cut -c1-12)"
+  mas purchase 1284863847 # Unsplash Wallpapers
+  mas purchase 973134470 # Be focused
+  mas purchase 919269455 # StuffIt Expander
+  mas purchase 1474276998 # HP Smart for Desktop
+  mas purchase 967004861 # HP Easy Scan
+  mas purchase 497799835 # XCode
+  mas purchase 1094255754 # outbank
+  mas purchase 1147396723 # WhatsApp
 
   # configure dock
-  source "${MY_DIR}/scripts/common/configuration-osx.sh"
   dockutil --list | awk -F\t '{print "dockutil --remove \""$1"\" --no-restart"}' | sh
   dockutil --add /System/Applications/Mail.app --no-restart
   dockutil --add /Applications/Safari.app --no-restart
@@ -68,13 +70,12 @@ then
   dockutil --add /System/Applications/Notes.app --no-restart
   dockutil --add /System/Applications/Reminders.app --no-restart
   dockutil --add /System/Applications/Utilities/Activity\ Monitor.app --no-restart
-  dockutil --add '~/Downloads' --view grid --display stack --no-restart
-  dockutil --add '~/Documents' --view grid --display stack
+  dockutil --add "$HOME/Boxcryptor/OneDrive/Documents" --view auto --display stack --no-restart
+  dockutil --add "$HOME/Downloads/" --view auto --display stack
 fi
 set -e
 
-cat <<EOF >> ~/.zshrc.local
-alias j="autojump"
-alias z="zoxide"
-eval "\$(zoxide init zsh)"
-EOF
+  # install python & java & lima
+source "$MY_DIR/scripts/opt-in/python.sh"
+source "$MY_DIR/scripts/opt-in/java.sh"
+source "$MY_DIR/scripts/opt-in/containerization.sh"
