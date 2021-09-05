@@ -76,6 +76,6 @@ fi
 set -e
 
   # install python & java & lima
-source "$MY_DIR/scripts/opt-in/python.sh"
-source "$MY_DIR/scripts/opt-in/java.sh"
-source "$MY_DIR/scripts/opt-in/containerization.sh"
+source "$WORK_DIR/scripts/opt-in/python.sh"
+source "$WORK_DIR/scripts/opt-in/java.sh"
+source "$WORK_DIR/scripts/opt-in/containerization.sh"

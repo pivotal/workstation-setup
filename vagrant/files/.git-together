@@ -1,0 +1,4 @@
+[git-together]
+domain = vmware.com
+[git-together "authors"]
+bd = "Bastian Doetsch; bdoetsch"

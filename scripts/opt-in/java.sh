@@ -13,4 +13,4 @@ fi
 # install latest version
 sdk install java
 
-source ${MY_DIR}/scripts/opt-in/java-tools.sh
+source ${WORK_DIR}/scripts/opt-in/java-tools.sh

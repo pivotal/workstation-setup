@@ -10,7 +10,7 @@ brew tap spring-io/tap
 brew uninstall springboot
 brew install spring-boot
 
-source "${MY_DIR}/scripts/common/download-jetbrains-ide-prefs.sh"
+source "${WORK_DIR}/scripts/common/download-jetbrains-ide-prefs.sh"
 pushd ~/workspace/jetbrains-ide-prefs/cli 1>/dev/null
   ./bin/ide_prefs install --ide=intellij
 popd

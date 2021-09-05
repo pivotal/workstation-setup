@@ -11,7 +11,7 @@ rbenv rehash
 # guard against pre-installed rubymine
 brew install --cask rubymine --force
 
-source ${MY_DIR}/scripts/common/download-jetbrains-ide-prefs.sh
+source ${WORK_DIR}/scripts/common/download-jetbrains-ide-prefs.sh
 pushd ~/workspace/jetbrains-ide-prefs/cli
 ./bin/ide_prefs install --ide=rubymine
 popd

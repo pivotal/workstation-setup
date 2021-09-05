@@ -2,7 +2,7 @@ echo
 echo "Installing common Kubernetes tooling"
 
 # install docker to have a container runtime for kubernetes/containers
-source ${MY_DIR}/scripts/opt-in/docker.sh
+source ${WORK_DIR}/scripts/opt-in/docker.sh
 
 # as docker now is propriertary, let's run minikube on virtualbox
 brew install --cask virtualbox
