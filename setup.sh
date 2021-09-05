@@ -10,7 +10,7 @@
 #
 
 # Fail immediately if any errors occur
-set -ex
+set -e
 
 WORK_DIR="$(dirname "$0")"
 
