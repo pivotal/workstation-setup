@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -ex pipefail
+set -e pipefail
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 TZ=Europe/Berlin
@@ -10,4 +10,4 @@ apt-get -y update && apt-get -y upgrade
 
 source /home/vagrant/workstation-setup/02_install-base.sh
 su -c "source /home/vagrant/workstation-setup/03_vagrant-user-config.sh" vagrant
-su -c "source /home/vagrant/workstation-setup/04_ui.sh" vagrant
+source /home/vagrant/workstation-setup/04_ui.sh

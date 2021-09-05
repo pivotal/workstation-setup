@@ -70,10 +70,21 @@ set +e
 [[ ! -f ~/.cargo/bin/mcfly ]] && cargo install --git https://github.com/cantino/mcfly.git --branch master mcfly # mcfly shell history
 set -e
 
+echo
+if [[ ! -d "$HOME/.sdkman" ]]
+then
+  echo "Installing sdkman"
+  curl -s "https://get.sdkman.io?rcupdate=false" | bash
+  [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+  sdk install java
+fi
+
+
+# install latest version
 
 cat <<EOF > ~/.zshrc.local
 DISABLE_UPDATE_PROMPT=true
-PATH=/usr/local/bin:\${PATH}:\$HOME/.cargo/bin/:$HOME/bin
+PATH=/usr/local/bin:\${PATH}:\$HOME/.cargo/bin/:\$HOME/bin
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # add git-together pairing credentials to prompt
@@ -103,6 +114,6 @@ alias dir='lsd -lah'
 alias la='lsd -la'
 alias j="autojump"
 alias bat='batcat'
-
+[[ -s "\$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "\$HOME/.sdkman/bin/sdkman-init.sh"
 EOF
 

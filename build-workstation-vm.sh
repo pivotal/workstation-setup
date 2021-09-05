@@ -8,10 +8,11 @@ echo
 echo "Installing virtualbox & vagrant..."
 echo
 echo
-#brew install virtualbox
-#brew install vagrant
-#brew install vagrant-manager
-#brew install vagrant-completion
+brew install virtualbox
+brew install virtualbox-extension-pack
+brew install vagrant
+brew install vagrant-manager
+brew install vagrant-completion
 
 echo
 echo "Configuring vagrant"
