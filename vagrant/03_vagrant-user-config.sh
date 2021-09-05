@@ -68,16 +68,13 @@ mv cred-alert-cli "$HOME"/bin # <= or other directory in ${PATH}
 set +e
 [[ ! -f ~/.cargo/bin/git-together ]] && cargo install --git https://github.com/kejadlen/git-together.git --branch master git-together # git-together for pairing
 [[ ! -f ~/.cargo/bin/mcfly ]] && cargo install --git https://github.com/cantino/mcfly.git --branch master mcfly # mcfly shell history
-[[ ! -f ~/.cargo/bin/lsd ]] && cargo install --git https://github.com/Peltoche/lsd.git --branch master lsd # lsd for a better ls
-[[ ! -f ~/.cargo/bin/dog ]] && cargo install --git https://github.com/ogham/dog.git --branch master dog # dog for a better dig
-#[[ ! -f ~/.cargo/bin/zoxide ]] && cargo install --git https://github.com/ajeetdsouza/zoxide.git --branch main zoxide # zoxide shell history
 set -e
 
 
 cat <<EOF > ~/.zshrc.local
 DISABLE_UPDATE_PROMPT=true
 PATH=/usr/local/bin:\${PATH}:\$HOME/.cargo/bin/:$HOME/bin
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # add git-together pairing credentials to prompt
 function pairing_initials {

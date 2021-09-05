@@ -24,9 +24,14 @@ apt-get -y install \
   git \
   build-essential \
   zsh-autosuggestions \
-  snapd
+  snapd \
+  zoxide
 
-snap install intellij-idea-ultimate --classic
+snap install --classic \
+  intellij-idea-ultimate \
+  lsd \
+  dog \
+  pycharm-professional
 
 
 
