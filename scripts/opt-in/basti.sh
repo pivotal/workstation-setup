@@ -50,8 +50,9 @@ then
   mas purchase 1094255754 # outbank
   mas purchase 1147396723 # WhatsApp
 
-  # configure dock
-  dockutil --list | awk -F$(printf '\t') '{print "dockutil --remove \""$1"\" --no-restart"}' | sh
+  # mac os configurations
+  source "$WORK_DIR"/scripts/opt-in/basti-macos-config.sh
+  dockutil --list | awk -F\t '{print "dockutil --remove \""$1"\" --no-restart"}' | sh
   dockutil --add "/System/Applications/Mail.app" --no-restart
   dockutil --add "/Applications/Safari.app" --no-restart
   dockutil --add "/System/Applications/Calendar.app" --no-restart
