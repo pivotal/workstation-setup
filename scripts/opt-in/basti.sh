@@ -47,6 +47,7 @@ then
   mas purchase 1474276998 # HP Smart for Desktop
   mas purchase 967004861 # HP Easy Scan
   mas purchase 497799835 # XCode
+  sudo xcodebuild -license accept
   mas purchase 1094255754 # outbank
   mas purchase 1147396723 # WhatsApp
 
