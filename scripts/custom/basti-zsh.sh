@@ -28,12 +28,11 @@ brew install zsh-autosuggestions
 cat <<EOF > ~/.zshrc.local
 DISABLE_UPDATE_PROMPT=true
 PATH=\$HOME/.cargo/bin:\$HOME/bin:/usr/local/bin:\${PATH}
+ASPATH=/usr/local/share/zsh-autosuggestions
 if [[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
   ASPATH=/usr/share/zsh-autosuggestions
-else
-  ASPATH=/usr/local/share/zsh-autosuggestions
 fi
-source $ASPATH/zsh-autosuggestions.zsh
+source \$ASPATH/zsh-autosuggestions.zsh
 alias git='git-together'
 alias git-pull-all='find . -type d -depth 1 -exec git -C {} pull \;'
 alias gpa=git-pull-all
