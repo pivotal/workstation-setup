@@ -1,7 +1,7 @@
 #!/bin/zsh
 set +e
 
-source "${WORK_DIR}"/scripts/opt-in/zsh.sh
+source "${WORK_DIR}"/scripts/opt-in/basti-zsh.sh
 source "${WORK_DIR}"/scripts/opt-in/cred-alert.sh
 
 echo "Installing direnv"
