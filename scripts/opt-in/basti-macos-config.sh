@@ -30,8 +30,8 @@ sudo spctl --master-disable
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
-# Disable transparency in the menu bar and elsewhere on Yosemite
-#defaults write com.apple.universalaccess reduceTransparency -bool true
+# Enable transparency in the menu bar and elsewhere on Yosemite
+defaults write com.apple.universalaccess reduceTransparency -bool false
 
 # Set highlight color to green
 # defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
@@ -40,8 +40,8 @@ sudo nvram SystemAudioVolume=" "
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
 # Always show scrollbars
-defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
+defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
 # Disable the over-the-top focus ring animation
 defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false
@@ -115,7 +115,7 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryCli
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
 
 # Increase sound quality for Bluetooth headphones/headsets
-#defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
@@ -128,8 +128,8 @@ defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 # Follow the keyboard focus while zoomed in
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
-# Disable press-and-hold for keys in favor of key repeat
-#defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+# Control press-and-hold for keys in favor of key repeat
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool true
 
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1
@@ -159,6 +159,7 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/nul
 
 # Enable lid wakeup
 sudo pmset -a lidwake 1
+sudo pmset -a acwake 1 # wake up on power source change
 
 # Restart automatically on power loss
 # sudo pmset -a autorestart 1
@@ -166,25 +167,31 @@ sudo pmset -a lidwake 1
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
 
-# Sleep the display after 15 minutes
-sudo pmset -a displaysleep 15
+# Sleep settings for charger
+sudo pmset -c displaysleep 15
+sudo pmset -c disksleep 30
+sudo pmset -c sleep 45
+sudo pmset -c powernap 1
+sudo pmset -c standbydelay 3600 # Set delay to go into hibernate to 6 hours (default is 1 hour)
+sudo pmset -c autopoweroffdelay 3600 # Set delay to go into hibernate to 6 hours (default is 1 hour)
 
-# Disable machine sleep while charging
-# sudo pmset -c sleep 0
+# Sleep settings for battery
+sudo pmset -b displaysleep 1
+sudo pmset -b disksleep 5
+sudo pmset -b sleep 10
 
-# Set machine sleep to 5 minutes on battery
-sudo pmset -b sleep 5
+sudo pmset -b lessbright 1 # on battery, make display less bright
 
-# Set standby delay to 24 hours (default is 1 hour)
-# sudo pmset -a standbydelay 86400
+sudo pmset -a womp 1 # wake on ethernet
+sudo pmset -a sms 1 # hdd protection on sudden movement
+sudo pmset -a ttyskeepawake 1 # don't fall asleep during remote sessions
+sudo pmset -a destroyfvkeyonstandby 1 # lock file-vault when falling asleep
 
-# Never go into computer sleep mode
-# sudo systemsetup -setcomputersleep Off > /dev/null
 
 # Hibernation mode
 # 0: Disable hibernation (speeds up entering sleep mode)
 # 3: Copy RAM to disk so the system state can still be restored in case of a
-#    power failure.
+#    power failure (default).
 # sudo pmset -a hibernatemode 0
 
 # Remove the sleep image file to save disk space
@@ -202,8 +209,8 @@ sudo pmset -b sleep 5
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# Save screenshots in OneDrive
-defaults write com.apple.screencapture location -string "${HOME}/OneDrive/Documents/Screenshots"
+# Save screenshots in Downloads
+defaults write com.apple.screencapture location -string "${HOME}/Downloads"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
