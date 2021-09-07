@@ -21,15 +21,14 @@ fi
 echo "source ~/.zshrc.local" >> ~/.zshrc
 
 cp files/dircolors.ansi-dark ~/.dircolors
-cp files/.inputrc ~/.inputrc
 
-echo "Installing direnv"
-brew install direnv
+echo "Installing zsh-autosuggestions"
+brew install zsh-autosuggestions
 
 cat <<EOF > ~/.zshrc.local
 DISABLE_UPDATE_PROMPT=true
-PATH=/usr/local/bin:\${PATH}
-
+PATH=\$HOME/.cargo/bin:\$HOME/bin:/usr/local/bin:\${PATH}
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias git='git-together'
 alias git-pull-all='find . -type d -depth 1 -exec git -C {} pull \;'
 alias gpa=git-pull-all

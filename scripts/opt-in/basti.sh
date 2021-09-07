@@ -1,9 +1,15 @@
 #!/bin/zsh
 set +e
 
+source "${WORK_DIR}"/scripts/opt-in/zsh.sh
+
+echo "Installing direnv"
+brew install direnv
+echo "Installing zoxide"
 brew install zoxide
-brew install zsh-autosuggestions
+echo "Uninstalling jetbrains-toolbox"
 brew uninstall --cask --force jetbrains-toolbox
+echo "Uninstalling docker"
 brew uninstall docker
 
 cat <<EOF >> ~/.zshrc.local
