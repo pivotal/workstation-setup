@@ -20,12 +20,3 @@ git config --global alias.squash "commit --squash"
 git config --global alias.amendit "commit --amend --no-edit"
 git config --global alias.unstage "reset HEAD"
 git config --global alias.rum "rebase master@{u}"
-
-if [[ $(basename $SHELL) == 'bash' ]]
-then
-  if [ ! -d ~/.bash_it/aliases/enabled ]; then
-      mkdir ~/.bash_it/aliases/enabled
-  fi
-  echo "#Git" >> ~/.bash_it/aliases/enabled/general.aliases.bash
-  echo "alias gst='git status'" >> ~/.bash_it/aliases/enabled/general.aliases.bash
-fi

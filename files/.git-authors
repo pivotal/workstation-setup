@@ -1,0 +1,7 @@
+pairs:
+  # Examples below:
+  aa: Aaron A Aaronson; aaronson
+  mm: Mary Miles; mmiles
+
+email:
+  domain: example.com

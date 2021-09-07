@@ -23,17 +23,5 @@ echo
 echo "Adding Pivotal tap to Homebrew"
 brew tap pivotal/tap
 
-echo
-echo "Adding Powerline fonts tap to Homebrew"
-brew tap homebrew/cask-fonts
-
-echo
-echo "Add font-hack-nerd-font"
-brew install --cask font-hack-nerd-font
-
-echo
-echo "Upgrading existing brews..."
-brew upgrade
-
 echo "Cleaning up your Homebrew installation..."
 brew cleanup

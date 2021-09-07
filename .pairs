@@ -1,14 +1,9 @@
 pairs:
-  bk: Brian Kelly; bkelly
-  ah: Ashraf Hanafy; ahanafy
-  jf: Joshua Franklin; jfranklin
-  de: David Edwards; dedwards
-  ec: Eric Cipra; ecipra
-  ts: Todd Sedano; tsedano
-  sw: Stephen Wu; stwu
-  js: John Sandfort; jsandfort
+  # Examples below (without # comment of course):
+  # aa: Aaron A Aaronson; aaronson
+  # mm: Mary Miles; mmiles
 
 email:
   prefix: pair
-  domain: pivotal.io
+  domain: example.com
 

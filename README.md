@@ -1,35 +1,34 @@
 # Workstation Setup
 
-This project automates the process of setting up a new Pivotal machine using a simple [Bash](https://www.gnu.org/software/bash/) script.
+This project automates the process of setting up a new Mac OS X software development machine using simple [Bash](https://www.gnu.org/software/bash/) scripting. It heavily relies on [homebrew](https://brew.sh/).
 
 ## Goals
 
-The primary goal of this project is to give people a simple script they can run to make their machine a bit more useful and standard for working on Pivotal projects.
+The primary goal of this project is to give people a simple script they can run to make their Mac OS X machine prepared and standardized for working on software development projects, especially those common at VMware Tanzu Labs.
+
+## Why did we do it this way?
 
  * A bash script is easy for users to edit locally on-the-fly for small temporary tweaks
  * Everything is in one repository
  * The project name is informative
- * Keep it easy to fork and customize
- * It has very limited requirements: git, bash and Ruby are all available on macOS by default
+ * It is easy to fork and customize
+ * It has limited requirements: `git` and `bash` available on macOS by default
 
 ## Anti-goals
 
 This project does not aim to do everything. Some examples:
 
  * We don't install everything that your project needs. These scripts should only install generally useful things, and prefer running quickly over being complete.
- * We avoid setting up and maintaining overly-custom configurations. When there is already a tool that will get us something in a conventional manner, such as [bash-it](https://github.com/Bash-it/bash-it), we prefer to use it instead of doing things ourselves.
+ * We avoid setting up and maintaining overly-custom configurations. When there is already a tool that will get us something in a conventional manner, such as [Oh My Zsh](https://ohmyz.sh/), we prefer to use it instead of doing things ourselves.
 
-**Warning: the automation script is currently aggressive about what it does and will overwrite vim configurations, bash-it configurations, etc.**
+## Preparation
 
-## Getting Started
-
-- Run the latest version of macOS, currently [High Sierra](https://www.apple.com/macos/high-sierra/),
-  unless you have a specific reason not to
+- Run the latest version of macOS unless you have a specific reason not to
 - These scripts might work on previous versions, but are maintained with only the latest macOS in mind
-- If you are not on High Sierra, you need to install the latest version of [Xcode](https://developer.apple.com/xcode/)
-- On High Sierra, once you have used git (below), you will have installed the command line developer tools
+- Install the latest version of [Xcode](https://developer.apple.com/xcode/)
 
-Open up Terminal.app and run the following command:
+## Getting this tool
+Open up `Terminal.app` and run the following command:
 
 ```sh
 mkdir -p ~/workspace &&
@@ -38,42 +37,43 @@ mkdir -p ~/workspace &&
   cd workstation-setup
 ```
 
-### Engineering Machine
+**Note:** This might prompt you to install the latest Xcode command line development tools. Please do so if prompted. 
 
-If you're setting up an engineering machine choose which languages to install:
+## Using this tool
+Within `~/workspace/workstation-setup`, run the following:
 
-```sh
-# For Labs developers (remove unnecessary languages when running command)
-./setup.sh java ruby node golang python c docker
-
-# For Data developers
-./setup.sh c golang java docker
-
-# For .net
-./setup.sh dotnet
-
-# For Solutions Architects/Platform Engineers
-./setup.sh docker golang kubernetes terraform concourse
+```shell
+./setup.sh [list of optional configurations]
 ```
 
-The list of Engineering applications is found in: [applications-common.sh](https://github.com/pivotal/workstation-setup/blob/master/scripts/common/applications-common.sh)
+Examples:
+```shell
+# This will only install the default items
+./setup.sh 
 
-### Designer Machine
-
-If you're setting up a design machine run the following:
-
-```sh
-./setup.sh designer
+# This will install the latest Java and Docker
+./setup.sh java docker
 ```
 
-In addition to the Engineering applications, this script also installs the list of Design applications found in: [applications-designer.sh](https://github.com/pivotal/workstation-setup/blob/master/scripts/opt-in/designer.sh)
+**Warning: this tool might overwrite existing configurations.**
 
-### XP Workshop
+### Items installed by default
+We recommend that you look at `setup.sh` to see what is automatically installed. You'll see it calls other scripts within `scripts/common`, so feel free to take a look at those, too. Note that you can edit any of those files to add or remove items specific for your needs, but the goal of this project is to have sane defaults for our target audience.
 
-If you're setting up a machine for the XP workshop run the following:
+### Opt-In Configurations
+Please look in `scripts/opt-in/` for optional, opt-in configurations. Some of these are languages and associated frameworks, such as `java` and `golang`. Some are supporting infrastructure, such as `docker` and `kubernetes`. Others might be specific tools for application platforms, such as `cloud-foundry`.
+
+To install any of these, add them as arguments to `$> setup.sh`. Examples: 
 
 ```sh
-./setup.sh java node
+# Common for Spring Boot development
+./setup.sh java spring-boot docker
+
+# Lots of languages
+./setup.sh java ruby node golang python c
+
+# Love those platforms!
+./setup.sh golang docker kubernetes cloud-foundry terraform concourse
 ```
 
 ## Analytics
@@ -99,16 +99,48 @@ If you'd like to customize this project for a project's use:
 - Edit the shells scripts to your liking
 - Profit
 
-## Frequently Asked Questions
+## Frequently Asked Questions and Troubleshooting
+_Q: Can I rerun `setup.sh`?_
 
-### Is it okay to run `./designer.sh` command again?
+A: Yes, but with a _but_. While this script is not entirely [idempotent](https://en.wikipedia.org/wiki/Idempotence), it does use homebrew's cache to skip reinstalling items, and is pretty lenient about ignoring errors when non-homebrew items get mad that they are already installed. There is no guarantee that some configurations won't be overwritten or duplicated. 
 
-Yes. The script does not reinstall apps that are already on the machine.
+_Q: Should I run this with `sudo`?_
 
-### What about sprout-wrap?
+A: No. `setup.sh` will ask you for your password take care of that for you.
 
-This project is provided as an alternative to the [pivotal-sprout/sprout-wrap](https://github.com/pivotal-sprout/sprout-wrap) project. You are encouraged to use that project if it better suits your needs.
+_Q: I'm getting permission errors such as the one below:_
+```sh 
+Error: Can't create update lock in /usr/local/var/homebrew/locks!
+Fix permissions by running:
+  sudo chown -R $(whoami) /usr/local/var/homebrew
+```
+A: **Short answer:** run the suggested command or consider the **Possible Solution** described below.
 
-The goals of this projects is to keep the setup process simple and up to date:
+**Longer answer:** You might have multiple user profiles on your machine that are using homebrew (such as this tool) resulting in a mix of file and directory ownership under `/usr/local/var/homebrew`. This should mostly be an issue with installing things, but not using the tools installed by `brew`. If you switch between profiles _and_ install tools using `brew` often you might run into this a lot.
 
-Please see [this GitHub issue](https://github.com/pivotal/workstation-setup/issues/3) for more discussion on the subject.
+**Possible Solution:** Try this solution from [itectec](https://itectec.com/superuser/enable-multiple-users-to-install-software-using-homebrew/) which makes homebrew's directories writable by the `staff` group, which should be all admin users on your machine.
+
+1. Note your default `umask` for later.
+
+   ```shell
+    $> umask
+    022
+    ```
+
+2. Set homebrew's directories to be writable by everyone in the `staff` group.
+
+    ```shell
+    umask 0002 # group write permission
+    sudo chmod -R g+w /usr/local/* # group writable
+    sudo chgrp -R staff /usr/local/* # staff owned
+    ```
+
+3. Set your `umask` back to the default.
+
+   ```shell
+    umask 022 # or whatever you noted earlier
+   ```
+
+_Q: How to I get my change into this tool?_
+
+A: Submit a PR, especially for things that are outdated or broken. But, we are being vigilant about keeping this tool lean after a history of letting many idiosyncratic changes creep in over the past few years. As stated above, you can edit the files yourself after downloading them and/or fork.

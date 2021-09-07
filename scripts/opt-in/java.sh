@@ -1,16 +1,11 @@
 echo
-if [[ ! -d "$HOME/.sdkman" ]]
-then
-  echo "Installing sdkman"
-  curl -s "https://get.sdkman.io?rcupdate=false" | bash
-  # shellcheck disable=SC2016
-  echo '[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"' >> ~/.zshrc.local
-  cp files/sdkman.bash ~/.bash_it/custom/sdkman.bash
-fi
+echo "Installing most recent version of OpenJDK"
+brew install openjdk
 
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# Configure opensjdk as instructed by 'brew info openjdk'
+sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+echo 'export PATH="/usr/local/opt/openjdk/bin:$PATH"' >> ~/.zshenv
+echo 'export CPPFLAGS="-I/usr/local/opt/openjdk/include"' >> ~/.zshenv
 
-# install latest version
-sdk install java
-
+# more java tools
 source ${WORK_DIR}/scripts/opt-in/java-tools.sh

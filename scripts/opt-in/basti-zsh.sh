@@ -37,8 +37,11 @@ alias ll='lsd -l'
 alias l='lsd -lah'
 alias dir='lsd -lah'
 alias la='lsd -la'
+alias j="autojump"
+alias z="zoxide"
 eval "\$(direnv hook zsh)"
 eval "\$(mcfly init zsh)"
+eval "\$(zoxide init zsh)"
 
 # add git-together pairing credentials to prompt
 function pairing_initials {
@@ -52,8 +55,8 @@ function pairing_initials {
 }
 
 export PROMPT='%{%F{2}%}\$(pairing_initials)%{\${reset_color}%}'\$PROMPT
-
 EOF
+
 read -r -p "Would you like to change your oh-my-zsh theme? Please enter name or press Enter (Default/n = no change) " THEME_NAME
 if [[ -n $THEME_NAME ]] || [[ $THEME_NAME == "n" ]]
 then

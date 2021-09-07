@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# setup.sh:  run the Pivotal workstation setup
+# setup.sh:  run the workstation setup
 #
 # Arguments:
 #   - a list of components to install, see scripts/opt-in/ for valid options
@@ -20,13 +20,17 @@ sudo -v
 # Keep sudo alive
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-source "${WORK_DIR}"/scripts/common/homebrew.sh
-source "${WORK_DIR}"/scripts/common/zsh.sh
-source "${WORK_DIR}"/scripts/common/git.sh
-source "${WORK_DIR}"/scripts/common/git-aliases.sh
-source "${WORK_DIR}"/scripts/common/unix.sh
+# Note: Homebrew needs to be set up first
+# Install everything else
+source ${WORK_DIR}/scripts/common/oh-my-zsh.sh
+source ${WORK_DIR}/scripts/common/editors.sh
+source ${WORK_DIR}/scripts/common/git.sh
+source ${WORK_DIR}/scripts/common/git-aliases.sh
+source ${WORK_DIR}/scripts/common/developer-utilities.sh
+source ${WORK_DIR}/scripts/common/vim-configurations.sh
+source ${WORK_DIR}/scripts/common/unix.sh
 
-# make mac os configurations optional
+# make common apps optional
 echo
 echo
 read -r -p "Would you like to install common applications like browsers? (y/n default)" INSTALL_COMMON_APPS
@@ -35,17 +39,13 @@ then
   source ${WORK_DIR}/scripts/common/applications-common.sh
 fi
 
-echo
-echo
-
+# make macOs config optional
 read -r -p "Do you want to update Mac OS settings? (y/n default)" OS_SETTINGS
 if [[ $OS_SETTINGS == "y" ]]
 then
   source ${WORK_DIR}/scripts/common/configuration-osx.sh
 fi
 echo
-
-source ${WORK_DIR}/scripts/common/configurations.sh
 
 # For each command line argument, try executing the corresponding script in opt-in/
 for var in "$@"
