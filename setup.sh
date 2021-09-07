@@ -28,16 +28,8 @@ source ${WORK_DIR}/scripts/common/git.sh
 source ${WORK_DIR}/scripts/common/git-aliases.sh
 source ${WORK_DIR}/scripts/common/developer-utilities.sh
 source ${WORK_DIR}/scripts/common/vim-configurations.sh
+source ${WORK_DIR}/scripts/common/applications-common.sh
 source ${WORK_DIR}/scripts/common/unix.sh
-
-# make common apps optional
-echo
-echo
-read -r -p "Would you like to install common applications like browsers? (y/n default)" INSTALL_COMMON_APPS
-if [[ $INSTALL_COMMON_APPS == "y" ]]
-then
-  source ${WORK_DIR}/scripts/common/applications-common.sh
-fi
 
 # make macOs config optional
 read -r -p "Do you want to update Mac OS settings? (y/n default)" OS_SETTINGS

@@ -1,5 +1,7 @@
+#!/usr/bin/env bash
 echo
-
-brew install --cask dash # api browser
-brew install --cask postman # api interaction tool
-brew install --cask quicklook-json # OSX tool for viewing JSON
+set +e
+brew install --cask dash --force # api browser
+brew install --cask postman --force # api interaction tool
+brew install --cask quicklook-json --force # OSX tool for viewing JSON
+set -e
