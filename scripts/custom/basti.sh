@@ -1,7 +1,7 @@
 #!/bin/zsh
 set +e
 
-source "${WORK_DIR}"/scripts/opt-in/basti-zsh.sh
+source "${WORK_DIR}"/scripts/custom/basti-zsh.sh
 source "${WORK_DIR}"/scripts/opt-in/cred-alert.sh
 
 echo "Installing direnv"
@@ -84,7 +84,7 @@ mas purchase 1094255754 # outbank
 mas purchase 1147396723 # WhatsApp
 
 # mac os configurations
-source "$WORK_DIR"/scripts/opt-in/basti-macos-config.sh
+source "$WORK_DIR"/scripts/custom/basti-macos-config.sh
 
 # git customization
 echo

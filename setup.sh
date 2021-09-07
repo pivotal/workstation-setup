@@ -52,4 +52,18 @@ do
     fi
 done
 
+# For each command line argument, try executing the corresponding script in custom/
+for var in "$@"
+do
+    echo "$var"
+    FILE=${WORK_DIR}/scripts/custom/${var}.sh
+    echo "$FILE"
+    if [ -f $FILE ]; then
+        source ${FILE}
+    else
+       echo "Warning: $var does not appear to be a valid argument. File $FILE does not exist."
+    fi
+done
+
+
 source ${WORK_DIR}/scripts/common/finished.sh
