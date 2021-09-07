@@ -4,15 +4,19 @@ set +e
 source "${WORK_DIR}"/scripts/custom/basti-zsh.sh
 source "${WORK_DIR}"/scripts/opt-in/cred-alert.sh
 
+# get rid of bloat
+brew uninstall --cask --force jetbrains-toolbox
+brew uninstall docker
+brew uninstall --cask rowanj-gitx
+brew uninstall --cask sourcetree
+brew uninstall --cask gitup
+brew uninstall --cask github
+
 echo "Installing direnv"
 brew install direnv
 echo "Installing zoxide"
 brew install zoxide
-echo "Uninstalling jetbrains-toolbox"
-brew uninstall --cask --force jetbrains-toolbox
-echo "Uninstalling docker"
-brew uninstall docker
-brew install the_silver_searcher
+
 brew tap cantino/mcfly
 brew install mcfly        # better shell history
 brew install lsd          # better ls
