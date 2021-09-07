@@ -53,27 +53,6 @@ then
 
   # mac os configurations
   source "$WORK_DIR"/scripts/opt-in/basti-macos-config.sh
-  dockutil --list | awk -F\t '{print "dockutil --remove \""$1"\" --no-restart"}' | sh
-  dockutil --add "/System/Applications/Mail.app" --no-restart
-  dockutil --add "/Applications/Safari.app" --no-restart
-  dockutil --add "/System/Applications/Calendar.app" --no-restart
-  dockutil --add "/System/Applications/Contacts.app" --no-restart
-  dockutil --add "/Applications/Slack.app" --no-restart
-  dockutil --add "/Applications/iTerm.app" --no-restart
-  dockutil --add "/Applications/IntelliJ IDEA.app" --no-restart
-  dockutil --add "/Applications/Miro.app" --no-restart
-  dockutil --add "/System/Applications/FaceTime.app" --no-restart
-  dockutil --add "/System/Applications/Messages.app" --no-restart
-  dockutil --add "/Applications/Signal.app" --no-restart
-  dockutil --add "/Applications/Adobe Lightroom CC/Adobe Lightroom.app" --no-restart
-  dockutil --add "/Applications/Microsoft Excel.app" --no-restart
-  dockutil --add "/Applications/Microsoft Word.app" --no-restart
-  dockutil --add /"Applications/Microsoft OneNote.app" --no-restart
-  dockutil --add "/System/Applications/Notes.app" --no-restart
-  dockutil --add "/System/Applications/Reminders.app" --no-restart
-  dockutil --add "/System/Applications/Utilities/Activity Monitor.app" --no-restart
-  dockutil --add "$HOME/Boxcryptor/OneDrive/Documents" --view auto --display stack --no-restart
-  dockutil --add "$HOME/Downloads/" --view auto --display stack
 fi
 set -e
 

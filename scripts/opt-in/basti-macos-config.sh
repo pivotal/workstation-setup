@@ -167,15 +167,15 @@ sudo pmset -a acwake 1 # wake up on power source change
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
 
-# Sleep settings for charger
-sudo pmset -c displaysleep 15
-sudo pmset -c disksleep 30
-sudo pmset -c sleep 45
-sudo pmset -c powernap 1
-sudo pmset -c standbydelay 3600 # Set delay to go into hibernate to 6 hours (default is 1 hour)
-sudo pmset -c autopoweroffdelay 3600 # Set delay to go into hibernate to 6 hours (default is 1 hour)
+# Sleep settings for all
+sudo pmset -a displaysleep 15
+sudo pmset -a disksleep 30
+sudo pmset -a sleep 45
+sudo pmset -a powernap 1
+sudo pmset -a standbydelay 3600 # Set delay to go into hibernate to 6 hours (default is 1 hour)
+sudo pmset -a autopoweroffdelay 3600 # Set delay to go into hibernate to 6 hours (default is 1 hour)
 
-# Sleep settings for battery
+# Override sleep settings for battery
 sudo pmset -b displaysleep 1
 sudo pmset -b disksleep 5
 sudo pmset -b sleep 10
@@ -374,7 +374,7 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Wipe all (default) app icons from the Dock
 # This is only really useful when setting up a new Mac, or if you don’t use
 # the Dock to launch apps.
-#defaults write com.apple.dock persistent-apps -array
+defaults write com.apple.dock persistent-apps -array
 
 # Show only open applications in the Dock
 #defaults write com.apple.dock static-only -bool true
@@ -449,6 +449,29 @@ find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -dele
 # Bottom left screen corner → Start screen saver
 # defaults write com.apple.dock wvous-bl-corner -int 5
 # defaults write com.apple.dock wvous-bl-modifier -int 0
+
+# custom dock
+dockutil --list | awk -F\t '{print "dockutil --remove \""$1"\" --no-restart"}' | sh
+dockutil --add "/System/Applications/Mail.app" --no-restart
+dockutil --add "/Applications/Safari.app" --no-restart
+dockutil --add "/System/Applications/Calendar.app" --no-restart
+dockutil --add "/System/Applications/Contacts.app" --no-restart
+dockutil --add "/Applications/Slack.app" --no-restart
+dockutil --add "/Applications/iTerm.app" --no-restart
+dockutil --add "/Applications/IntelliJ IDEA.app" --no-restart
+dockutil --add "/Applications/Miro.app" --no-restart
+dockutil --add "/System/Applications/FaceTime.app" --no-restart
+dockutil --add "/System/Applications/Messages.app" --no-restart
+dockutil --add "/Applications/Signal.app" --no-restart
+dockutil --add "/Applications/Adobe Lightroom CC/Adobe Lightroom.app" --no-restart
+dockutil --add "/Applications/Microsoft Excel.app" --no-restart
+dockutil --add "/Applications/Microsoft Word.app" --no-restart
+dockutil --add /"Applications/Microsoft OneNote.app" --no-restart
+dockutil --add "/System/Applications/Notes.app" --no-restart
+dockutil --add "/System/Applications/Reminders.app" --no-restart
+dockutil --add "/System/Applications/Utilities/Activity Monitor.app" --no-restart
+dockutil --add "$HOME/Boxcryptor/OneDrive/Documents" --view auto --display stack --no-restart
+dockutil --add "$HOME/Downloads/" --view auto --display stack
 
 ###############################################################################
 # Safari & WebKit                                                             #
