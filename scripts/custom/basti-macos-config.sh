@@ -835,6 +835,12 @@ defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
 
 ###############################################################################
+# Rectangle                                                                   #
+###############################################################################
+
+cp -f "${WORK_DIR}"/scripts/custom/shiftit-rectangle.plist ~/Library/Preferences/com.knollsoft.Rectangle.plist
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
@@ -854,7 +860,11 @@ for app in "Activity Monitor" \
 	"SystemUIServer" \
 	"Terminal" \
 	"Transmission" \
+	"Rectangle" \
 	"iCal"; do
 	killall "${app}" &> /dev/null
 done
+
+open /Applications/Rectangle.app/
+
 echo "Done. Note that some of these changes require a logout/restart to take effect."
