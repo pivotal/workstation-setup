@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+set +e
 echo
 echo 'Customizing OS X configuration'
 
@@ -44,3 +46,4 @@ open /Applications/Rectangle.app
 
 echo "Configuring FlyCut"
 open /Applications/Flycut.app
+set -e
