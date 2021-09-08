@@ -291,7 +291,7 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 #defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 
 # Show item info near icons on the desktop and in other icon views
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:show-ItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 
@@ -846,6 +846,12 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 cp -f "${WORK_DIR}"/scripts/custom/shiftit-rectangle.plist ~/Library/Preferences/com.knollsoft.Rectangle.plist
 
 ###############################################################################
+# Boxcryptor                                                                   #
+###############################################################################
+
+/usr/libexec/PlistBuddy -c "Set :com.boxcryptor.osx.SCVolumeSettings:mountAsLocalDisk true" ~/Library/Preferences/com.boxcryptor.osx.plist
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
@@ -866,10 +872,12 @@ for app in "Activity Monitor" \
 	"Terminal" \
 	"Transmission" \
 	"Rectangle" \
+	"Boxcryptor" \
 	"iCal"; do
 	killall "${app}" &> /dev/null
 done
 
 open /Applications/Rectangle.app/
+open /Applications/Boxcryptor.app/
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
