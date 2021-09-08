@@ -70,7 +70,8 @@ brew install veracrypt
 brew install vnc-viewer
 brew install teamviewer
 brew install arq
-brew install git-together
+brew install pivotal/tap/git-together
+
 echo
 echo "Adding Powerline fonts tap to Homebrew"
 brew tap homebrew/cask-fonts
