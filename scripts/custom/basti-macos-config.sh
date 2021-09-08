@@ -849,6 +849,10 @@ cp -f "${WORK_DIR}"/scripts/custom/shiftit-rectangle.plist ~/Library/Preferences
 # Boxcryptor                                                                   #
 ###############################################################################
 
+# start to login
+open /Applications/Boxcryptor.app/
+
+# set setting to mount it as volume
 /usr/libexec/PlistBuddy -c "Set :com.boxcryptor.osx.SCVolumeSettings:mountAsLocalDisk true" ~/Library/Preferences/com.boxcryptor.osx.plist
 
 ###############################################################################
