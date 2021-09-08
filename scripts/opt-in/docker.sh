@@ -5,12 +5,10 @@ set +e
 brew install --cask docker
 echo "To get docker command-line tools, run the docker application"
 
-# Docker Bash Completion
+# Docker Zsh Completion
 # Reference https://docs.docker.com/docker-for-mac/
-pushd /usr/local/etc/bash_completion.d
-  ln -s /Applications/Docker.app/Contents/Resources/etc/docker.bash-completion
-  ln -s /Applications/Docker.app/Contents/Resources/etc/docker-machine.bash-completion
-  ln -s /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion
-popd
+etc=/Applications/Docker.app/Contents/Resources/etc
+ln -s $etc/docker.zsh-completion /usr/local/share/zsh/site-functions/_docker
+ln -s $etc/docker-compose.zsh-completion /usr/local/share/zsh/site-functions/_docker-composepopd
 
 set -e
