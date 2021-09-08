@@ -1,16 +1,23 @@
 #!/bin/zsh
 set +e
+# xcode
+brew install mas
+mas purchase 497799835 # XCode
+sudo xcodebuild -license accept
+xcode-select --install
 
+# install zsh 'basti-style', cred-alert, vim config
 source "${WORK_DIR}"/scripts/custom/basti-zsh.sh
 source "${WORK_DIR}"/scripts/opt-in/cred-alert.sh
+source "${WORK_DIR}"/scripts/common/vim-configurations.sh
 
 # get rid of bloat
 brew uninstall --cask --force jetbrains-toolbox
-brew uninstall docker
-brew uninstall --cask rowanj-gitx
-brew uninstall --cask sourcetree
-brew uninstall --cask gitup
-brew uninstall --cask github
+brew uninstall --force docker
+brew uninstall --cask --force rowanj-gitx
+brew uninstall --cask --force sourcetree
+brew uninstall --cask --force gitup
+brew uninstall --cask --force github
 
 echo "Installing direnv"
 brew install direnv
@@ -37,12 +44,6 @@ brew install wget
 
 # For developers of shell scripts
 brew install jq # json parsing
-
-# xcode
-brew install mas
-mas purchase 497799835 # XCode
-sudo xcodebuild -license accept
-xcode-select --install
 
 # Text Editors
 brew install --cask sublime-text
