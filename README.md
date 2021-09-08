@@ -130,7 +130,7 @@ A: **Short answer:** run the suggested command or consider the **Possible Soluti
 2. Set homebrew's directories to be writable by everyone in the `staff` group.
 
     ```shell
-    umask 0002 # group write permission
+    umask 002 # group write permission
     sudo chmod -R g+w /usr/local/* # group writable
     sudo chgrp -R staff /usr/local/* # staff owned
     ```
