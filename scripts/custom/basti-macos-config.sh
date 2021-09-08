@@ -452,6 +452,11 @@ defaults write com.apple.dock wvous-tr-modifier -int 0
 defaults write com.apple.dock wvous-br-corner -int 13
 defaults write com.apple.dock wvous-br-modifier -int 0
 
+# modify appearance of dock: remove standard icons, add chrome and iTerm
+if [ ! -e /usr/local/bin/dockutil ]; then
+    curl https://raw.githubusercontent.com/kcrawford/dockutil/master/scripts/dockutil > /usr/local/bin/dockutil
+fi
+chmod a+rx,go-w /usr/local/bin/dockutil
 
 # custom dock
 dockutil --list | awk -F\t '{print "dockutil --remove \""$1"\" --no-restart"}' | sh
