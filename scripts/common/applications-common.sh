@@ -12,10 +12,6 @@ brew install --cask rectangle
 defaults write com.knollsoft.Rectangle resizeOnDirectionalMove -bool true
 defaults write com.knollsoft.Rectangle centerHalfCycles -int 1
 
-brew install --cask dash
-brew install --cask postman
-brew install --cask quicklook-json
-
 # Terminals
 brew install --cask iterm2
 
