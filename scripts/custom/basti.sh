@@ -1,10 +1,9 @@
 #!/bin/zsh
 set +e
+
 # xcode
-brew install mas
-mas purchase 497799835 # XCode
-sudo xcodebuild -license accept
 xcode-select --install
+sudo xcodebuild -license accept
 
 # install zsh 'basti-style', cred-alert, vim config
 source "${WORK_DIR}"/scripts/custom/basti-zsh.sh
@@ -24,6 +23,7 @@ brew install direnv
 echo "Installing zoxide"
 brew install zoxide
 
+brew install mas
 brew tap cantino/mcfly
 brew install mcfly        # better shell history
 brew install lsd          # better ls
