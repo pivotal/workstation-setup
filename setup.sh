@@ -21,6 +21,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Note: Homebrew needs to be set up first
+source ${WORK_DIR}/scripts/common/homebrew.sh
 # Install everything else
 source ${WORK_DIR}/scripts/common/oh-my-zsh.sh
 source ${WORK_DIR}/scripts/common/editors.sh

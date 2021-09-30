@@ -1,9 +1,5 @@
-#!/bin/zsh
+#!/bin/bash
 set +e
-
-# xcode
-xcode-select --install
-sudo xcodebuild -license accept
 
 # install zsh 'basti-style', cred-alert, vim config
 source "${WORK_DIR}"/scripts/custom/basti-zsh.sh
