@@ -81,7 +81,8 @@ echo "Add font-hack-nerd-font"
 brew install --cask font-hack-nerd-font
 
 # mac app store installations
-
+read -r -p "Please enter your AppleID: " APPLE_ID
+mas signin --dialog "$APPLE_ID"
 mas purchase 1284863847 # Unsplash Wallpapers
 mas purchase 973134470  # Be focused
 mas purchase 919269455  # StuffIt Expander
