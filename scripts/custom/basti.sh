@@ -81,15 +81,16 @@ echo "Add font-hack-nerd-font"
 brew install --cask font-hack-nerd-font
 
 # mac app store installations
-read -r -p "Please enter your AppleID: " APPLE_ID
-mas signin --dialog "$APPLE_ID"
-mas purchase 1284863847 # Unsplash Wallpapers
-mas purchase 973134470  # Be focused
-mas purchase 919269455  # StuffIt Expander
-mas purchase 1474276998 # HP Smart for Desktop
-mas purchase 967004861  # HP Easy Scan
-mas purchase 1094255754 # outbank
-mas purchase 1147396723 # WhatsApp
+read -r -p "Please sign in to App Store manually and press 'y' to install apps from App Store..." APPLE_ID
+if [[ 'y' == "$APPLE_ID" ]]; then
+  mas purchase 1284863847 # Unsplash Wallpapers
+  mas purchase 973134470  # Be focused
+  mas purchase 919269455  # StuffIt Expander
+  mas purchase 1474276998 # HP Smart for Desktop
+  mas purchase 967004861  # HP Easy Scan
+  mas purchase 1094255754 # outbank
+  mas purchase 1147396723 # WhatsApp
+fi
 
 # mac os configurations
 source "$WORK_DIR"/scripts/custom/basti-macos-config.sh
