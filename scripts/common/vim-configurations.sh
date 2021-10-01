@@ -1,11 +1,13 @@
+#!/usr/bin/env zsh
+set +e
 echo
 echo "Installing vim configuration"
 pushd ~/
 if [ ! -d ~/.vim ]; then
-    git clone https://github.com/pivotal/vim-config.git ~/.vim
-    ~/.vim/bin/install
-    echo "let g:snipMate = { 'snippet_version' : 1 }" >> ~/.vim/vimrc
+  brew uninstall ctags
+  brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+  curl vimfiles.luan.sh/install | bash
 fi
 popd
-
+set -e
 
