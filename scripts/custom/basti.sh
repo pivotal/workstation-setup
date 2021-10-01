@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 set +e
 
 # install zsh 'basti-style', cred-alert, vim config
@@ -32,6 +32,10 @@ brew install fd           # better find
 brew install choose       # better cut
 brew install glances htop # better top
 brew install dog
+brew install ripgrep
+brew install fzf
+
+
 
 # for http scripting/testing
 brew install xh
@@ -77,6 +81,7 @@ echo "Add font-hack-nerd-font"
 brew install --cask font-hack-nerd-font
 
 # mac app store installations
+
 mas purchase 1284863847 # Unsplash Wallpapers
 mas purchase 973134470  # Be focused
 mas purchase 919269455  # StuffIt Expander
