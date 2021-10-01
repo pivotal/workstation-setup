@@ -31,7 +31,11 @@ apt-get -y install \
   fonts-powerline \
   ripgrep \
   fzf \
-  neovim
+  neovim \
+  python3 \
+  python-is-python3 \
+  python3-pip
+
 
 
 snap install lsd
@@ -67,9 +71,10 @@ dpkg -i minikube_latest_amd64.deb
 
 # terraform version management
 TF_ENV_DIR=/usr/local/share/tfenv
-git clone https://github.com/tfutils/tfenv.git "$TF_ENV_DIR"
-ln -s "$TF_ENV_DIR"/bin/* /usr/local/bin
-
+if [[ ! -f "$TF_ENV_DIR" ]]; then
+  git clone https://github.com/tfutils/tfenv.git "$TF_ENV_DIR"
+  ln -s "$TF_ENV_DIR"/bin/* /usr/local/bin
+fi
 
 
 

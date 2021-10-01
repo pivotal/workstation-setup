@@ -84,8 +84,8 @@ echo
 echo "Installing vim configuration"
 pushd ~/
 if [ ! -d "$HOME/.vim" ]; then
-  sudo mkdir -p /usr/local/lib
-  sudo chmod -R ug+rw /usr/local
+  sudo mkdir -p /usr/local/lib /usr/local/bin
+  sudo chown -R vagrant:vagrant /usr/local/
   curl vimfiles.luan.sh/install | FORCE=1 bash
 fi
 popd
