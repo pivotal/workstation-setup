@@ -79,6 +79,18 @@ then
   sdk install java
 fi
 
+# install git plugins
+echo
+echo "Installing vim configuration"
+pushd ~/
+if [ ! -d "$HOME/.vim" ]; then
+  sudo mkdir -p /usr/local/lib
+  sudo chmod -R ug+rw /usr/local
+  curl vimfiles.luan.sh/install | FORCE=1 bash
+fi
+popd
+
+
 
 # install latest version
 

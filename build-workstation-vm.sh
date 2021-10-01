@@ -22,6 +22,7 @@ cp -rf files "$VDIR/vagrant"
 cp -rf vagrant/Vagrantfile "$VDIR"
 pushd "$VDIR" || exit
   vagrant destroy || echo "Nothing to destroy..."
+  vagrant box update
   vagrant up --provision
 #vagrant provision
 popd || exit
