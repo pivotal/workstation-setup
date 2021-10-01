@@ -103,8 +103,6 @@ if [[ ! -f ~/.git-together ]]; then
 fi
 git config --global --add include.path ~/.git-together
 
-set -e
-
 # install python & java & lima
 source "$WORK_DIR/scripts/opt-in/python.sh"
 

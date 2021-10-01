@@ -1,5 +1,4 @@
 #!/usr/bin/env zsh
-set +e
 echo
 echo "Installing vim configuration"
 pushd ~/
@@ -10,5 +9,4 @@ if [ ! -d ~/.vim ]; then
   curl vimfiles.luan.sh/install | FORCE=1 bash
 fi
 popd
-set -e
 

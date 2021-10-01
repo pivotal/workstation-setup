@@ -1,7 +1,5 @@
 # All these applications are independent, so if one
 # fails to install, don't stop.
-set +e
-
 echo
 echo "Installing editors"
 echo "Only installing Visual Studio Code and Vim by default"
@@ -19,5 +17,3 @@ echo "Uncomment what you want."
 # brew install --cask macvim
 # brew install --cask jetbrains-toolbox --force # guard against pre-installed jetbrains-toolbox
 # brew install --cask atom
-
-set -e

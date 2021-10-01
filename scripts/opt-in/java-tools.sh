@@ -11,4 +11,3 @@ source "${WORK_DIR}/scripts/common/download-jetbrains-ide-prefs.sh"
 pushd ~/workspace/jetbrains-ide-prefs/cli 1>/dev/null
   ./bin/ide_prefs install --ide=intellij
 popd
-set -e

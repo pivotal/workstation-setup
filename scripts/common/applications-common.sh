@@ -23,5 +23,3 @@ brew install --cask firefox
 # Communication
 brew install --cask slack
 brew install --cask zoom
-
-set -e

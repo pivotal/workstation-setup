@@ -26,4 +26,3 @@ set +e # Optional; don't exit if they fail
 brew install --cask rowanj-gitx
 brew install --cask sourcetree
 brew install --cask gitup
-set -e

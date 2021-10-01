@@ -16,4 +16,3 @@ limactl start
 bashcompinit
 eval "\$(limactl completion bash)"
 EOF
-set -e

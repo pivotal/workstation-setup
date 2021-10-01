@@ -46,4 +46,3 @@ open /Applications/Rectangle.app
 
 echo "Configuring FlyCut"
 open /Applications/Flycut.app
-set -e

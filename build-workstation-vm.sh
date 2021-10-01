@@ -1,5 +1,4 @@
 #!/bin/bash
-set -ex
 
 # install containerization support
 #source "$(dirname "$0")/scripts/common/homebrew.sh"
