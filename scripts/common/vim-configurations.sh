@@ -6,7 +6,8 @@ pushd ~/
 if [ ! -d ~/.vim ]; then
   brew uninstall ctags
   brew install --HEAD universal-ctags/universal-ctags/universal-ctags
-  curl vimfiles.luan.sh/install | bash
+  brew install nvim
+  curl vimfiles.luan.sh/install | FORCE=1 bash
 fi
 popd
 set -e

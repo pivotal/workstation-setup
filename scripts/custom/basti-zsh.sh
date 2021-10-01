@@ -35,6 +35,7 @@ if [[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
 fi
 source \$ASPATH/zsh-autosuggestions.zsh
 
+EDITOR='nvim'
 
 alias git='git-together'
 alias git-pull-all='find . -type d -depth 1 -exec git -C {} pull \;'
@@ -45,6 +46,7 @@ alias l='lsd -lah'
 alias dir='lsd -lah'
 alias la='lsd -la'
 alias z="zoxide"
+alias vi=nvim
 eval "\$(direnv hook zsh)"
 eval "\$(mcfly init zsh)"
 eval "\$(zoxide init zsh)"
