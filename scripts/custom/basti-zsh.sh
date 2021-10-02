@@ -18,12 +18,14 @@ then
   chsh -s "$(which zsh)"
 fi
 
-echo "source ~/.zshrc.local" >> ~/.zshrc
-
-cp files/dircolors.ansi-dark ~/.dircolors
+cp files/dircolors.ansi-dark $HOME/.dircolors
 
 echo "Installing zsh-autosuggestions"
 brew install zsh-autosuggestions
+
+# avoid duplicate sourcing of .zshrc.local and ensure it is last
+grep -v .zshrc.local $HOME/.zshrc > /tmp/zshrc.tmp && mv /tmp/zshrc.tmp $HOME/.zshrc 
+echo "source ~/.zshrc.local" >> $HOME/.zshrc
 
 cat <<EOF > ~/.zshrc.local
 DISABLE_UPDATE_PROMPT=true
@@ -47,9 +49,16 @@ alias dir='lsd -lah'
 alias la='lsd -la'
 alias z="zoxide"
 alias vi=nvim
+
+# disable FZF keybinding for history (ctrl-r) even if initialized in other file in favor for mcfly
+bindkey -r "^R"
+rg --passthru -N "bindkey '\^R' fzf-history-widget" -r "# bindkey '^R' fzf-history-widget" \$HOME/.fzf/shell/key-bindings.zsh > \$HOME/.fzf/shell/key-bindings.without-history.zsh
+
+[ -f \$HOME/.fzf/shell/key-bindings.without-history.zsh ] && source \$HOME/.fzf/shell/key-bindings.without-history.zsh
 eval "\$(direnv hook zsh)"
-eval "\$(mcfly init zsh)"
 eval "\$(zoxide init zsh)"
+eval "\$(mcfly init zsh)"
+
 
 # add git-together pairing credentials to prompt
 function pairing_initials {
