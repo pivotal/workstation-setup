@@ -24,7 +24,7 @@ brew tap cantino/mcfly
 brew install mcfly        # better shell history
 brew install lsd          # better ls
 brew install bat          # better cat
-brew install delta        # better diff
+brew install git-delta    # better diff
 brew install dust         # better du
 brew install duf          # better df
 brew install broot        # better file ops in directory
