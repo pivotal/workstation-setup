@@ -460,6 +460,7 @@ chmod a+rx,go-w /usr/local/bin/dockutil
 
 # custom dock
 dockutil --list | awk -F\t '{print "dockutil --remove \""$1"\" --no-restart"}' | sh
+dockutil --add "/System/Applications/Launchpad.app" --no-restart
 dockutil --add "/System/Applications/Mail.app" --no-restart
 dockutil --add "/Applications/Safari.app" --no-restart
 dockutil --add "/System/Applications/Calendar.app" --no-restart
