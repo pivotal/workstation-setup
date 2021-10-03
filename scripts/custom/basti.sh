@@ -122,3 +122,4 @@ fi
 sdk install java
 
 source "$WORK_DIR/scripts/opt-in/containerization.sh"
+source "$WORK_DIR/scripts/custom/basti-git.sh"

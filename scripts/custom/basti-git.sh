@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-git config --global core.editor "$EDITOR"
+git config --global core.editor "vi"
 git config --global core.autocrlf input
 
 if [[ $(command -v delta) ]]; then
