@@ -43,7 +43,7 @@ if [[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
 fi
 source \$ASPATH/zsh-autosuggestions.zsh
 
-EDITOR='nvim'
+export EDITOR='nvim'
 
 alias git='git-together'
 alias git-pull-all='find . -type d -depth 1 -exec git -C {} pull \;'
