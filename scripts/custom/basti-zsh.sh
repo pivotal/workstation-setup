@@ -23,9 +23,15 @@ cp files/dircolors.ansi-dark $HOME/.dircolors
 echo "Installing zsh-autosuggestions"
 brew install zsh-autosuggestions
 
+# configure zsh plugins
+PLUGINS="plugins=(git gitfast git-extras github pip kubectl docker golang gradle helm iterm2 mercurial mvn nmap npm python rust aws cloudfoundry common-aliases brew vscode)"
+rg --passthru -N "^plugins=.*" -r "$PLUGINS" ~/.zshrc > /tmp/.zshrc && mv /tmp/.zshrc ~/.zshrc
+
+
 # avoid duplicate sourcing of .zshrc.local and ensure it is last
-grep -v .zshrc.local $HOME/.zshrc > /tmp/zshrc.tmp && mv /tmp/zshrc.tmp $HOME/.zshrc 
-echo "source ~/.zshrc.local" >> $HOME/.zshrc
+grep -v .zshrc.local ~/.zshrc > /tmp/zshrc.tmp && mv /tmp/zshrc.tmp ~/.zshrc
+echo "source ~/.zshrc.local" >> ~/.zshrc
+
 
 cat <<EOF > ~/.zshrc.local
 DISABLE_UPDATE_PROMPT=true
@@ -43,10 +49,8 @@ alias git='git-together'
 alias git-pull-all='find . -type d -depth 1 -exec git -C {} pull \;'
 alias gpa=git-pull-all
 alias vi=vim
-alias ll='lsd -l'
-alias l='lsd -lah'
-alias dir='lsd -lah'
-alias la='lsd -la'
+alias ls='lsd'
+alias dir='ls -lah'
 alias z="zoxide"
 alias vi=nvim
 
