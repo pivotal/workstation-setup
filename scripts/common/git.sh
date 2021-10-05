@@ -1,12 +1,9 @@
 echo
 echo "Installing Git and associated tools"
 brew install git
-brew tap git-duet/tap
-brew install git-duet
 brew tap pivotal-legacy/tap
 brew install git-pair
 brew install git-together
-brew install git-author
 brew install vim
 echo "GitHub CLI -- gh"
 brew install gh
