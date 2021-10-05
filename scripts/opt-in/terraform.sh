@@ -6,4 +6,4 @@ tfenv install "${DEFAULT_TF_VERSION}"
 tgenv install "${DEFAULT_TG_VERSION}"
 
 # shell completion
-terraform -install-autocomplete
+terraform -install-autocomplete || true
