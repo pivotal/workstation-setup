@@ -5,7 +5,7 @@ brew tap jcgay/jcgay
 brew install maven-deluxe
 brew install gradle
 
-source ${MY_DIR}/scripts/common/download-jetbrains-ide-prefs.sh
-pushd ~/workspace/jetbrains-ide-prefs/cli
-./bin/ide_prefs install --ide=intellij
-popd
+#source ${MY_DIR}/scripts/common/download-jetbrains-ide-prefs.sh
+#pushd ~/workspace/jetbrains-ide-prefs/cli
+#./bin/ide_prefs install --ide=intellij
+#popd
