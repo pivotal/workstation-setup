@@ -71,6 +71,18 @@ brew install teamviewer
 brew install arq
 brew install pivotal/tap/git-together
 
+# cloud
+brew install google-cloud-sdk
+
+# frontend/node
+brew install fmn
+
+# databases
+brew install redis
+brew services start redis
+brew install postgresql@9.6
+brew services start postgresql@9.6
+
 echo
 echo "Adding Powerline fonts tap to Homebrew"
 brew tap homebrew/cask-fonts
