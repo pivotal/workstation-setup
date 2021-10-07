@@ -58,7 +58,6 @@ brew install balenaetcher
 brew install onyx
 brew install signal
 brew install spotify
-brew install tuple
 brew install zoom
 brew install deepl
 brew install expressvpn
@@ -85,9 +84,7 @@ read -r -p "Please sign in to App Store manually and press 'y' to install apps f
 if [[ 'y' == "$APPLE_ID" ]]; then
   mas purchase 1284863847 # Unsplash Wallpapers
   mas purchase 973134470  # Be focused
-  mas purchase 919269455  # StuffIt Expander
   mas purchase 1474276998 # HP Smart for Desktop
-  mas purchase 967004861  # HP Easy Scan
   mas purchase 1094255754 # outbank
   mas purchase 1147396723 # WhatsApp
 fi
