@@ -69,6 +69,7 @@ brew install veracrypt
 brew install vnc-viewer
 brew install teamviewer
 brew install arq
+brew install bitwarden
 brew install pivotal/tap/git-together
 
 # cloud
@@ -99,6 +100,7 @@ if [[ 'y' == "$APPLE_ID" ]]; then
   mas purchase 1474276998 # HP Smart for Desktop
   mas purchase 1094255754 # outbank
   mas purchase 1147396723 # WhatsApp
+  mas purchase 1352778147 # Bitwarden
 fi
 
 # mac os configurations
