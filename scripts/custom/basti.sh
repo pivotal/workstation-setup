@@ -35,8 +35,6 @@ brew install dog
 brew install ripgrep
 brew install fzf
 
-
-
 # for http scripting/testing
 brew install xh
 brew install httpie
@@ -72,8 +70,9 @@ brew install arq
 brew install bitwarden
 brew install pivotal/tap/git-together
 
-# cloud
+# sdks
 brew install google-cloud-sdk
+brew install iterativelyhq/itly/itly
 
 # frontend/node
 brew install fmn
