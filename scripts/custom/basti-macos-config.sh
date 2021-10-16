@@ -472,7 +472,7 @@ dockutil --add "/Applications/Miro.app" --no-restart
 dockutil --add "/System/Applications/FaceTime.app" --no-restart
 dockutil --add "/System/Applications/Messages.app" --no-restart
 dockutil --add "/Applications/Signal.app" --no-restart
-dockutil --add "/Applications/Adobe Lightroom CC/Adobe Lightroom.app" --no-restart
+dockutil --add "/Applications/Adobe Lightroom Classic/Adobe Lightroom Classic.app" --no-restart
 dockutil --add "/Applications/Microsoft Excel.app" --no-restart
 dockutil --add "/Applications/Microsoft Word.app" --no-restart
 dockutil --add /"Applications/Microsoft OneNote.app" --no-restart
