@@ -43,8 +43,9 @@ brew install wget
 # For developers of shell scripts
 brew install jq # json parsing
 
-# Text Editors
+# Text Editors & note taking
 brew install --cask sublime-text
+brew install --cask obsidian
 
 brew install microsoft-office
 brew install adobe-creative-cloud
