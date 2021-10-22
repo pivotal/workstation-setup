@@ -475,8 +475,7 @@ dockutil --add "/Applications/Signal.app" --no-restart
 dockutil --add "/Applications/Adobe Lightroom Classic/Adobe Lightroom Classic.app" --no-restart
 dockutil --add "/Applications/Microsoft Excel.app" --no-restart
 dockutil --add "/Applications/Microsoft Word.app" --no-restart
-dockutil --add /"Applications/Microsoft OneNote.app" --no-restart
-dockutil --add "/System/Applications/Notes.app" --no-restart
+dockutil --add "/Applications/Obsidian.app" --no-restart
 dockutil --add "/System/Applications/Reminders.app" --no-restart
 dockutil --add "/System/Applications/Utilities/Activity Monitor.app" --no-restart
 dockutil --add "$HOME/Boxcryptor/OneDrive/Documents" --view auto --display stack --no-restart
