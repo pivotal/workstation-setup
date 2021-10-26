@@ -69,6 +69,7 @@ brew install vnc-viewer
 brew install teamviewer
 brew install arq
 brew install bitwarden
+brew install keepassxc
 brew install pivotal/tap/git-together
 
 # sdks
