@@ -7,7 +7,6 @@ source "${WORK_DIR}"/scripts/opt-in/cred-alert.sh
 source "${WORK_DIR}"/scripts/common/vim-configurations.sh
 
 # get rid of bloat
-brew uninstall --cask --force jetbrains-toolbox
 brew uninstall --force docker
 brew uninstall --cask --force rowanj-gitx
 brew uninstall --cask --force sourcetree
@@ -35,11 +34,6 @@ brew install dog
 brew install ripgrep
 brew install fzf
 
-# for http scripting/testing
-brew install xh
-brew install httpie
-brew install wget
-
 # For developers of shell scripts
 brew install jq # json parsing
 
@@ -52,7 +46,6 @@ brew install adobe-creative-cloud
 brew install boxcryptor
 brew install google-drive
 brew install meetingbar
-brew install miro
 brew install balenaetcher
 brew install onyx
 brew install signal
@@ -62,7 +55,6 @@ brew install deepl
 brew install expressvpn
 brew install fanny
 brew install keka
-brew install slack
 brew install calibre
 brew install veracrypt
 brew install vnc-viewer
@@ -74,16 +66,6 @@ brew install pivotal/tap/git-together
 
 # sdks
 brew install google-cloud-sdk
-brew install iterativelyhq/itly/itly
-
-# frontend/node
-brew install fmn
-
-# databases
-brew install redis
-brew services start redis
-brew install postgresql@9.6
-brew services start postgresql@9.6
 
 echo
 echo "Adding Powerline fonts tap to Homebrew"
