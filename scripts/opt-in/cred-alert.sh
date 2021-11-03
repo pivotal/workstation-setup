@@ -20,4 +20,4 @@ os_name=$(uname | awk '{print tolower($1)}')
 curl -L -o cred-alert-cli \
   https://github.com/pivotal-cf/cred-alert/releases/latest/download/cred-alert-cli_${os_name}
 chmod 755 cred-alert-cli
-mv cred-alert-cli /usr/local/bin # <= or other directory in ${PATH}
+mv cred-alert-cli "$(brew --prefix)/bin" # <= or other directory in ${PATH}
