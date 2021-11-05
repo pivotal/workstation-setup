@@ -69,13 +69,13 @@ function pairing_initials {
   if [[ \$(git rev-parse --is-inside-work-tree 2>/dev/null) == "true" ]]
   then
     GIT_TOGETHER=\$(git config git-together.active)
-    echo -e "[\$GIT_TOGETHER]"
+    echo -e "[\$GIT_TOGETHER] "
   else
     echo -e ""
   fi
 }
 export PAIRING_INITIALS='%{%F{2}%}\$(pairing_initials)%{\${reset_color}%}'
-export PROMPT="\$PAIRING_INITIALS \$PROMPT"
+export PROMPT="\$PAIRING_INITIALS\$PROMPT"
 
 # this must be after the prompt command, as autojump uses the prompt to work
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
