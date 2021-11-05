@@ -18,7 +18,7 @@ then
   chsh -s "$(which zsh)"
 fi
 
-cp files/dircolors.ansi-dark $HOME/.dircolors
+cp "$WORK_DIR"/files/dircolors.ansi-dark "$HOME"/.dircolors
 
 echo "Installing zsh-autosuggestions"
 brew install zsh-autosuggestions
@@ -69,22 +69,18 @@ function pairing_initials {
   if [[ \$(git rev-parse --is-inside-work-tree 2>/dev/null) == "true" ]]
   then
     GIT_TOGETHER=\$(git config git-together.active)
-    echo -e "[\$GIT_TOGETHER] "
+    echo -e "[\$GIT_TOGETHER]"
   else
     echo -e ""
   fi
 }
-
-export PROMPT='%{%F{2}%}\$(pairing_initials)%{\${reset_color}%}'\$PROMPT
+export PAIRING_INITIALS='%{%F{2}%}\$(pairing_initials)%{\${reset_color}%}'
+export PROMPT="\$PAIRING_INITIALS \$PROMPT"
 
 # this must be after the prompt command, as autojump uses the prompt to work
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 EOF
-
-read -r -p "Would you like to change your oh-my-zsh theme? Please enter name or press Enter (Default/n = no change) " THEME_NAME
-if [[ -n $THEME_NAME ]] || [[ $THEME_NAME == "n" ]]
-then
-  sed -i '' -e "s/ZSH_THEME=\".*$/ZSH_THEME=\"$THEME_NAME\"/g" ~/.zshrc
-fi
+cp "${WORK_DIR}"/files/basti-afowler.zsh-theme "${OH_DIR}"/themes/
+sed -i '' -e "s/ZSH_THEME=\".*$/ZSH_THEME=\"basti-afowler\"/g" ~/.zshrc
 echo "You can find your custom zsh config in ~/.zshrc.local"
