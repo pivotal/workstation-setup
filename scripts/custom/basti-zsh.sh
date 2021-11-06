@@ -83,6 +83,6 @@ export PROMPT="\$PAIRING_INITIALS\$PROMPT"
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 EOF
-cp "${WORK_DIR}"/files/basti-afowler.zsh-theme "${OH_DIR}"/themes/
-sed -i '' -e "s/ZSH_THEME=\".*$/ZSH_THEME=\"basti-afowler\"/g" ~/.zshrc
+cp "${WORK_DIR}"/scripts/custom/basti.zsh-theme "${OH_DIR}"/themes/
+sed -i '' -e "s/ZSH_THEME=\".*$/ZSH_THEME=\"basti\"/g" ~/.zshrc
 echo "You can find your custom zsh config in ~/.zshrc.local"
