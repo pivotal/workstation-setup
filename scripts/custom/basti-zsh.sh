@@ -68,10 +68,12 @@ eval "\$(mcfly init zsh)"
 function pairing_initials {
   if [[ \$(git rev-parse --is-inside-work-tree 2>/dev/null) == "true" ]]
   then
-    GIT_TOGETHER=\$(git config git-together.active)
-    echo -e "[\$GIT_TOGETHER] "
-  else
-    echo -e ""
+    if [[ \$GIT_TOGETHER != "" ]]
+    then
+      echo -e "[\$GIT_TOGETHER] "
+    else
+      echo -e ""
+    fi
   fi
 }
 export PAIRING_INITIALS='%{%F{2}%}\$(pairing_initials)%{\${reset_color}%}'
