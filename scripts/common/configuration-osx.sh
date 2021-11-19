@@ -8,12 +8,12 @@ defaults write ~/Library/Preferences/.GlobalPreferences InitialKeyRepeat -int 15
 # set finder to display full path in title bar
 defaults write com.apple.finder '_FXShowPosixPathInTitle' -bool true
 
-
 # modify appearance of dock: remove standard icons, add chrome and iTerm
 brew install dockutil
 dockutil --list | awk -F\t '{print "dockutil --remove \""$1"\" --no-restart"}' | sh
 dockutil --add /Applications/Google\ Chrome.app --no-restart
-dockutil --add /Applications/iTerm.app
+dockutil --add /Applications/Visual\ Studio\ Code.app --no-restart
+dockutil --add /Applications/Slack.app --no-restart
 
 # Force Preference Refresh
 killall -u $USER cfprefsd
