@@ -17,7 +17,6 @@ brew install --cask rectangle
 # Browsers
 
 brew install --cask google-chrome
-brew install --cask firefox
 
 # Communication
 brew install --cask slack
