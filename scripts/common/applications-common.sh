@@ -11,7 +11,8 @@ brew install --cask flycut
 brew install --cask rectangle
 
 # Terminals
-brew install --cask iterm2
+# Pending discussion we may move to Warp
+# brew install --cask iterm2
 
 # Browsers
 
