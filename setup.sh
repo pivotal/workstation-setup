@@ -37,10 +37,12 @@ source ${MY_DIR}/scripts/common/applications-common.sh
 source ${MY_DIR}/scripts/common/developer-utilities.sh
 source ${MY_DIR}/scripts/common/unix.sh
 source ${MY_DIR}/scripts/common/configuration-osx.sh
+source ${MY_DIR}/scripts/common/docker.sh
 
 ## Languages
 source ${MY_DIR}/scripts/common/node.sh
 source ${MY_DIR}/scripts/common/golang.sh
+
 
 # For each command line argument, try executing the corresponding script in opt-in/
 for var in "$@"
