@@ -5,7 +5,7 @@ git config --global alias.gdf diff
 git config --global alias.gco checkout
 git config --global alias.gci commit
 git config --global alias.gscam "git commit -S -a -m"
-git config --global alias.gcan! "commit -S --amend --no-edit -a"
+git config --global alias.gcan "commit -S --amend --no-edit -a"
 git config --global alias.gcp cherry-pick
 git config --global alias.gbr branch
 git config --global alias.gsta stash
