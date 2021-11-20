@@ -1,9 +1,0 @@
-pairs:
-  # Examples below (without # comment of course):
-  # aa: Aaron A Aaronson; aaronson
-  # mm: Mary Miles; mmiles
-
-email:
-  prefix: pair
-  domain: example.com
-
