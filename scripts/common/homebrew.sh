@@ -5,6 +5,14 @@ if hash brew 2>/dev/null; then
 else
   echo "Installing Homebrew..."
   yes '' | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  if which brew; then
+      echo "Homebrew install verified"
+  else
+      echo "Running these two commands in your terminal to add Homebrew to your PATH:"
+      echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+      eval "$(/opt/homebrew/bin/brew shellenv)"
+  fi
 fi
 
 echo
