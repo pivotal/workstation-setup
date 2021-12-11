@@ -9,7 +9,7 @@ else
   if which brew; then
       echo "Homebrew install verified"
   else
-      echo "Running these two commands in your terminal to add Homebrew to your PATH:"
+      echo "Adding Homebrew to your PATH"
       echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
       eval "$(/opt/homebrew/bin/brew shellenv)"
   fi
