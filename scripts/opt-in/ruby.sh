@@ -44,7 +44,7 @@ gem install bundler
 # guard against pre-installed rubymine
 brew install --cask rubymine --force
 
-source ${WORKSTATION_SETUP_HOME}/scripts/common/download-pivotal-ide-prefs.sh
+source "${WORKSTATION_SETUP_HOME}/scripts/common/download-pivotal-ide-prefs.sh"
 pushd ~/workspace/pivotal_ide_prefs/cli
 ./bin/ide_prefs install --ide=rubymine
 popd

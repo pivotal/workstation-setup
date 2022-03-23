@@ -14,10 +14,10 @@ set -e
 for var in "$@"
 do
     echo "$var"
-    FILE=${WORKSTATION_SETUP_HOME}/scripts/opt-in/${var}.sh
+    FILE="${WORKSTATION_SETUP_HOME}/scripts/opt-in/${var}.sh"
     echo "$FILE"
-    if [ -f $FILE ]; then
-      . $FILE
+    if [ -f "$FILE" ]; then
+      . "$FILE"
     else
        echo "Warning: $var does not appear to be a valid argument. File $FILE does not exist."
     fi

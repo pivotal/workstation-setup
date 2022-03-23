@@ -41,6 +41,9 @@ If you're setting up a development machine choose which languages and tools to i
 #### For Solutions Architects/Platform Engineers
 `./setup.sh aws docker snowflake terraform lefthook`
 
+#### For Scout developers
+`./setup.sh aws java16 docker flycut rectangle`
+
 Additional options can be installed later by running:
 
 `./add_setup.sh <list of opt-in items to install>`
@@ -54,6 +57,10 @@ printf "%s " `ls scripts/opt-in | sed 's/\..*//'`; echo
 ### Shiftit
 
 Shiftit is no longer under active development, if you want to install it you can add `shiftit` to either your `./setup.sh` or `./add_setup.sh` command line.
+
+### Rectangle (Shiftit Alternative)
+
+Window manager for Mac
 
 ## Having problems?
 

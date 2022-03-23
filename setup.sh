@@ -17,4 +17,4 @@ set -e
 . ./base_setup.sh
 ./add_setup.sh "$@"
 
-. ${WORKSTATION_SETUP_HOME}/scripts/common/finished.sh
+. "${WORKSTATION_SETUP_HOME}/scripts/common/finished.sh"

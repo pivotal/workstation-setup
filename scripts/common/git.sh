@@ -1,9 +1,8 @@
 echo
 echo "Installing Git and associated tools"
 brew install git
-brew tap pivotal-legacy/tap
-brew install git-pair
-brew install git-together
+brew install pivotal/tap/git-pair
+brew install pivotal/tap/git-together
 brew install vim
 echo "GitHub CLI -- gh"
 brew install gh
@@ -24,7 +23,7 @@ cp files/.pairs ~/.pairs
 
 echo
 echo "Setting global Git configurations"
-git config --global core.editor /usr/local/bin/vim
+git config --global core.editor vim
 git config --global transfer.fsckobjects true
 
 mkdir -p ~/.git_templates
