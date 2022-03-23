@@ -27,7 +27,7 @@ alias gpsup='git push --set-upstream origin $(current_branch)'
 alias be='bundle exec'
 alias current='cd ${RX_REVU_HOME}'
 alias delete_branch='cb=$(current_branch) && gco master && git branch -D ${cb}'
-alias mfa=${WORKSTATION_SETUP_HOME}/bin/mfa
+alias mfa="${WORKSTATION_SETUP_HOME}/bin/mfa"
 alias awsume=". awsume"
 
 

@@ -2,7 +2,9 @@
 set +e
 
 # Docker
-brew install --cask docker
+brew install docker
+brew install docker-compose
+
 echo "To get docker command-line tools, run the docker application"
 
 # Docker Bash Completion

@@ -9,9 +9,9 @@ if [[ ! -d ~/.aws ]] ; then
 fi
 
 if [[ ! -f ~/.aws/config ]] ; then
-cp ${WORKSTATION_SETUP_HOME}/files/aws_config.example ~/.aws/config
+cp "${WORKSTATION_SETUP_HOME}/files/aws_config.example" ~/.aws/config
 fi
 
 if [[ ! -f ~/.aws/credentials ]] ; then
-cp ${WORKSTATION_SETUP_HOME}/files/aws_credentials.example ~/.aws/credentials
+cp "${WORKSTATION_SETUP_HOME}/files/aws_credentials.example" ~/.aws/credentials
 fi
