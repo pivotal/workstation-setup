@@ -20,7 +20,6 @@ alias gap='git add -p'
 alias gra='git commit --amend --no-edit --reset-author'
 alias wip="git add -A && git commit -m'WIP'"
 alias unwip='git reset HEAD~'
-alias master='git checkout master'
 alias main='git checkout main'
 alias current_branch="git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'"
 alias gpsup='git push --set-upstream origin $(current_branch)'
