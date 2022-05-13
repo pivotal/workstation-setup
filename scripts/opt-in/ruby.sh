@@ -1,45 +1,33 @@
+#!/bin/env bash
+
 echo
-echo "Installing Ruby tools and latest Ruby"
+echo "Installing Ruby tools and Ruby"
 cp files/.irbrc ~/.irbrc
 brew install readline
-#eval "$(rbenv init -)"
-#rbenv install $(rbenv install -l | grep -v - | tail -1) --skip-existing
-#rbenv global $(rbenv install -l | grep -v - | tail -1)
 
-# Install rvm and use it to update to the desired Ruby version
+# Install ruby-install and use it to update to the desired Ruby version
 ruby_version="$DEFAULT_RUBY_VERSION"
 
-if ! command -v rvm > /dev/null; then
-  echo 'Installing rvm...'
-  curl -sSL https://rvm.io/mpapis.asc | gpg --import -
-  curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -
-  curl -sSL https://get.rvm.io | bash -s stable
+brew install ruby-install
 
-  # Load RVM into a shell session *as a function*
-  if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
-    # First try to load from a user install
-    source "$HOME/.rvm/scripts/rvm"
-  elif [[ -s '/usr/local/rvm/scripts/rvm' ]] ; then
-    # Then try to load from a root install
-    source '/usr/local/rvm/scripts/rvm'
-  else
-    printf "ERROR: An RVM installation was not found.\n"
-  fi
-else
-  echo 'RVM Installed'
-fi
-
-
-if ! [[ $(rvm ls) == *"${ruby_version}"* ]]; then
+if ! [[ $(ls ~/.rubies) == *"${ruby_version}"* ]]; then
   echo "Installing Ruby ${ruby_version}"
-  rvm install "ruby-${ruby_version}"
+  ruby-install "ruby-${ruby_version}"
 else
-  echo "Ruby ${ruby_version} Installed"
+  echo "Ruby ${ruby_version} already installed"
 fi
 
-rvm --default use "ruby-${ruby_version}"
+brew install chruby
+{
+  printf "%s\\n" "# Chruby Setup"
+  printf "%s\\n" "source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh"
+  printf "%s\\n" "source $(brew --prefix)/opt/chruby/share/chruby/auto.sh" 
+} >> ~/.zprofile
 
+# Bundler configuration for native gems requiring brewed libraries
 gem install bundler
+bundle config set --global build.myslq2 "--with-ldflags=-L$(brew --prefix)/opt/openssl/lib --with-ldflags=-L$(brew --prefix)/Cellar/zstd/1.5.2/lib --with-cppflags=-I$(brew --prefix)/opt/openssl/include"
+bundle config set --global build.eventmachine "--with-cppflags=-I$(brew --prefix)/opt/openssl/include"
 
 # guard against pre-installed rubymine
 brew install --cask rubymine --force
