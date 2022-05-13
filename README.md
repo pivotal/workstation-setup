@@ -33,7 +33,11 @@ If you're setting up a development machine choose which languages and tools to i
 #### For Direct developers (remove unnecessary languages when running command)
 `./setup.sh aws ruby python java java-tools docker snowflake terraform intellij`
 
-(and possibly `rxrevu_web_app_yml_symlink`)
+Optional but recommended:
+ - `fzf`
+ - `lefthook`
+ - `rectangle`
+ - `rxrevu_web_app_yml_symlink`
 
 #### For Insights developers
 `./setup.sh aws python docker snowflake intellij`
