@@ -27,7 +27,7 @@ git config --global core.editor vim
 git config --global transfer.fsckobjects true
 
 echo
-echo "Setting setting default branch name to main"
+echo "Setting default branch name to main"
 mkdir -p ~/.git_templates
 git config --global init.templateDir ~/.git_templates
 echo "ref: refs/heads/main" > ~/.git_templates/HEAD
