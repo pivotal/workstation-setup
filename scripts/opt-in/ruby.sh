@@ -29,6 +29,9 @@ gem install bundler
 bundle config set --global build.myslq2 "--with-ldflags=-L$(brew --prefix)/opt/openssl/lib --with-ldflags=-L$(brew --prefix)/Cellar/zstd/1.5.2/lib --with-cppflags=-I$(brew --prefix)/opt/openssl/include"
 bundle config set --global build.eventmachine "--with-cppflags=-I$(brew --prefix)/opt/openssl/include"
 
+# Install license_finder- finds dependencies and detects the licenses of the packages in them
+gem install license_finder
+
 # guard against pre-installed rubymine
 brew install --cask rubymine --force
 
