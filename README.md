@@ -25,7 +25,7 @@ This project does not aim to do everything. Some examples:
 
 - Run the latest version of macOS unless you have a specific reason not to
 - These scripts might work on previous versions, but are maintained with only the latest macOS in mind
-- Install the latest version of [Xcode](https://developer.apple.com/xcode/)
+- Install the latest stable version of [Command Line Tools for Xcode](https://developer.apple.com/download/all/?q=Command%20Line%20Tools%20for%20Xcode)
 
 ## Getting this tool
 Open up `Terminal.app` and run the following command:
