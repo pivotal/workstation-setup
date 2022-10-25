@@ -38,6 +38,7 @@ Optional but recommended:
  - `lefthook`
  - `rectangle`
  - `rxrevu_web_app_yml_symlink`
+ - `postgres`
 
 #### For Insights developers
 `./setup.sh aws python docker snowflake intellij`
