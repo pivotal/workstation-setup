@@ -58,6 +58,13 @@ To see a list of available options run:
 printf "%s " `ls scripts/opt-in | sed 's/\..*//'`; echo
 ```
 
+### MySQL
+See [https://github.com/rxrevu/docker-mysql](https://github.com/rxrevu/docker-mysql)
+
+### Postgres
+
+See [https://github.com/rxrevu/docker-postgres](https://github.com/rxrevu/docker-postgres)
+
 ### Shiftit
 
 Shiftit is no longer under active development, if you want to install it you can add `shiftit` to either your `./setup.sh` or `./add_setup.sh` command line.
