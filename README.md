@@ -42,17 +42,20 @@ mkdir -p ~/workspace &&
 ## Using this tool
 Within `~/workspace/workstation-setup`, run the following:
 
-```shell
-./setup.sh [list of optional configurations]
+```sh
+./setup.sh [--list] [list of optional configurations]
 ```
 
 Examples:
-```shell
+```sh
 # This will only install the default items
 ./setup.sh 
 
 # This will install the latest Java and Docker
 ./setup.sh java docker
+
+# This will only print a list of optional configurations available
+./setup.sh --list
 ```
 
 **Warning: this tool might overwrite existing configurations.**
@@ -63,7 +66,7 @@ We recommend that you look at `setup.sh` to see what is automatically installed.
 ### Opt-In Configurations
 Please look in `scripts/opt-in/` for optional, opt-in configurations. Some of these are languages and associated frameworks, such as `java` and `golang`. Some are supporting infrastructure, such as `docker` and `kubernetes`. Others might be specific tools for application platforms, such as `cloud-foundry`.
 
-To install any of these, add them as arguments to `$> setup.sh`. Examples: 
+To install any of these, add them as arguments to `setup.sh`. Examples: 
 
 ```sh
 # Common for Spring Boot development
@@ -74,6 +77,12 @@ To install any of these, add them as arguments to `$> setup.sh`. Examples:
 
 # Love those platforms!
 ./setup.sh golang docker kubernetes cloud-foundry terraform concourse
+```
+
+To see a list of available optional, opt-in configurations, run the following:
+
+```sh
+./setup.sh --list
 ```
 
 ## Analytics
