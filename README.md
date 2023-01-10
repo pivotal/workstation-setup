@@ -31,7 +31,7 @@ mkdir -p ~/workspace &&
 If you're setting up a development machine choose which languages and tools to install:
 
 #### For Direct developers (remove unnecessary languages when running command)
-`./setup.sh aws ruby python java java-tools docker snowflake terraform intellij`
+`./setup.sh aws ruby python java java-tools docker snowflake terraform intellij mysql`
 
 Optional but recommended:
  - `fzf`
@@ -57,9 +57,6 @@ To see a list of available options run:
 ```sh
 printf "%s " `ls scripts/opt-in | sed 's/\..*//'`; echo
 ```
-
-### MySQL
-See [https://github.com/rxrevu/docker-mysql](https://github.com/rxrevu/docker-mysql)
 
 ### Postgres
 
