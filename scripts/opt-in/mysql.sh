@@ -2,7 +2,7 @@ echo "Cloning docker-mysql repo"
 
 if [ ! -d "$WORKSTATION_SETUP_HOME/../docker-mysql" ]
 then
-  git clone https://github.com/rxrevu/docker-mysql $WORKSTATION_SETUP_HOME/../docker-mysql
+  git clone git@github.com:rxrevu/docker-mysql.git $WORKSTATION_SETUP_HOME/../docker-mysql
 else
   echo "docker-mysql directory already exists"
 fi

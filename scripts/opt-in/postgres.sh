@@ -2,7 +2,7 @@ echo "Cloning docker-postgres repo"
 
 if [ ! -d "$WORKSTATION_SETUP_HOME/../docker-postgres" ]
 then
-  git clone https://github.com/rxrevu/docker-postgres $WORKSTATION_SETUP_HOME/../docker-postgres
+  git clone git@github.com:rxrevu/docker-postgres.git $WORKSTATION_SETUP_HOME/../docker-postgres
 else
   echo "docker-postgres directory already exists"
 fi
