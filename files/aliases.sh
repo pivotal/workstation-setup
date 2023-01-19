@@ -27,7 +27,7 @@ alias be='bundle exec'
 alias current='cd ${RX_REVU_HOME}'
 alias delete_branch='cb=$(current_branch) && gco master && git branch -D ${cb}'
 alias mfa="${WORKSTATION_SETUP_HOME}/bin/mfa"
-alias awsume=". awsume sso; . awsume"
+alias awsume="aws-sso-util login && . awsume sso; . awsume"
 
 
 # Git aliases
