@@ -1,8 +1,10 @@
 echo
 echo "Installing the AWS cli"
 
-brew install awscli
+brew install awscli pipx
 brew install awsume
+pipx ensurepath
+pipx install aws-sso-util
 
 if [[ ! -d ~/.aws ]] ; then
   mkdir ~/.aws

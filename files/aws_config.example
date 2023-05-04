@@ -3,3 +3,14 @@ region = us-east-1
 
 [sandbox]
 region = us-east-1
+
+[profile sso]
+
+credential_process = aws-sso-util credential-process --profile sso
+
+sso_start_url = https://arriveaws.awsapps.com/start
+sso_region = us-east-1
+sso_account_id = 351089825949
+sso_role_name = devs
+region = us-east-1
+output = json
