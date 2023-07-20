@@ -1,0 +1,112 @@
+{
+  "coauthors": {
+    "aa": {
+      "name": "Adrian Avila",
+      "email": "adrian.avila@arrivehealth.com"
+    },
+    "ab": {
+      "name": "Anna Baer",
+      "email": "anna.baer@arrivehealth.com"
+    },
+    "ac": {
+      "name": "Andrew Courter",
+      "email": "andrew.courter@arrivehealth.com"
+    },
+    "atc": {
+      "name": "Antonio Carter",
+      "email": "antonio.carter@arrivehealth.com"
+    },
+    "al": {
+      "name": "Anna Lewis",
+      "email": "anna.noel.lewis@gmail.com"
+    },
+    "at": {
+      "name": "Alex Terletskiy",
+      "email": "alex.terletskiy@arrivehealth.com"
+    },
+    "cd": {
+      "name": "Corey Downing",
+      "email": "corey.downing@arrivehealth.com"
+    },
+    "cd": {
+      "name": "Craig Livorsi",
+      "email": "craig.livorsi@arrivehealth.com"
+    },
+    "df": {
+      "name": "Dyan Fedde",
+      "email": "duncan.fedde+github@rxrevu.com"
+    },
+    "dk": {
+      "name": "Daniel Keeney",
+      "email": "daniel.keeney@arrivehealth.com"
+    },
+    "dm": {
+      "name": "David Madouros",
+      "email": "david.madouros@gmail.com"
+    },
+    "ds": {
+      "name": "Don Schram",
+      "email": "don.schram@arrivehealth.com"
+    },
+    "ek": {
+      "name": "Ed Kerns",
+      "email": "blauentag@gmail.com"
+    },
+    "es": {
+      "name": "Evan Sailer",
+      "email": "evan.sailer@arrivehealth.com"
+    },
+    "iip": {
+      "name": "Iain Irwin-Powell",
+      "email": "iain.irwin-powell@arrivehealth.com"
+    },
+    "jc": {
+      "name": "Jared Cross",
+      "email": "jared.cross@arrivehealth.com"
+    },
+    "jh": {
+      "name": "Jim Hantz",
+      "email": "james.hantz@arrivehealth.com"
+    },
+    "jr": {
+      "name": "John Roemer",
+      "email": "john.roemer@arrivehealth.com"
+    },
+    "jre": {
+      "name": "John Reiter",
+      "email": "john.reiter@arrivehealth.com"
+    },
+    "jt": {
+      "name": "Jeff Turley",
+      "email": "pythe314@gmail.com"
+    },
+    "kc": {
+      "name": "Kyle Campbell",
+      "email": "kyle.campbell@arrivehealth.com"
+    },
+    "ks": {
+      "name": "Kenny Storms",
+      "email": "kenny.storms@arrivehealth.com"
+    },
+    "ml": {
+      "name": "Mike Levin",
+      "email": "mike.levin@arrivehealth.com"
+    },
+    "ml": {
+      "name": "Matt Odille",
+      "email": "matt.odille@arrivehealth.com"
+    },
+    "pa": {
+      "name": "Pablo Alvarez",
+      "email": "pablo.alvarez@arrivehealth.com"
+    },
+    "pg": {
+      "name": "Phil Goodwin",
+      "email": "phil.goodwin@arrivehealth.com"
+    },
+    "sc": {
+     "name": "Shane Chesnutt",
+     "email": "shane.chesnutt@arrivehealth.com"
+    }
+  }
+}

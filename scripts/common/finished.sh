@@ -10,12 +10,7 @@ echo "sudo scutil --set LocalHostName newname"
 echo "sudo scutil --set HostName newname"
 
 echo
-echo "You can use 'git pair' (enabled)"
-echo "or 'git with' aka git-together (installed but not enabled)"
-echo ""
-echo "To enable git together:"
-echo "echo 'alias git=git-together' >> ~/.bash_profile"
-echo "and then follow the configuration instructions at https://github.com/kejadlen/git-together"
+echo "Learn more about git-mob: https://github.com/Frost/git-mob"
 
 echo
 echo "After checking the above output for any problems, start a new iTerm session to make use of all the installed tools."
