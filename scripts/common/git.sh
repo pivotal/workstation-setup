@@ -1,8 +1,7 @@
 echo
 echo "Installing Git and associated tools"
 brew install git
-brew install pivotal/tap/git-pair
-brew install pivotal/tap/git-together
+brew install frost/tap/git-mob
 brew install vim
 echo "GitHub CLI -- gh"
 brew install gh
@@ -18,8 +17,8 @@ brew install --cask gitup
 set -e
 
 echo
-echo "Putting a sample git-pair file in ~/.pairs"
-cp files/.pairs ~/.pairs
+echo "Putting a sample git-coauthors file in ~/.git-coauthors"
+cp files/.git-coauthors ~/.git-coauthors
 
 echo
 echo "Setting global Git configurations"
