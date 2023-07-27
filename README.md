@@ -31,7 +31,7 @@ mkdir -p ~/workspace &&
 If you're setting up a development machine choose which languages and tools to install:
 
 #### For Direct developers (remove unnecessary languages when running command)
-`./setup.sh aws ruby python java java-tools docker snowflake terraform intellij mysql postgres`
+`./setup.sh aws ruby python java java-tools docker snowflake terraform intellij postgres`
 
 Optional but recommended:
  - `fzf`
@@ -98,7 +98,7 @@ Select all the settings and hit `Ok`, RubyMine will then prompt you to restart (
 
 ### AWS Credential Setup
 **Note:** Requires staging/prod and sandbox AWS credentials
-Change `aws_access_key_id`s and `aws_secret_access_key`s in 
+Change `aws_access_key_id`s and `aws_secret_access_key`s in
 the `~/.aws/credentials` file to use the credentials provided to
 you by the security team.
 
