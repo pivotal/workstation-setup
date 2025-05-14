@@ -24,7 +24,7 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 # modify appearance of dock: remove standard icons, add chrome and iTerm
 if ! dockutil ; then
   # dockutil is not installed
-  brew install --cask hpedrorodrigues/tools/dockutil
+  brew install dockutil
 fi
 dockutil --list | awk -F\t '{print "dockutil --remove \""$1"\" --no-restart"}' | sh
 dockutil --add /Applications/Google\ Chrome.app --no-restart
